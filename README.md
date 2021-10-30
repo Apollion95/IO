@@ -34,7 +34,7 @@ Celem jest utworzenie utworzenie aplikacji, która umożliwi uzytkownikom korzys
 
 #### 2.2. Opis Architektury
 
-Do napisania interfejsu użytkownika zostanie wykorzystany React.JS. Za mechanike systemu będzie odpowiadać ASP.NET. Dane będą przechowywanie w MySQL.
+Do napisania interfejsu użytkownika zostanie wykorzystany React.JS. Za mechanike systemu będzie odpowiadać ASP.NET. Dane będą przechowywane bazie opartej na MySQL.
 
 <img src="https://user-images.githubusercontent.com/56208135/139539073-5cf6cc5b-cd04-40c7-b59d-4254af0aeada.png">
 
