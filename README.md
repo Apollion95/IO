@@ -23,7 +23,7 @@ Nazwa:	Biblioteka</br>
 Opis:	Miejsce w którym użytkownik ma dostęp do zakupionych przez siebie książęk.</br>
 ID: 3</br>
 Nazwa:	Forum</br>
-Opis:	Podstrona księgarni która pozwala naszym zarejestrowanym użytkownikom na tworzenie wątków i prowadzenie dyskusji na temat książek, ich autorów.
+Opis:	Podstrona księgarni która pozwala naszym zarejestrowanym użytkownikom na tworzenie wątków i prowadzenie dyskusji na temat książek, ich autorów. </br>
 2.2 Aktorzy Biznesowi</br>
 ID: 1</br>
 Nazwa:	Użytkownik (Gość)</br>
