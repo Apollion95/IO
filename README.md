@@ -33,41 +33,67 @@ Nazwa:	Administrator
 Opis:	Posiada pełen dostęp do serwisu. Służy jako pomoc techniczna dlaużytkowników.
 Nazwa: Moderator
 Opis: Moderator zajmuje się forum, dba o przestrzeganie zasad i regulaminu. Blokuje lub wydaje ostrzeżenia do użytkowników forum którzy ich nie przestrzegają. 
+
 3.Wymagania
+
 3.1 Wymagania Funkcjonalne
-ID:	1
+
+ID:	1 
+
 Nazwa:	Tworzenie konta i logowanie
+
 Priorytet:	Najwyższy
+
 Rola:	Wszyscy
+
 Opis:	Utworzenie konta jednego z dostepem do Elektronicznej Księgarni oraz Forum. 
 
 ID:	2
+
 Nazwa:	Zakup lub wypożyczenie książki
+
 Priorytet:	Najwyższy
+
 Rola:	Wszyscy
+
 Opis:	Możliwość wypożyczenia książki lub jej permanentnego wykupu i przypisania do swojego wczesniej utworzonego konta.
 
 ID:	3
+
 Nazwa:	System punktowy
+
 Priorytet:	Wysoki
+
 Rola:	Wszyscy
+
 Opis:	Za wypożyczanie oraz zakup przewidziane są punkty lojalnościowe. Punktów nie wolno wymienić, punkty decydują o randze użytkownika (przykład rangi: Początkujący, Średni Czytacz, Czytelnik, Stały Czytacz) która jest widoczna na forum. 
 
 ID: 	4
+
 Nazwa: Nagrody
+
 Rola: Wszyscy
+
 Opis: Co piędziesiąt przeczytanych książek użytkownik może otrzymać darmowy i dożywotni dostęp do jeden z wybranych książek. Dostęp zostnaie przypisany do konta. 
 
 ID:	5
+
 Nazwa:	Zakup subskrypcji Premium
+
 Priorytet:	Średni
+
 Rola:	Użytkownik
+
 Opis:	Zakup subskrybcji pozwoli na dostęp do wielu książek, podwojonej ilości punktów za wszystkie akcje. Dodatkowo użytkownik będzie się wyróżniał na forum. 
 
 3.2 Wymagania Niefunkcjonalne
+
 ID:	1
+
 Nazwa:	Przejrzystość strony
+
 Priorytet:	Wysoki
+
 Opis:	Strona musi być przejrzysta, czytelna i łatwa w użyciu. Swoim wyglądem ma przyciągać użytkownika, a trescią i łatwoscią użytkowania, zatrzymać na dłużej. 
 i przejrzysty.
 
