@@ -154,7 +154,7 @@ Celem jest utworzenie aplikacji, która umożliwi uzytkownikom korzystanie z ksi
 | Opis:      |Platforma powinna wczytywać się raz (brak przeładowywania podstron).        |
 
 
-### 4.Technologia i Architketura
+### 4.Technologia i Architektura
 
 #### 4.1. Technologie
 -ASP.NET
