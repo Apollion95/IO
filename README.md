@@ -133,7 +133,7 @@ Celem jest utworzenie aplikacji, która umożliwi uzytkownikom korzystanie z ksi
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Podział odpowiedzalnośći                                                    |
 | Priorytet: |Wysoki                                                                      |
-| Opis:      |Platforma ma być podzielona na część frontendową jak i backendową. Komunikacja pomiędzy tymi dwoma systemami powinna w głównej mierze odbywać się przez endpointy API z autoryzacją opartą na JWT lub czymś podobnym.|
+| Opis:      |Platforma ma być podzielona na część frontendową jak i backendową. |
 
 | ID:        | 2                       <img width=1000/>                                                     |
 |:-----------|:---------------------------------------------------------------------------|
