@@ -27,6 +27,43 @@ Celem jest utworzenie utworzenie aplikacji, która umożliwi uzytkownikom korzys
 
 ### 2.Model Procesów Biznesowych
 
+#### 2.1 Obiekty Binesowe
+
+| Nazwa:| Księgarnia                                                            |
+|:------|:----------------------------------------------------------------------|
+| Opis: |Miejsce w ktróym użytkownik może przeglądać dostępne E-booki, przeglądnąć kilka przykładowych stron, dokonwywać ich zakupu, czytać oraz wystawiać opinie.|
+
+| Nazwa:| Biblioteka                                                            |
+|:------|:----------------------------------------------------------------------|
+| Opis: |Miejsce w którym użytkownik ma dostęp do zakupionych przez siebie książęk.|
+
+| Nazwa:| Grupa                                                                 |
+|:------|:----------------------------------------------------------------------|
+| Opis: |Grupa posiada użytkowników oraz właściciela, który zarządza grupą i jej przywilejami. Grupy mają wspólną bibliotektę, które mogą zostać stworzone na początku tylko przez właściciela, który później przydzielając odpowiednie prawa może zezwolić na tę opcję innym użytkownikom.|
+
+#### 2.2 Aktorzy Biznesowi
+
+
+| Nazwa:| Użytkownik Niezalogowany                                              |
+|:------|:----------------------------------------------------------------------|
+| Opis: |Użytkownik który nie zalogował sie lub nie wykreował swojego konta, ma <br> dostęp tylko do księgarni w której może przeglądać interesujące go książki.|
+
+| Nazwa:| Użytkownik Zalogowany                                                 |
+|:------|:----------------------------------------------------------------------|
+| Opis: |Użytkownik który wykreował swoje konto ale także się zalogował ma pełny <br> dostęp do oferowanej treśći.|
+
+| Nazwa:| Subskrybent                                                           |
+|:------|:----------------------------------------------------------------------|
+| Opis: |Użytkownik który wykupił subskrypcje i ma dostę do specjalnych treści <br> przeznaczonych wyłącznie dla niego oraz użytkowników w jego grupie.|
+
+| Nazwa:| Człownek Grupy                                                        |
+|:------|:----------------------------------------------------------------------|
+| Opis: |Użytkownik dodany przez właściciela do grupy, ma dostę do treści  <br> sybskrybenta.|
+
+| Nazwa:| Administrator                                                         |
+|:------|:----------------------------------------------------------------------|
+| Opis: |Posiada pełen dostęp do serwisu. Służy jako pomoc techniczna dla <br> użytkowników.|
+
 ### 3.Wymagania
 
 #### 3.1 Wymagania Funkcjonalne
