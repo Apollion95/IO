@@ -165,9 +165,9 @@ Celem jest utworzenie utworzenie aplikacji, która umożliwi uzytkownikom korzys
 
 -Za frontend będzie odpowiadać Reacj.JS w którym zostanie napisany interfejs użytkownika z którym to będzie mógł wchodzić w interakcję.
 
--Za backend odpowiada ASP.NET.
+-Za backend odpowiada ASP.NET w którym zostanie napisany Web API. W ASP.NET zostanie wykonana mechanika strony oraz połączenie z bazą danych. 
 
--Dane będą przechowywane w bazie opartej na MySQL.
+-Za przechowywanie danych będzie odpowiadać baza danych MySQL. Będą się w niej znajodwać informacje o klientach, subksrybentach oraz książkach.
 
 <img src="https://user-images.githubusercontent.com/56208135/139539073-5cf6cc5b-cd04-40c7-b59d-4254af0aeada.png">
 
