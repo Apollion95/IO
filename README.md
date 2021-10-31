@@ -118,11 +118,11 @@ Celem jest utworzenie utworzenie aplikacji, która umożliwi uzytkownikom korzys
 ### 4.Technologia i Architketura
 
 #### 4.1. Technologie
--ASP.NET(Backend)
+-ASP.NET
 
--React.JS(Frontend)
+-React.JS
 
--MySQL(Database)
+-MySQL
 
 #### 4.2. Opis Architektury
 
