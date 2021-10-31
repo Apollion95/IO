@@ -50,42 +50,42 @@ Celem jest utworzenie utworzenie aplikacji, która umożliwi uzytkownikom korzys
 | Nazwa:     |Zakup lub wypożyczenie książki                                              |
 | Priorytet: |Wysoki                                                                      |
 | Rola:      |Wszyscy                                                                     |
-| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika <br> dane.|
+| Opis:      |Aplikcja oferuje zakup lub wypożyczenie książek. Wypożyczenie będzie <br> ograniczone czasowo, natomiast zakup wiąże się z dożywotnim dostępem.|
 
 | ID:        | 4                                                                          |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Przechowywanie książek                                                      |
 | Priorytet: |Wysoki                                                                      |
 | Rola:      |Wszyscy                                                                     |
-| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika <br> dane.|
+| Opis:      |Użytkownik w każdym momencie będzie mógł uzyskać dostęp do produktów. <br> Będzie miał możliwość pobrania.|
 
 | ID:        | 5                                                                          |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Nagradzanie punkatami                                                       |
 | Priorytet: |Wysoki                                                                      |
 | Rola:      |Wszyscy                                                                     |
-| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika <br> dane.|
+| Opis:      |Aplikacja będzie nagradzać użytkownika punktami. Punkty będą przydzielane <br> za zakup, przeczytanie książki lub innego rodzaju aktywnośći <br> np. powiększenie swojej kolekcji.|
 
 | ID:        | 6                                                                          |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Wymiana punktów                                                             |
 | Priorytet: |Wysoki                                                                      |
-| Rola:      |Wszyscy                                                                     |
-| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika <br> dane.|
+| Rola:      |Użytkownik                                                                  |
+| Opis:      |Możliwość wymiany puntków na nagraody, kody rabatowe lub nawet na darmowe <br> kopie książek|
 
 | ID:        | 7                                                                          |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Zakup subskrypcji                                                           |
-| Priorytet: |Wysoki                                                                      |
-| Rola:      |Wszyscy                                                                     |
-| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika <br> dane.|
+| Priorytet: |Średni                                                                      |
+| Rola:      |Użytkownik                                                                  |
+| Opis:      |Subskrypcja zaoferuje użytkownikowi dostęp do określonej liczby książek za <br> darmo. Ich pula będzie się zmieniać co miesiąć. Będzie objęty <br> zniżkami na inne produkty oraz będzie miał dostęp przedpremierowo. <br> Będą istniały 2 rodzaje subskrypcji: Solo oraz Grupowa.|
 
 | ID:        | 8                                                                          |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Dodawanie użytkownika do grupy subskrypcji                                  |
-| Priorytet: |Wysoki                                                                      |
-| Rola:      |Wszyscy                                                                     |
-| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika <br> dane.|
+| Priorytet: |Średni                                                                      |
+| Rola:      |Użytkownik                                                                  |
+| Opis:      |Po zakupie subksrypcji grupowej właściciel będzie mógł dodawać do grupy <br> innych użytkowników.|
 
 
 #### 3.2 Wymagania Niefunkcjonalne
@@ -94,25 +94,25 @@ Celem jest utworzenie utworzenie aplikacji, która umożliwi uzytkownikom korzys
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Podział odpowiedzalnośći                                                    |
 | Priorytet: |Wysoki                                                                      |
-| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika <br> dane.|
+| Opis:      |Platforma ma być podzielona na część frontendową jak i backendową. <br> Komunikacja pomiędzy tymi dwoma systemami powinna w głównej mierze odbywać <br> się przez endpointy API z autoryzacją opartą na JWT lub czymś podobnym.|
 
 | ID:        | 2                                                                          |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Łatwość w użyciu                                                            |
 | Priorytet: |Wysoki                                                                      |
-| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika <br> dane.|
+| Opis:      |Platforma ma być przyjazna dla użytkownika. Interfejs musi być nowoczesny <br> i przejrzysty.|
 
 | ID:        | 3                                                                          |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Intergralność danych                                                        |
-| Priorytet: |Wysoki                                                                      |
-| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika <br> dane.|
+| Priorytet: |Średni                                                                      |
+| Opis:      |Zabezpieczenie przed nieautoryzowaną zmianą danych przez użycie szyfrowania <br> haseł oraz implementacja szyfrowanego połączenia https.|
 
 | ID:        | 4                                                                          |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Przeładowanie Stron                                                         |
-| Priorytet: |Wysoki                                                                      |
-| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika <br> dane.|
+| Priorytet: |Średni                                                                      |
+| Opis:      |Platforma powinna wczytywać się raz (brak przeładowywania podstron).        |
 
 
 ### 4.Technologia i Architketura
