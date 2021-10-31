@@ -1,9 +1,11 @@
+
+
 # Specyfikacja - Wirtualna Biblioteczka
 
 ### 1. Wprowadzenie
 
 #### 1.1. Opis Systemu
-Celem jest utworzenie utworzenie aplikacji, która umożliwi uzytkownikom korzystanie z książek(E-book). Aplikacja ma działać na zasadzie księgarni gdzie użytkownik może zakupić lub wypożyczyć swoją kopię produktu ale także składować swoje E-booki w formie biblioteczki. Po zakupie lub wypożyczeniu użytkownik ale także przeczytaniu zostanie nagrodzony odpowiednią ilość punktów które później będzie mógł wymienić na kody rabatowe(nie tylko obowiązujące w naszej aplikacji) lub nawet zakupić za te punkty kolejny produkt. Dla użykownika będzie również istniała możliwość wykupu subskrypcji w ramach której będzie otrzymywał co miesiąc darmowe kopie książek, po jej zakończeniu nadal będzie mógł z nich w pełni korzystać. Subksrypcja będzie obejmować grupy, każdy dodany do grupy będzie miał możliwość korzystania z biblioteki.
+Celem jest utworzenie aplikacji, która umożliwi uzytkownikom korzystanie z książek(E-book). Aplikacja ma działać na zasadzie księgarni gdzie użytkownik może zakupić lub wypożyczyć swoją kopię produktu ale także składować swoje E-booki w formie biblioteczki. Po zakupie lub wypożyczeniu użytkownik ale także przeczytaniu zostanie nagrodzony odpowiednią ilość punktów które później będzie mógł wymienić na kody rabatowe(nie tylko obowiązujące w naszej aplikacji) lub nawet zakupić za te punkty kolejny produkt. Dla użykownika będzie również istniała możliwość wykupu subskrypcji w ramach której będzie otrzymywał co miesiąc darmowe kopie książek, po jej zakończeniu nadal będzie mógł z nich w pełni korzystać. Subksrypcja będzie obejmować grupy, każdy dodany do grupy będzie miał możliwość korzystania z biblioteki.
 
 #### 1.2. Słownik Pojęć
 
@@ -29,123 +31,123 @@ Celem jest utworzenie utworzenie aplikacji, która umożliwi uzytkownikom korzys
 
 #### 2.1 Obiekty Binesowe
 
-| Nazwa:| Księgarnia                                                            |
+| Nazwa:| Księgarnia <img width=1000/>|         
 |:------|:----------------------------------------------------------------------|
 | Opis: |Miejsce w ktróym użytkownik może przeglądać dostępne E-booki, przeglądnąć kilka przykładowych stron, dokonwywać ich zakupu, czytać oraz wystawiać opinie.|
 
-| Nazwa:| Biblioteka                                                            |
-|:------|:----------------------------------------------------------------------|
+| Nazwa:| Biblioteka <img width=1000/>|
+|:------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Opis: |Miejsce w którym użytkownik ma dostęp do zakupionych przez siebie książęk.|
 
-| Nazwa:| Grupa                                                                 |
+| Nazwa:| Grupa <img width=1000/>                                               |
 |:------|:----------------------------------------------------------------------|
 | Opis: |Grupa posiada użytkowników oraz właściciela, który zarządza grupą i jej przywilejami. Grupy mają wspólną bibliotektę, które mogą zostać stworzone na początku tylko przez właściciela, który później przydzielając odpowiednie prawa może zezwolić na tę opcję innym użytkownikom.|
 
 #### 2.2 Aktorzy Biznesowi
 
 
-| Nazwa:| Użytkownik Niezalogowany                                              |
+| Nazwa:| Użytkownik Niezalogowany <img width=1000/>                            |
 |:------|:----------------------------------------------------------------------|
 | Opis: |Użytkownik który nie zalogował sie lub nie wykreował swojego konta, ma <br> dostęp tylko do księgarni w której może przeglądać interesujące go książki.|
 
-| Nazwa:| Użytkownik Zalogowany                                                 |
+| Nazwa:| Użytkownik Zalogowany <img width=1000/>                                                  |
 |:------|:----------------------------------------------------------------------|
-| Opis: |Użytkownik który wykreował swoje konto ale także się zalogował ma pełny <br> dostęp do oferowanej treśći.|
+| Opis: |Użytkownik który wykreował swoje konto ale także się zalogował ma pełny dostęp do oferowanej treśći.|
 
-| Nazwa:| Subskrybent                                                           |
+| Nazwa:| Subskrybent                 <img width=1000/>                                            |
 |:------|:----------------------------------------------------------------------|
-| Opis: |Użytkownik który wykupił subskrypcje i ma dostę do specjalnych treści <br> przeznaczonych wyłącznie dla niego oraz użytkowników w jego grupie.|
+| Opis: |Użytkownik który wykupił subskrypcje i ma dostę do specjalnych treści przeznaczonych wyłącznie dla niego oraz użytkowników w jego grupie.|
 
-| Nazwa:| Człownek Grupy                                                        |
+| Nazwa:| Człownek Grupy       <img width=1000/>                                                   |
 |:------|:----------------------------------------------------------------------|
-| Opis: |Użytkownik dodany przez właściciela do grupy, ma dostę do treści  <br> sybskrybenta.|
+| Opis: |Użytkownik dodany przez właściciela do grupy, ma dostę do treści sybskrybenta.|
 
-| Nazwa:| Administrator                                                         |
+| Nazwa:| Administrator          <img width=1000/>                                                 |
 |:------|:----------------------------------------------------------------------|
-| Opis: |Posiada pełen dostęp do serwisu. Służy jako pomoc techniczna dla <br> użytkowników.|
+| Opis: |Posiada pełen dostęp do serwisu. Służy jako pomoc techniczna dla użytkowników.|
 
 ### 3.Wymagania
 
 #### 3.1 Wymagania Funkcjonalne
 
-| ID:        | 1                                                                     |
+| ID:        | 1                   <img width=1000/>                                                    |
 |:-----------|:----------------------------------------------------------------------|
 | Nazwa:     |Tworzenie konta                                                        |
 | Priorytet: |Wysoki                                                                 |
 | Rola:      |Wszyscy                                                                |
-| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika <br> dane.|
+| Opis:      |Aplikcja oferuje tworzenie konta poprzez podane przez użytkownika dane.|
 
-| ID:        | 2                                                                                                           | 
+| ID:        | 2                   <img width=1000/>                                                                                          | 
 |:-----------|:------------------------------------------------------------------------------------------------------------|
 | Nazwa:     |Logowanie                                                                                                    |
 | Priorytet: |Wysoki                                                                                                       |
 | Rola:      |Wszyscy                                                                                                      |
-| Opis:      |Za pomocą podanych przy logowaniu danych uwierzytelniającyh,<br> użytkownik uzyskuje dostęp do swojego konta.|
+| Opis:      |Za pomocą podanych przy logowaniu danych uwierzytelniającyh, użytkownik uzyskuje dostęp do swojego konta.|
 
-| ID:        | 3                                                                          |
+| ID:        | 3                    <img width=1000/>                                                        |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Zakup lub wypożyczenie książki                                              |
 | Priorytet: |Wysoki                                                                      |
 | Rola:      |Wszyscy                                                                     |
-| Opis:      |Aplikcja oferuje zakup lub wypożyczenie książek. Wypożyczenie będzie <br> ograniczone czasowo, natomiast zakup wiąże się z dożywotnim dostępem.|
+| Opis:      |Aplikcja oferuje zakup lub wypożyczenie książek. Wypożyczenie będzie  ograniczone czasowo, natomiast zakup wiąże się z dożywotnim dostępem.|
 
-| ID:        | 4                                                                          |
+| ID:        | 4                   <img width=1000/>                                                         |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Przechowywanie książek                                                      |
 | Priorytet: |Wysoki                                                                      |
 | Rola:      |Wszyscy                                                                     |
 | Opis:      |Użytkownik w każdym momencie będzie mógł uzyskać dostęp do produktów. <br> Będzie miał możliwość pobrania.|
 
-| ID:        | 5                                                                          |
+| ID:        | 5                    <img width=1000/>                                                        |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Nagradzanie punkatami                                                       |
 | Priorytet: |Wysoki                                                                      |
 | Rola:      |Wszyscy                                                                     |
-| Opis:      |Aplikacja będzie nagradzać użytkownika punktami. Punkty będą przydzielane <br> za zakup, przeczytanie książki lub innego rodzaju aktywnośći <br> np. powiększenie swojej kolekcji.|
+| Opis:      |Aplikacja będzie nagradzać użytkownika punktami. Punkty będą przydzielane za zakup, przeczytanie książki lub innego rodzaju aktywnośći <br> np. powiększenie swojej kolekcji.|
 
-| ID:        | 6                                                                          |
+| ID:        | 6                      <img width=1000/>                                                      |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Wymiana punktów                                                             |
 | Priorytet: |Wysoki                                                                      |
 | Rola:      |Użytkownik                                                                  |
 | Opis:      |Możliwość wymiany puntków na nagraody, kody rabatowe lub nawet na darmowe <br> kopie książek|
 
-| ID:        | 7                                                                          |
+| ID:        | 7                     <img width=1000/>                                                       |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Zakup subskrypcji                                                           |
 | Priorytet: |Średni                                                                      |
 | Rola:      |Użytkownik                                                                  |
-| Opis:      |Subskrypcja zaoferuje użytkownikowi dostęp do określonej liczby książek za <br> darmo. Ich pula będzie się zmieniać co miesiąć. Będzie objęty <br> zniżkami na inne produkty oraz będzie miał dostęp przedpremierowo. <br> Będą istniały 2 rodzaje subskrypcji: Solo oraz Grupowa.|
+| Opis:      |Subskrypcja zaoferuje użytkownikowi dostęp do określonej liczby książek za darmo. Ich pula będzie się zmieniać co miesiąć. Będzie objęty zniżkami na inne produkty oraz będzie miał dostęp przedpremierowo.  Będą istniały 2 rodzaje subskrypcji: Solo oraz Grupowa.|
 
-| ID:        | 8                                                                          |
+| ID:        | 8                      <img width=1000/>                                                      |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Dodawanie użytkownika do grupy subskrypcji                                  |
 | Priorytet: |Średni                                                                      |
 | Rola:      |Użytkownik                                                                  |
-| Opis:      |Po zakupie subksrypcji grupowej właściciel będzie mógł dodawać do grupy <br> innych użytkowników.|
+| Opis:      |Po zakupie subksrypcji grupowej właściciel będzie mógł dodawać do grupy  innych użytkowników.|
 
 
 #### 3.2 Wymagania Niefunkcjonalne
 
-| ID:        | 1                                                                          |
+| ID:        | 1                       <img width=1000/>                                                     |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Podział odpowiedzalnośći                                                    |
 | Priorytet: |Wysoki                                                                      |
-| Opis:      |Platforma ma być podzielona na część frontendową jak i backendową. <br> Komunikacja pomiędzy tymi dwoma systemami powinna w głównej mierze odbywać <br> się przez endpointy API z autoryzacją opartą na JWT lub czymś podobnym.|
+| Opis:      |Platforma ma być podzielona na część frontendową jak i backendową. Komunikacja pomiędzy tymi dwoma systemami powinna w głównej mierze odbywać się przez endpointy API z autoryzacją opartą na JWT lub czymś podobnym.|
 
-| ID:        | 2                                                                          |
+| ID:        | 2                       <img width=1000/>                                                     |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Łatwość w użyciu                                                            |
 | Priorytet: |Wysoki                                                                      |
-| Opis:      |Platforma ma być przyjazna dla użytkownika. Interfejs musi być nowoczesny <br> i przejrzysty.|
+| Opis:      |Platforma ma być przyjazna dla użytkownika. Interfejs musi być nowoczesny i przejrzysty.|
 
-| ID:        | 3                                                                          |
+| ID:        | 3                      <img width=1000/>                                                      |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Intergralność danych                                                        |
 | Priorytet: |Średni                                                                      |
-| Opis:      |Zabezpieczenie przed nieautoryzowaną zmianą danych przez użycie szyfrowania <br> haseł oraz implementacja szyfrowanego połączenia https.|
+| Opis:      |Zabezpieczenie przed nieautoryzowaną zmianą danych przez użycie szyfrowania haseł oraz implementacja szyfrowanego połączenia https.|
 
-| ID:        | 4                                                                          |
+| ID:        | 4                       <img width=1000/>                                                     |
 |:-----------|:---------------------------------------------------------------------------|
 | Nazwa:     |Przeładowanie Stron                                                         |
 | Priorytet: |Średni                                                                      |
