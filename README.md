@@ -163,9 +163,9 @@ Celem jest utworzenie utworzenie aplikacji, która umożliwi uzytkownikom korzys
 
 #### 4.2. Opis Architektury
 
--Do napisania interfejsu użytkownika zostanie wykorzystany React.JS.
+-Za frontend będzie odpowiadać Reacj.JS w którym zostanie napisany interfejs użytkownika z którym to będzie mógł wchodzić w interakcję.
 
--Za mechanike systemu będzie odpowiadać ASP.NET.
+-Za backend odpowiada ASP.NET.
 
 -Dane będą przechowywane w bazie opartej na MySQL.
 
