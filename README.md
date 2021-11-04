@@ -173,4 +173,4 @@ Celem jest utworzenie aplikacji, która umożliwi uzytkownikom korzystanie z ksi
 
 ![image](https://user-images.githubusercontent.com/56208135/139593932-508362fd-074d-4bef-b898-e03149c3f736.png)
 
-
+#Mała zmiana
