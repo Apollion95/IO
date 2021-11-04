@@ -172,5 +172,3 @@ Celem jest utworzenie aplikacji, która umożliwi uzytkownikom korzystanie z ksi
 -Za przechowywanie danych będzie odpowiadać baza danych MySQL. Będą się w niej znajodwać informacje o klientach, subksrybentach oraz książkach.
 
 ![image](https://user-images.githubusercontent.com/56208135/139593932-508362fd-074d-4bef-b898-e03149c3f736.png)
-
-Mała zmiana testowa
