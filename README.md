@@ -4,14 +4,14 @@
 
 ## Spis treści
 
-1. Wprowadzenie
+**1. Wprowadzenie**
 
    * Cel dokumnetu 
    * Zakres dokumentu
    * Definicje, akronimy oraz skróty użyte w dokumencie 
    
    
-2. Opis
+**2. Opis**
 
    * Cel ssytemu
    * Funkcje systemu
@@ -19,7 +19,7 @@
    * Opis technologii oraz architektury
    
    
-3. Funkcje systemu(przypadki użycia)
+**3. Funkcje systemu(przypadki użycia)**
 
    * Rejestracja użytkownika 
    * Logowanie
