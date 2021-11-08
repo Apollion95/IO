@@ -108,8 +108,29 @@ Celem systemu jest stworzenie platformy udostępniającej książki w postaci eb
 
 W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik. Poniższa tabela przedstawia funkcjonalności poszczególnych ról.
 
+<center>
+
 |Funkcjonalność | Użytkownik | Administrator|
 |----------------|------------|-------------|
-|Rejestracja użytkownika | + | -|
-|Logowanie do platformy | + | +|
-|Wylogowanie z platformy | + | +|
+|Rejestracja użytkownika | + | - |
+|Logowanie do platformy | + | + |
+|Wylogowanie z platformy | + | + |
+|Edycja danych użytkownika/uwierzytelniających | + | + |
+|Wyszukiwanie ebooków | + | + |
+|Dodanie środków do e-portfela | + | - | 
+|Dodanie ebooków do koszyka | + | - |
+|Usuwanie ebooków z koszyka | + | - |
+|Kupowanie ebooków | + | - | 
+|Wyświetlenie historii wydanych środków | + | - |
+|Kontakt z administratorem | + | + |
+|Zbieranie punktów | + | - |
+|Wydawanie punktów | + | - |
+|Dodawanie ebooków do systemu | - | + | 
+|Modyfikowanie ebooków z systemu | - | + |
+|Usuwanie ebooków z sytemu | - | + |
+|Przeglądanie ebooków | + | + |
+|Przeglądanie użytkowników | - | + | 
+|Usuwanie użytkownika | - | + |
+|Przyjmowanie zgłoszeń | - | + |
+  
+</center>
