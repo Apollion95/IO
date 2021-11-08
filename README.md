@@ -108,10 +108,9 @@ Celem systemu jest stworzenie platformy udostępniającej książki w postaci eb
 
 W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik. Poniższa tabela przedstawia funkcjonalności poszczególnych ról.
 
-<center>
 
 |Funkcjonalność | Użytkownik | Administrator|
-|----------------|------------|-------------|
+|:-------------:|:----------:|:------------:|
 |Rejestracja użytkownika | + | - |
 |Logowanie do platformy | + | + |
 |Wylogowanie z platformy | + | + |
@@ -133,4 +132,33 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 |Usuwanie użytkownika | - | + |
 |Przyjmowanie zgłoszeń | - | + |
   
-</center>
+### 2.4 Opis technologii oraz architektury
+
+System będzie działał na trzech platformach
+
+* Dane użytkowników związane z ich kontem, dane poszczególnych ebooków oraz pozostałe dane związane z działaniem platformy będą zapisywane w bazie danych: **MySQL**
+* Za zarządzanie całym systemem(backend) odpowiedzialna będzie aplikacja **.Net Core** udostępniająca odpowiednie API.
+* Na frontendzie będzie wykorzystany framework **React JS** odpowiedzialny za odpowiedni wygląd platformy oraz stanowiący interfejs do komunikacji użytkownika z aplikacją.
+
+## 3 Funkcje systemu(przypadki użycia)
+
+-- ss1
+
+### 3.1 Rejestracja użytkownika
+
+* **Cel:** 
+  Celem tej funkcjonalności jest stworzenie konta dla nowego użytkownika w celu możliwości zalogowania się do systemu.
+* **Wejście:** 
+  Osoba wprowadza e-mail, hasło oraz dane demograficzne.
+* **Wyjście:** 
+  Osoba otrzymuje informację o poprawnym założeniu konta lub o  błędzie.
+* **Główny scenariusz:**
+  Osoba chce skorzystać z systemu oraz jego funkcji, aby tego dokonać musi posiadać konto w systemie.
+* **Kroki:**
+  Krok 1: Osobie korzystającej wyświetla się ekran z możliwością zarejestrowania lub zalogowania.
+  Krok 2: Osoba wybiera opcję rejestracji.
+  Krok 3: Osoba wypełnia wymagane dane w formularzu.
+  Krok 4: Osoba otrzymuje informację o pomyślnym utworzeniu konta lub o wystąpieniu błędu.
+* **Przykład:**
+
+-- ss2
