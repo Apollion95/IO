@@ -2,7 +2,7 @@
 ###### Wersja: 1.0.0v
 
 
-### Spis treści
+## Spis treści
 
 1. Wprowadzenie
    * Cel dokumnetu
@@ -35,3 +35,14 @@
    * Przeglądanie użytkowników
    * Usuwanie użytkowników
    * Przyjmowanie zgłoszeń 
+
+
+
+## 1. Wprowadzenie 
+
+### 1.1 Cel dokumentu
+----------------------
+
+  Celem niniejszego dokumentu jest przedstawienie specyfikacji wymagań oraz wyników fazy analizy na potrzeby projektu Księgarnia Online. Dokument ten służy do przedstawienia poszczególnych celów oraz proponowanych planów rozwoju systemu.
+
+
