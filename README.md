@@ -160,9 +160,9 @@ System będzie działał na trzech platformach
   * Krok 3: Osoba wypełnia wymagane dane w formularzu.
   * Krok 4: Osoba otrzymuje informację o pomyślnym utworzeniu konta lub o wystąpieniu błędu.
 * **Przykład:**
-
+<center>
 ![alt text](https://github.com/Apollion95/IO/blob/Seba/2.png?raw=true)
-
+</center>
 ### 3.2 Logowanie
 
 * **Cel:**
