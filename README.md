@@ -5,15 +5,22 @@
 ## Spis treści
 
 1. Wprowadzenie
+
    * Cel dokumnetu 
    * Zakres dokumentu
    * Definicje, akronimy oraz skróty użyte w dokumencie 
+   
+   
 2. Opis
+
    * Cel ssytemu
    * Funkcje systemu
    * Klasy i cechy użytkowników
    * Opis technologii oraz architektury
+   
+   
 3. Funkcje systemu(przypadki użycia)
+
    * Rejestracja użytkownika 
    * Logowanie
    * Wylogowanie
@@ -34,6 +41,7 @@
    * Przeglądanie użytkowników
    * Usuwanie użytkowników
    * Przyjmowanie zgłoszeń 
+
 
 
 
@@ -63,6 +71,7 @@ Dokument ten przedstawia plany, założenia oraz cele które powinien zrealizowa
 
 
 
+
 ## 2. Opis
 ----------
 
@@ -73,28 +82,34 @@ Celem systemu jest stworzenie platformy udostępniającej książki w postaci eb
 
 ### 2.2 Funkcje systemu
 
-•Rejestracja nowego użytkownika
-•Logowanie do platformy
-•Wylogowanie z platformy
-•Edycja danych użytkownika/uwierzytelniających 
-•Wyszukiwanie ebooków
-•Dodanie środków do e-portfela
-•Dodanie ebooków do koszyka
-•Usuwanie ebooków z koszyka
-•Kupowanie ebooków
-•Wyświetlenie historii wydanych środków
-•Kontakt z administratorem 
-•Zbieranie punktów
-•Wydawanie punktów
-•Dodawanie ebooków do systemu
-•Modyfikowanie ebooków z systemu
-•Usuwanie ebooków z systemu
-•Przeglądanie ebooków 
-•Przeglądanie użytkowników
-•Usuwanie użytkownika
-•Przyjmowanie zgłoszeń od użytkownika
+* Rejestracja nowego użytkownika
+* Logowanie do platformy
+* Wylogowanie z platformy
+* Edycja danych użytkownika/uwierzytelniających 
+* Wyszukiwanie ebooków
+* Dodanie środków do e-portfela
+* Dodanie ebooków do koszyka
+* Usuwanie ebooków z koszyka
+* Kupowanie ebooków
+* Wyświetlenie historii wydanych środków
+* Kontakt z administratorem 
+* Zbieranie punktów
+* Wydawanie punktów
+* Dodawanie ebooków do systemu
+* Modyfikowanie ebooków z systemu
+* Usuwanie ebooków z systemu
+* Przeglądanie ebooków 
+* Przeglądanie użytkowników
+* Usuwanie użytkownika
+* Przyjmowanie zgłoszeń od użytkownika
 
 
 ### 2.3 Klasy i cechy użytkowników
 
+W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik. Poniższa tabela przedstawia funkcjonalności poszczególnych ról.
 
+**Funkcjonalność | Użytkownik | Administrator**
+-----------------------------------------------
+Rejestracja użytkownika | + | -
+Logowanie do platformy | + | +
+Wylogowanie z platformy | + | +
