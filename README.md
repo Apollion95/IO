@@ -108,8 +108,8 @@ Celem systemu jest stworzenie platformy udostępniającej książki w postaci eb
 
 W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik. Poniższa tabela przedstawia funkcjonalności poszczególnych ról.
 
-**Funkcjonalność | Użytkownik | Administrator**
------------------------------------------------
+Funkcjonalność | Użytkownik | Administrator
+-------------------------------------------
 Rejestracja użytkownika | + | -
 Logowanie do platformy | + | +
 Wylogowanie z platformy | + | +
