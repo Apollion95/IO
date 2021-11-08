@@ -142,8 +142,8 @@ System będzie działał na trzech platformach
 
 ## 3 Funkcje systemu(przypadki użycia)
 
-![alt text](https://github.com/Apollion95/IO/blob/Seba/1.png?raw=true)
-
+  ![alt text](https://github.com/Apollion95/IO/blob/Seba/1.png?raw=true)
+  
 ### 3.1 Rejestracja użytkownika
 
 * **Cel:**
@@ -160,9 +160,9 @@ System będzie działał na trzech platformach
   * Krok 3: Osoba wypełnia wymagane dane w formularzu.
   * Krok 4: Osoba otrzymuje informację o pomyślnym utworzeniu konta lub o wystąpieniu błędu.
 * **Przykład:**
-<center>
+
 ![alt text](https://github.com/Apollion95/IO/blob/Seba/2.png?raw=true)
-</center>
+
 ### 3.2 Logowanie
 
 * **Cel:**
