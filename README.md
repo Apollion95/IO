@@ -142,7 +142,7 @@ System będzie działał na trzech platformach
 
 ## 3 Funkcje systemu(przypadki użycia)
 
--- ss1
+![alt text](https://github.com/Apollion95/IO/blob/Seba/1.png?raw=true)
 
 ### 3.1 Rejestracja użytkownika
 
@@ -161,7 +161,7 @@ System będzie działał na trzech platformach
   * Krok 4: Osoba otrzymuje informację o pomyślnym utworzeniu konta lub o wystąpieniu błędu.
 * **Przykład:**
 
--- ss2
+![alt text](https://github.com/Apollion95/IO/blob/Seba/2.png?raw=true)
 
 ### 3.2 Logowanie
 
@@ -180,7 +180,7 @@ System będzie działał na trzech platformach
   * Krok 4: Użytkownik/Administrator otrzymuje informację o pomyślnym zalogowaniu lub o błędnych danych.
 * **Przykład:**
 
--- ss3
+![alt text](https://github.com/Apollion95/IO/blob/Seba/3.png?raw=true)
 
 
 ### 3.3 Wylogowanie
