@@ -341,3 +341,213 @@ System będzie działał na trzech platformach
 * **Przykład:**
 
 -- ss11
+
+
+
+### 3.11 Kontakt z administratorem
+
+* **Cel:**
+  Celem tej funkcjonalności jest umożliwienie Użytkownikowi skontaktowanie się z administratorem systemu poprzez wysłanie zgłoszenia.
+* **Wejście:** 
+  Użytkownik wybiera zakładkę „Kontakt”.
+  
+  Użytkownik wybiera klika przycisk „Wyślij zgłoszenie”.
+* **Wyjście:** 
+ Potwierdzenie wysłania zgłoszenia.
+* **Główny scenariusz:**
+  Użytkownik chce skontaktować się z administracją serwisu w celu złożenia zapytania/prośby o usunięcie konta.
+* **Kroki:**
+  * Krok 1: Użytkownik otwiera zakładkę „Kontakt”.
+  * Krok 2: Użytkownik klika przycisk „Wyślij zgłoszenie”.
+  * Krok 3: Użytkownik wypełnia formularz zgłoszeniowy.
+  * Krok 4: Użytkownik klika przycisk „Wyślij”.
+* **Przykład:**
+
+-- ss12
+
+### 3.12 Zbieranie punktów
+
+* **Cel:**
+  Celem tej funkcjonalności jest umożliwienie zbierania punktów użytkownikowi za wydawanie dostępnych środków.
+* **Wejście:** 
+ Użytkownik składa zamówienie.
+* **Wyjście:** 
+  Użytkownik otrzymuje pewną pulę punktów zależną od ilości wydanych środków.
+
+  Użytkownik otrzymuje komunikat o ilości otrzymanych punktów.
+* **Główny scenariusz:**
+  Użytkownik finalizujący zamówienie automatycznie otrzymuje pulę punktów na swoje konto.
+* **Kroki:**
+  * Krok 1: Użytkownik dodaje pozycje do koszyka.
+  * Krok 2: Użytkownik finalizuje zamówienie.
+  * Krok 3: Punkty są automatycznie naliczane na konto użytkownika
+* **Przykład:**
+
+-- ss13
+
+### 3.13 Wydawanie punktów
+
+* **Cel:**
+  Celem tej funkcjonalności jest umożliwienie użytkownikowi wymiany zebranych punktów na rabat bądź jedną książkę z puli dostępnych.
+* **Wejście:** 
+Użytkownik wybiera sposób wykorzystania punktów.
+* **Wyjście:** 
+Użytkownik otrzymuje pewien zasób bądź rabat do zamówienia.
+
+Użytkownik otrzymuje komunikat o ilości wykorzystanych  punktów.
+* **Główny scenariusz:**
+ Użytkownik po zebraniu określonej ilości punktów wyraża chęć ich wykorzystania.
+* **Kroki:**
+  * Krok 1: Użytkownik ma chęć wydania zebranych punktów.
+  * Krok 2: Użytkownik wybiera pozycję którą chce otrzymać / Użytkownik wybiera opcję uzyskania rabatu.
+  * Krok 3: Użytkownik potwierdza operację.
+  * Krok 4: Użytkownik otrzymuje określony zasób. / Użytkownik otrzymuje numer kuponu do wykorzystania.
+* **Przykład:**
+
+-- ss14
+
+
+### 3.14 Dodawanie ebooków do systemu
+
+* **Cel:**
+  Celem tej funkcjonalności jest umożliwienie powiększenia ilości udostępnianych zasobów dostępnych w systemie.
+* **Wejście:** 
+Administrator wypełnia formularz definiujący nową pozycję.
+
+Administrator ładuje odpowiedni plik z udostępnianym zasobem
+* **Wyjście:** 
+Administrator otrzymuje komunikat o pomyślnym dodaniu zasobu lub komunikat o błędzie.
+* **Główny scenariusz:**
+ Administrator otrzymuje zasób do udostępnienia w systemie. Po zalogowaniu do systemu wchodzi w odpowiednią zakładkę. Wypełnia formularz (tytuł/autor/isbn..) oraz dodaje zasób, po czym zatwierdza formularz. 
+* **Kroki:**
+  * Krok 1: Administrator otrzymuje zasób.
+  * Krok 2: Administrator uruchamia odpowiedni formularz.
+  * Krok 3: Administrator wypełnia formularz.
+  * Krok 4: Administrator ładuje zasób.
+  * Krok 5: Administrator zatwierdza zasób.
+* **Przykład:**
+
+-- ss15
+
+### 3.15 Modyfikowanie ebooków z systemu
+
+* **Cel:**
+  Celem tej funkcjonalności jest umożliwienie zmianę zbioru danych które definiują dany zasób(autor, tytuł, ISBN).
+* **Wejście:** 
+Administrator wybiera pozycję do edycji.
+
+Administrator modyfikuje poszczególne dane
+* **Wyjście:** 
+Administrator otrzymuje komunikat o pomyślnej  modyfikacji zasobu lub komunikat o błędzie.
+* **Główny scenariusz:**
+ Administrator otrzymuje informację o zmianie danych identyfikujących dany zasób. Przeszukuje system w poszukiwaniu określonego zasobu oraz w momencie znalezienia modyfikuje określone informacje. 
+* **Kroki:**
+  * Krok 1: Administrator przeszukuje system w poszukiwaniu określonej pozycji.
+  * Krok 2: Administrator modyfikuje określone pola.
+  * Krok 3: Administrator zatwierdza wprowadzone modyfikacje.
+* **Przykład:**
+
+-- ss16
+
+### 3.16 Usuwanie ebooków z systemu
+
+* **Cel:**
+  Celem tej funkcjonalności jest umożliwienie usunięcia poszczególnych zasobów z systemu
+* **Wejście:** 
+Administrator wybiera pozycję do usunięcia.
+
+Administrator potwierdza usunięcie pozycji.
+* **Wyjście:** 
+Administrator otrzymuje komunikat o pomyślnym usunięciu lub komunikat o błędzie.
+* **Główny scenariusz:**
+ Administrator otrzymuje informację o potrzebie usunięcia danego zasobu z systemu. Administrator wyszukuje odpowiedni zasób, wybiera opcję usunięciapo czym ją zatwierdza.określone informacje. 
+* **Kroki:**
+  * Krok 1: Administrator przeszukuje system w poszukiwaniu określonej pozycji.
+  * Krok 2: Administrator wybiera opcję usunięcia.
+  * Krok 3: Administrator zatwierdza usunięcie pozycji.
+* **Przykład:**
+
+-- ss17
+
+
+### 3.17 Przeglądanie ebooków
+
+* **Cel:**
+  Celem tej funkcjonalności jest umożliwienie Użytkownikowi/Administratorowi skorzystanie z zasobu w postaci trybu do czytania.
+* **Wejście:** 
+Użytkownik/Administrator wybiera dany zasób.
+* **Wyjście:** 
+Użytkownik/Administrator otrzymuje dany zasób w postaci do czytania.
+* **Główny scenariusz:**
+Użytkownik/Administrator chce skorzystać z zasobu, w tym celu przechodzi do odpowiedniej zakładki i wybiera interesującą go pozycje.
+* **Kroki:**
+  * Krok 1: Użytkownik/Administrator wybiera odpowiednią zakładkę.
+  * Krok 2: Użytkownik/Administrator wybiera interesującą go pozycje.
+  * Krok 3: Pozycja zostaje otwarta w trybie do czytania.
+* **Przykład:**
+
+-- ss18
+
+
+
+### 3.18 Przeglądanie użytkowników
+
+* **Cel:**
+  Celem tej funkcjonalności jest umożliwienie Administratorowi przeglądanie użytkowników w postaci listy celem późniejszych modyfikacji.
+* **Wejście:** 
+Administrator wybiera odpowiednią zakładkę.
+
+Administrator ewentualnie stosuje filtry w celu zawężenia wyników.
+* **Wyjście:** 
+Kolekcja użytkowników ułożona według poszczególnych filtrów.
+* **Główny scenariusz:**
+Administrator wybiera odpowiednia zakładkę odpowiedzialną za przeszukiwanie bazy użytkowników. Administrator ewentualnie korzysta z filtrów w celu zawężenia wyników. 
+* **Kroki:**
+  * Krok 1: Administrator wybiera odpowiednią zakładkę.
+  * Krok 2: Administrator definiuje poszczególne filtry.
+  * Krok 3: Administrator klika przycisk „Szukaj”.
+* **Przykład:**
+
+-- ss19
+
+
+### 3.19 Usuwanie użytkowników
+
+* **Cel:**
+ Celem tej funkcjonalności jest umożliwienie Administratorowi usunięcie danych użytkownika z systemu.
+* **Wejście:** 
+Administrator wyszukuje danego użytkownika.
+
+Administrator wybiera opcję usunięcia konta.
+* **Wyjście:** 
+Komunikat o pomyślnym usunięciu konta i powiązanych danych lub komunikat o błędzie.
+* **Główny scenariusz:**
+Administrator otrzymuje zgłoszenie od klienta z prośbą o usunięcie konta. Administrator przeszukuje bazę użytkowników. Po znalezieniu określonego użytkownika wybiera opcję usunięcia oraz ją potwierdza.
+* **Kroki:**
+  * Krok 1: Administrator otrzymuje zgłoszenie.
+  * Krok 2: Administrator wyszukuje określonego użytkownika.
+  * Krok 3: Administrator wybiera opcję usunięcia.
+  * Krok 4: Administrator potwierdza wykonywaną operację.
+* **Przykład:**
+
+-- ss20
+
+### 3.20 Przyjmowanie zgłoszeń
+
+* **Cel:**
+Celem tej funkcjonalności jest umożliwienie przyjmowanie zgłoszeń przez Administratora otrzymanych od Użytkowników systemu.
+* **Wejście:** 
+Administrator potwierdza przyjęcie zgłoszenia.
+* **Wyjście:** 
+Administrator zostaje przypisany do zgłoszenia.
+* **Główny scenariusz:**
+Po otrzymaniu zgłoszeń od użytkowników, administrator wybiera dane zgłoszenie i przypisuje się do niego.
+* **Kroki:**
+  * Krok 1: Administrator wchodzi w panel zgłoszeń.
+  * Krok 2: Administrator wybiera określone zgłoszenie.
+  * Krok 3: Administrator potwierdza przypisanie.
+  * Krok 4: Administrator zostajeprzypisany do zgłoszenia.
+* **Przykład:**
+
+-- ss21
+
