@@ -5,10 +5,10 @@
 ### Spis treści
 
 1. Wprowadzenie
-  * Cel dokumnetu
-  * Konwencja dokumnetu 
-  * Zakres dokumentu
-  * Definicje, akronimy oraz skróty użyte w dokumencie 
+   * Cel dokumnetu
+   * Konwencja dokumnetu 
+   * Zakres dokumentu
+   * Definicje, akronimy oraz skróty użyte w dokumencie 
 2. Opis
   2.1. Cel ssytemu
   2.2. Funkcje systemu
