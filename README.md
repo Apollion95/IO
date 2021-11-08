@@ -53,6 +53,48 @@ Dokument ten przedstawia plany, założenia oraz cele które powinien zrealizowa
 
 ### 1.3 Definicje, akronimy oraz skróty używane w dokumencie 
 
-* **Użytkownik**–osoba z dostępem do internetu, korzystająca z systemu Księgarnia Online i posiadająca konto w systemie
+* **Użytkownik** – osoba z dostępem do internetu, korzystająca z systemu Księgarnia Online i posiadająca konto w systemie
+* **Administrator** – osoba z wyższymi uprawnieniami oddelegowana do zarządzania systemem
+* **System/Platforma/Aplikacja** – skrótowa forma reprezentująca Księgarnię Online.
+* **Baza danych** – program służący do gromadzenia i przechowywania danych w aplikacji
+* **API** – metoda odpowiedzialna za komunikację pomiędzy poszczególnymi składowymi aplikacji( Udostępniana przez .NET Core)
+* **Frontend** – część systemu odpowiedzialna za interakcję z użytkownikiem/administratorem
+* **Backend** – część systemu odpowiedzialna za logikę kryjącą się za aplikacją
+
+
+
+## 2. Opis
+----------
+
+### 2.1 Cel systemu Księgarnia Online
+
+Celem systemu jest stworzenie platformy udostępniającej książki w postaci ebooków dla użytkowników. Ma to na celu umożliwienie kupowania książek na stronie tym samym pozwalając na czytanie bez konieczności udania się do księgarni. Strona jest dostępna dla każdego zarejestrowanego użytkownika z dostępem do internetu oraz dowolnej przeglądarki zaktualizowanej do najwyższej możliwej wersji. System za pomocą interfejsu umożliwi klientom szereg funkcji związanych z działalnością księgarni, takich jak utworzenie konta, przeglądanie, wyszukiwanie, kupowanie, czytanie wybranych pozycji. Klient za kupowanie książek otrzymuje punkty które może później  wymienić na uzyskanie rabatu dla wybranej przez siebie pozycji lub otrzymać darmową książkę z dostępnej puli książek. 
+
+
+### 2.2 Funkcje systemu
+
+•Rejestracja nowego użytkownika
+•Logowanie do platformy
+•Wylogowanie z platformy
+•Edycja danych użytkownika/uwierzytelniających 
+•Wyszukiwanie ebooków
+•Dodanie środków do e-portfela
+•Dodanie ebooków do koszyka
+•Usuwanie ebooków z koszyka
+•Kupowanie ebooków
+•Wyświetlenie historii wydanych środków
+•Kontakt z administratorem 
+•Zbieranie punktów
+•Wydawanie punktów
+•Dodawanie ebooków do systemu
+•Modyfikowanie ebooków z systemu
+•Usuwanie ebooków z systemu
+•Przeglądanie ebooków 
+•Przeglądanie użytkowników
+•Usuwanie użytkownika
+•Przyjmowanie zgłoszeń od użytkownika
+
+
+### 2.3 Klasy i cechy użytkowników
 
 
