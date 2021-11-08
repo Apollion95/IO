@@ -5,8 +5,7 @@
 ## Spis treści
 
 1. Wprowadzenie
-   * Cel dokumnetu
-   * Konwencja dokumnetu 
+   * Cel dokumnetu 
    * Zakres dokumentu
    * Definicje, akronimy oraz skróty użyte w dokumencie 
 2. Opis
@@ -39,10 +38,21 @@
 
 
 ## 1. Wprowadzenie 
-
-### 1.1 Cel dokumentu
 ----------------------
 
+### 1.1 Cel dokumentu
+
+
   Celem niniejszego dokumentu jest przedstawienie specyfikacji wymagań oraz wyników fazy analizy na potrzeby projektu Księgarnia Online. Dokument ten służy do przedstawienia poszczególnych celów oraz proponowanych planów rozwoju systemu.
+  
+
+### 1.2 Zakresu dokumentu
+
+Dokument ten przedstawia plany, założenia oraz cele które powinien zrealizować system przedstawione przez klienta w odpowiedniej, zwięzłej oraz przystępnej formie.
+
+
+### 1.3 Definicje, akronimy oraz skróty używane w dokumencie 
+
+* **Użytkownik**–osoba z dostępem do internetu, korzystająca z systemu Księgarnia Online i posiadająca konto w systemie
 
 
