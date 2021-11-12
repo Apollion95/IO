@@ -387,12 +387,25 @@
         -  Użytkownik/Użytkownik premium otrzymuje określoną nagordę.
         
 * **Główny scenariusz**:
-      Użytkownik/Użytkownik premium po zebraniu określonej ilości punktów wyraża chęć ich wykorzystania. Wybiera zakładkę
+      Użytkownik/Użytkownik premium po zebraniu określonej ilości punktów wyraża chęć ich wykorzystania. 
         
 * **Kroki**:
 
-        - Krok 1.1: Użytkownik/Użytkownik premium 
+        - Krok 1: Użytkownik/Użytkownik premium wchodzi w zakładkę "Punkty".
+        
+        - Krok 2.1.1: Użytkownik/Użytkownik premium wybiera opcję uzyskania rabatu.
+        
+        - Krok 2.1.2: Użytkownik/Użytkownik premium wybiera określony rabat oraz go zatwierdza.
+        
+        - Krok 2.1.3: Użytkownik/Użytkownik premium otrzymuje kod, który może wykorzystać w zamówieniu
 
+        /
+        
+        - Krok 2.2.1: Użytkownik/Użytkownik premium wybiera opcję otrzymania określonej pozycji.
+        
+        - Krok 2.2.2: Użytkownik/Użytkownik premium wybiera pozycję z określonej puli.
+        
+        - Krok 2.2.3: Użytkownik/Użytkownik premium zatwierdza swój wybór.
        
 
 * **Przykład**:
@@ -404,20 +417,28 @@
 ### Dodanie pozycji do systemu
 
 * **Cel**: 
-        
+        Celem tej funkcjonalności jest umożliwienie powiększenia ilości udostępnianych zasobów dostępnych w systemie.
      
 * **Wejście**:
-        
+        Administrator zatwierdza odpowiedni formularz.
         
 * **Wyjście**:
-      
+        Administrator otrzymuje komunikat o pomyślnym dodaniu zasobu lub komunikat o błędzie .
         
 * **Główny scenariusz**:
-      
+      Administrator otrzymuje zasób do udostępnienia w systemie. Po zalogowaniu do systemu wchodzi w odpowiednią zakładkę. Wypełnia formularz (tytuł/autor/isbn..) oraz dodaje zasób, po czym zatwierdza formularz. 
         
 * **Kroki**:
 
-        - Krok 1: 
+        - Krok 1: Administrator otrzymuje zasób.
+        
+        - Krok 2: Administrator uruchamia odpowiedni formularz.
+        
+        - Krok 3: Administrator wypełnia formularz.
+        
+        - Krok 4: Administrator ładuje zasób.
+        
+        - Krok 5: Administrator zatwierdza zasób.
 
        
 
@@ -430,20 +451,22 @@
 ### Modyfikowanie pozycji z systemu
 
 * **Cel**: 
-        
+        Celem tej funkcjonalności jest umożliwienie zmianę zbioru danych które definiują dany zasób(autor, tytuł, ISBN).
      
 * **Wejście**:
-        
+        Administrator modyfikuje poszczególne dane.
         
 * **Wyjście**:
-      
+         Administrator otrzymuje komunikat o pomyślnej  modyfikacji zasobu lub komunikat o błędzie.
         
 * **Główny scenariusz**:
-      
+      Administrator otrzymuje informację o zmianie danych identyfikujących dany zasób. Przeszukuje system w poszukiwaniu określonego zasobu oraz w momencie znalezienia modyfikuje określone informacje.
         
 * **Kroki**:
 
-        - Krok 1: 
+        - Krok 1: Administrator przeszukuje system w poszukiwaniu określonej pozycji.'
+        - Krok 2: Administrator modyfikuje określone pola.
+        - Krok 3: Administrator zatwierdza wprowadzone modyfikacje.
 
        
 
@@ -454,3 +477,324 @@
 - - -
 
 
+### Usuwanie pozycji z systemu
+
+* **Cel**: 
+        Celem tej funkcjonalności jest umożliwienie usunięcia poszczególnych zasobów z systemu.
+     
+* **Wejście**:
+        Administrator zatwierdza usunięcie pozycji.
+        
+* **Wyjście**:
+        Administrator otrzymuje komunikat o pomyślnym usunięciu lub komunikat o błędzie.
+        
+* **Główny scenariusz**:
+            Administrator otrzymuje informację o potrzebie usunięcia danego zasobu z systemu. Administrator wyszukuje odpowiedni zasób, wybiera opcję usunięcia po czym ją zatwierdza.
+        
+* **Kroki**:
+
+        - Krok 1: Administrator przeszukuje system w poszukiwaniu określonej pozycji.
+        - Krok 2: Administrator wybiera opcję usunięcia.
+        - Krok 3: Administrator zatwierdza usunięcie pozycji.
+       
+
+* **Przykład**:
+
+----usuwanie_pozycji_z_systemu.png------
+
+- - -
+
+
+### Tryb czytania
+
+* **Cel**: 
+        Celem tej funkcjonalności jest umożliwienie użytkownikowi/użytkownikowi premium/administratorowi skorzystanie z zasobu w postaci trybu do czytania.
+     
+* **Wejście**:
+       Użytkownik/Użytkownik premium/Administrator wybiera dany zasób.
+        
+* **Wyjście**:
+        Użytkownik/Użytkownik premium/Administrator otrzymuje dany zasób w trybie "do czytania".
+        
+* **Główny scenariusz**:
+        Użytkownik/Użytkownik premium/Administrator chce skorzystać z zasobu, w tym celu przechodzi do odpowiedniej zakładki i wybiera interesującą go pozycje.
+        
+* **Kroki**:
+
+        Użytkownik / Użytkownik premium:
+        
+        - Krok 1: Wybiera zakładkę biblioteczka.
+        
+        - Krok 2: Wyszukuje interesującą go pozcyję.
+        
+        - Krok 3: Uruchamia tryb "do czytania".
+
+        Administrator:
+        
+        - Krok 1: Wyszukuje określoną pozycję.
+        
+        - Krok 2: Uruchamia tryb "do czytania".
+
+* **Przykład**:
+
+----tryb_czytania.png------
+
+- - -
+
+
+### Przeglądanie użytkowników
+
+* **Cel**: 
+        Celem tej funkcjonalności jest umożliwienie Administratorowi przeglądanie użytkowników w postaci listy lub w postaci indywidualnej celem późniejszych modyfikacji.
+     
+* **Wejście**:
+        Adminstrator wyszukuje określonego użytkownika / grupę przy pomocy fraz i filtrów.
+        
+* **Wyjście**:
+        Określony użytkownik / Kolekcja użytkowników / Komunikat o nie znalezieniu.
+        
+* **Główny scenariusz**:
+        Administrator wybiera zakładkę przeszukania bazy w celu znalezienia określonego użytkownika lub grupy użytkowników. 
+        
+* **Kroki**:
+
+        - Krok 1: Administrator wybiera zakładkę przeszukania bazy użytkowników
+        
+        - Krok 2: Administrator wpisuje określoną frazę do odnalezienia.
+        
+        - Krok 3: **(opcjonalnie)** Stosuje określone filtry w celu zawężenia wyników.
+        
+       
+
+* **Przykład**:
+
+----przeglądanie_użytkowników.png------
+
+- - -
+
+
+### Usuwanie użytkowników
+
+* **Cel**: 
+        Celem tej funkcjonalności jest umożliwienie Administratorowi usunięcie danych użytkownika z systemu.
+     
+* **Wejście**:
+        Administrator wybiera opcję usunięcia konta.
+        
+* **Wyjście**:
+        Komunikat o pomyślnym usunięciu konta i powiązanych danych lub komunikat o błędzie.
+        
+* **Główny scenariusz**:
+        Administrator otrzymuje zgłoszenie od klienta z prośbą o usunięcie konta. Administrator przeszukuje bazę użytkowników. Po znalezieniu określonego użytkownika wybiera opcję usunięcia .
+        
+* **Kroki**:
+
+        - Krok 1: Administrator otrzymuje zgłoszenie.
+        
+        - Krok 2: Administrator wyszukuje określonego użytkownika.
+        
+        - Krok 3: Administrator wybiera opcję usunięcia.
+        
+        - Krok 4: Administrator potwierdza wykonywaną operację.
+       
+
+* **Przykład**:
+
+----usuwanie_użytkowników.png------
+
+- - -
+
+
+### Przyjmowanie zgłoszeń
+
+* **Cel**: 
+        Celem tej funkcjonalności jest umożliwienie przyjmowanie zgłoszeń przez administratora otrzymanych od użytkowników/użytkowników premium systemu.
+     
+* **Wejście**:
+        Administrator potwierdza przyjęcie zgłoszenia.
+        
+* **Wyjście**:
+        Administrator zostaje przypisany do zgłoszenia.
+        
+* **Główny scenariusz**:
+    Po otrzymaniu zgłoszeń od użytkowników, administrator wybiera dane zgłoszenie i przypisuje się do niego.
+        
+* **Kroki**:
+
+        - Krok 1: Administrator wchodzi w panel zgłoszeń.
+        
+        - Krok 2: Administrator wybiera określone zgłoszenie.
+        
+        - Krok 3: Administrator potwierdza przypisanie
+        
+        - Krok 4: Administrator zostaje przypisany do zgłoszenia
+       
+
+* **Przykład**:
+
+----zgłoszenia.png------
+
+- - -
+
+
+### Biblioteczka
+
+* **Cel**: 
+        Celem tej funkcjonalności jest umożliwnie użytkownikom/użytkownikom premium przeglądniecię pozycji do których uzyskali dostęp oraz za pomocą tej funkcjonalności przejście to trybu "do czytania".
+     
+* **Wejście**:
+        Użytkownik/Użytkownik premium wybiera zakładkę "Biblioteczka".
+        
+* **Wyjście**:
+        Użytkownik/Użytkownik premium otrzymuję kolekcję zasobów do których ma przyznany dostęp.
+        
+* **Główny scenariusz**:
+        Użytkownik/Użytkownik premium chce skorzystać z posiadanych zasobów, w tym celu wybiera odpowiednią zakładkę oraz wyszukuje określoną pozycję.
+        
+* **Kroki**:
+
+        - Krok 1: Użytkownik/Użytkownik premium wybiera zakładkę "Biblioteczka"
+        
+        - Krok 2: Użytkownik/Użytkownik premium otrzymuje kolekcję pozycji do który posiada dostęp.
+        
+        - Krok 3: **(opcjonalnie)** Użytkownik/Użytkownik premium wybiera określoną pozycję której szukał w celu uruchomienia trybu "do czytania".
+       
+
+* **Przykład**:
+
+----biblioteczka.png------
+
+- - -
+
+
+### Zakup subskrypcji
+
+* **Cel**: 
+        - Użytkownik otrzymuje możliwość zakupienia miesięcznej subskrybcji(indywidualnej/grupowej) w celu otrzymania statusu "premium" oraz otrzymując tym samym następujące bonusy: 
+          - Otrzymanie określonej ilości pozycji za darmo(ich pula zmienia się co miesiąc)
+          - Dodatkowe zniżki
+          - Możliwość zakupienia określonych pozycji przedpremierowo 
+          - Dodatkowej ilości przyznawanych punktów za doładowania
+        - Użytkownik premium otrzymuje możliwość przedłużenia już posiadanej subskrypcji.
+        
+     * Subskrypcja indywidualna - dla użytkownika kupującego.
+     * Subskrypcja grupowa - po zakupie pozwala na dodanie innych użytkowników do grupy tym samym użytkownicy dodani otrzymują status "Premium" oraz wszystkie benefity z tym związane.
+
+        
+     
+* **Wejście**:
+        Użytkownik/Użytkownik premium wybiera zakładkę "Premium".
+        
+* **Wyjście**:
+        - Użytkownik otrzymuje status premium lub komunikat o niepowodzeniu.
+        - Użytkownik premium otrzymuje przedłużenie swojej subskrypcji lub komunikat o niepowodzeniu.
+        
+* **Główny scenariusz**:
+        Użytkownik/Użytkownik premium chce skorzystać z funkcji premium/przedłużyć subskrypcję, wybiera odpowiednią zakładkę oraz potwierdza transakcję.
+        
+       
+        
+* **Kroki**:
+
+        - Krok 1:  Użytkownik/Użytkownik premium wybiera zakładkę "premium"
+
+        Użytkownik:
+        
+        - Krok 1.1.1: Wybiera jeden z dostępnych typów subskrypcji.
+        
+        - Krok 1.1.2: Klika przycisk "Kup".
+       
+       - Krok 1.1.3: Zatiwerdza sfinalizowanie transakcji.
+
+        Użytkownik premium:
+        
+        - Krok 1.2.1: Wybiera opcję przedłużenia subskrypcji
+        
+        - Krok 1.2.2: Klika przycisk "Kup".
+       
+       - Krok 1.2.3: Zatiwerdza sfinalizowanie transakcji.
+       
+
+* **Przykład**:
+
+----subskrypcja.png------
+
+- - -
+
+
+### Dodanie użytwkonika do grupy subskrypcji
+
+* **Cel**: 
+        
+     
+* **Wejście**:
+        
+        
+* **Wyjście**:
+        
+        
+* **Główny scenariusz**:
+    .
+        
+* **Kroki**:
+
+        - Krok 1: 
+       
+
+* **Przykład**:
+
+----modyfikowanie_pozycji_z_systemu.png------
+
+- - -
+
+
+### Wypożyczenie pozycji
+
+* **Cel**: 
+        
+     
+* **Wejście**:
+        
+        
+* **Wyjście**:
+        
+        
+* **Główny scenariusz**:
+    .
+        
+* **Kroki**:
+
+        - Krok 1: 
+       
+
+* **Przykład**:
+
+----wypożyczenie.png------
+
+- - -
+
+
+### Modyfikowanie pozycji z systemu
+
+* **Cel**: 
+        
+     
+* **Wejście**:
+        
+        
+* **Wyjście**:
+        
+        
+* **Główny scenariusz**:
+    .
+        
+* **Kroki**:
+
+        - Krok 1: 
+       
+
+* **Przykład**:
+
+----modyfikowanie_pozycji_z_systemu.png------
+
+- - -
