@@ -301,7 +301,9 @@
 * **Kroki**:
 
         - Krok 1: Użytkownik/Użytkownik premium otwiera zakładkę „Historia”.
+        
         - Krok 2: Użytkownik/Użytkownik premium opcjonalnie wybiera określone filtry(łączna cena / data złożenia … )
+        
         - Krok 3: Użytkownik/Użytkownik premium klika „Szukaj”.
 
        
@@ -329,8 +331,11 @@
 * **Kroki**:
 
         - Krok 1: Użytkownik/Użytkownik premium otwiera zakładkę „Kontakt”.
+        
         - Krok 2: Użytkownik/Użytkownik premium klika przycisk „Wyślij zgłoszenie”.
+        
         - Krok 3: Użytkownik/Użytkownik premium wypełnia formularz zgłoszeniowy.
+        
         - Krok 4: Użytkownik/Użytkownik premium klika przycisk „Wyślij”.
 
        
@@ -344,20 +349,22 @@
 ### Zdobywanie punktów
 
 * **Cel**: 
-        
+        Celem tej funkcjonalności jest umożliwienie zbierania punktów użytkownikowi/użytkownikowi premium za wydawanie dostępnych środków oraz za wykonywanie określonych aplikacji w systemie.
      
 * **Wejście**:
-        
+        Użytkowik/Użytkownik premium wykonuję określoną akcję.
         
 * **Wyjście**:
-      
+      - Użytkowik/Użytkownik premium otrzymuję określoną ilość punktów w zależności od wykonanej akcji.
+      - Użytkowik/Użytkownik premium otrzymuje komunikat o ilości otrzymanych punktów.
         
 * **Główny scenariusz**:
-      
+      Użytkowik/Użytkownik premium wykonuje określone akcje np. złożenie zamówienia / wypożyczenie książki. Za sfinalizowanie akcji otrzymuje określoną ilośc punktów na swoje konto.
         
 * **Kroki**:
 
-        - Krok 1: 
+        - Krok 1: Użytkowik/Użytkownik premium wykonuje określoną akcję
+        - Krok 2: Po jej zakończeniu punkty automatycznie są dopisywane do konta w odpowiedniej ilości.
 
        
 
@@ -370,20 +377,21 @@
 ### Wydawanie punktów
 
 * **Cel**: 
-        
+        Celem tej funkcjonalności jest umożliwienie użytkownikowi/użytkownikowi premium wymiany zebranych punktów na określone nagrody(ksiązki / kody rabatowe).
      
 * **Wejście**:
-        
+        Użytkownik/Użytkownik premium wybiera sposób wykorzystania punktów.
         
 * **Wyjście**:
-      
+        - Użytkownik/Użytkownik premium traci pewną ilość punktów.
+        -  Użytkownik/Użytkownik premium otrzymuje określoną nagordę.
         
 * **Główny scenariusz**:
-      
+      Użytkownik/Użytkownik premium po zebraniu określonej ilości punktów wyraża chęć ich wykorzystania. Wybiera zakładkę
         
 * **Kroki**:
 
-        - Krok 1: 
+        - Krok 1.1: Użytkownik/Użytkownik premium 
 
        
 
