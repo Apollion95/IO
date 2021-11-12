@@ -675,6 +675,7 @@
 ### Zakup subskrypcji
 
 * **Cel**: 
+        - Użytkownik premium otrzymuje możliwość przedłużenia już posiadanej subskrypcji.
         - Użytkownik otrzymuje możliwość zakupienia miesięcznej subskrybcji(indywidualnej/grupowej) w celu otrzymania statusu "premium" oraz otrzymując tym samym następujące bonusy: 
         
           - Otrzymanie określonej ilości pozycji za darmo(ich pula zmienia się co miesiąc)
@@ -685,7 +686,7 @@
           
           - Dodatkowej ilości przyznawanych punktów za doładowania
           
-     - Użytkownik premium otrzymuje możliwość przedłużenia już posiadanej subskrypcji.
+     
         
      * Subskrypcja indywidualna - dla użytkownika kupującego.
      * Subskrypcja grupowa - po zakupie pozwala na dodanie innych użytkowników do grupy tym samym użytkownicy dodani otrzymują status "Premium" oraz wszystkie benefity z tym związane.
@@ -735,25 +736,31 @@
 ### Dodanie użytwkonika do grupy subskrypcji
 
 * **Cel**: 
-        
+        Celem tej funkcjonalności jest umożliwnie użytkownikowi premiumu z subskrypcją grupową na dodanie innych użytkowników do swojej grupy. 
      
 * **Wejście**:
-        
+        Użytkownik podaje e-mail innego użytkownika.
         
 * **Wyjście**:
-        
+        Użytkownik o podanym adresie e-mail zostaje dodany do grupy / Wystąpienie komunikatu o błędzie
         
 * **Główny scenariusz**:
-    .
+        Użytkownik premium wykupił subskrypcję grupową i chce ją wykorzystać, w tym celu wchodzi w zakładkę premium w celu podania adresu e-mail innego użytkownika.
         
 * **Kroki**:
 
-        - Krok 1: 
+        - Krok 1: Użytkownik premium wybiera zakładkę "Premium".
+        
+        - Krok 2: Użytkownik premium wybiera opcję dodaj do grupy.
+        
+        - Krok 3: Użytkownik premium podaje adres e-mail innego uzytkownika.
+        
+        - Krok 4: Użytkownik premium zatwierdza wykonanie operacji.
        
 
 * **Przykład**:
 
-----modyfikowanie_pozycji_z_systemu.png------
+----dodanie_do_grupy.png------
 
 - - -
 
@@ -761,20 +768,28 @@
 ### Wypożyczenie pozycji
 
 * **Cel**: 
-        
+        Celem tej funkcjonalności jest umożliwienie użytkownikowi/użytkownikowi premium wypożyczenie danej pozycji za mniejszą kwotę lub za punkty  w zamian za udostępnienie danej pozycji na określony przedział czasu.
      
 * **Wejście**:
-        
+        Użytkowni/Użytkownik premium wybiera opcję wypożyczenia.
         
 * **Wyjście**:
-        
+        Użytkownik/Użytkownik premium otrzymuje dany zasób na określony czas.
         
 * **Główny scenariusz**:
-    .
+        Użytkownik/Użytkownik premium chce skorzystać z tańszej alternatywy otrzymania danego zasobu. Po wypożyczeniu pozycji otrzymuje do niej pełny dostęp na określony przediał czasu.
         
 * **Kroki**:
 
-        - Krok 1: 
+        - Krok 1: Użytkownik/Użytkownik premium wyszukuje interesującą go pozcycje.
+       
+       - Krok 2: Użytkownik/Użytkownik premium wybiera opcję "Wypożycz".
+       
+       - Krok 3: Użytkownik/Użytkownik premium wybiera opcję wypożyczenia za punkty/z dostępnych środków
+        
+        - Krok 4: Użytkownik/Użytkownik premium zatwierdza swój wybór.
+       
+       - Krok 5: Użytkownik/Użytkownik premium otrzymuje dany zasób na  określony czas.
        
 
 * **Przykład**:
@@ -784,27 +799,3 @@
 - - -
 
 
-### Modyfikowanie pozycji z systemu
-
-* **Cel**: 
-        
-     
-* **Wejście**:
-        
-        
-* **Wyjście**:
-        
-        
-* **Główny scenariusz**:
-    .
-        
-* **Kroki**:
-
-        - Krok 1: 
-       
-
-* **Przykład**:
-
-----modyfikowanie_pozycji_z_systemu.png------
-
-- - -
