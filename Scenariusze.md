@@ -2,6 +2,7 @@
 
 ----przypadki.png------
 
+- - - 
 
 ### Rejestracja użytkownika
 
@@ -32,7 +33,7 @@
 
 ----rejestracja.png------
 
-
+- - - 
 
 ### Logowanie
 
@@ -64,7 +65,7 @@
 
 ----logowanie.png------
 
-
+- - - 
 
 ### Wylogowanie
 
@@ -82,22 +83,42 @@
         
 * **Kroki**:
 
-        - Krok 1: Użytkownikowi/Użytkownikowi premium/Administratorowi wyświetla się ekran z możliwością zarejestrowania lub zalogowania.
+        - Krok 1: Użytkownik/Użytkownik premium/Administrator klika przycisk wyloguj.
 
-        - Krok 2: Użytkownik/Użytkownik premium/Administrator wybiera opcję logowania.
-
-        - Krok 3: Użytkownik/Użytkownik premium/Administrator wypełnia wymagane dane w formularzu.
-
-        - Krok 4: Użytkownik/Użytkownik premium/Administrator otrzymuje informację o pomyślnym zalogowaniu lub o błędnych danych.
-
-        
+        - Krok 2: Zamykana jest sesja określonego użytkownika/użytkownika premium/administratora.
+       
 
 * **Przykład**:
 
 ----wylogowanie.png------
 
+- - -
 
+### Edycja danych profilu
 
+* **Cel**: 
+        
+     
+* **Wejście**:
+        
+        
+* **Wyjście**:
+       
+        
+* **Główny scenariusz**:
+       
+        
+* **Kroki**:
+
+        - Krok 1: 
+
+       
+
+* **Przykład**:
+
+----edycja_danych.png------
+
+- - -
 
 
 
