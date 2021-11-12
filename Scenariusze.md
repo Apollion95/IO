@@ -676,11 +676,16 @@
 
 * **Cel**: 
         - Użytkownik otrzymuje możliwość zakupienia miesięcznej subskrybcji(indywidualnej/grupowej) w celu otrzymania statusu "premium" oraz otrzymując tym samym następujące bonusy: 
+        
           - Otrzymanie określonej ilości pozycji za darmo(ich pula zmienia się co miesiąc)
+          
           - Dodatkowe zniżki
+          
           - Możliwość zakupienia określonych pozycji przedpremierowo 
+          
           - Dodatkowej ilości przyznawanych punktów za doładowania
-        - Użytkownik premium otrzymuje możliwość przedłużenia już posiadanej subskrypcji.
+          
+     - Użytkownik premium otrzymuje możliwość przedłużenia już posiadanej subskrypcji.
         
      * Subskrypcja indywidualna - dla użytkownika kupującego.
      * Subskrypcja grupowa - po zakupie pozwala na dodanie innych użytkowników do grupy tym samym użytkownicy dodani otrzymują status "Premium" oraz wszystkie benefity z tym związane.
