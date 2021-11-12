@@ -364,6 +364,7 @@
 * **Kroki**:
 
         - Krok 1: Użytkowik/Użytkownik premium wykonuje określoną akcję
+        
         - Krok 2: Po jej zakończeniu punkty automatycznie są dopisywane do konta w odpowiedniej ilości.
 
        
@@ -464,8 +465,10 @@
         
 * **Kroki**:
 
-        - Krok 1: Administrator przeszukuje system w poszukiwaniu określonej pozycji.'
+        - Krok 1: Administrator przeszukuje system w poszukiwaniu określonej pozycji.
+        
         - Krok 2: Administrator modyfikuje określone pola.
+        
         - Krok 3: Administrator zatwierdza wprowadzone modyfikacje.
 
        
@@ -494,7 +497,9 @@
 * **Kroki**:
 
         - Krok 1: Administrator przeszukuje system w poszukiwaniu określonej pozycji.
+        
         - Krok 2: Administrator wybiera opcję usunięcia.
+        
         - Krok 3: Administrator zatwierdza usunięcie pozycji.
        
 
