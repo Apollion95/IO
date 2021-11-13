@@ -1,0 +1,150 @@
+
+
+-- ************************************** `author`
+
+CREATE TABLE `author`
+(
+ `author_id` varchar(45) NOT NULL ,
+ `name`      varchar(45) NOT NULL ,
+ `lastname`  varchar(45) NOT NULL ,
+
+PRIMARY KEY (`author_id`)
+);
+
+
+
+-- ************************************** `city`
+
+CREATE TABLE `city`
+(
+ `city`        varchar(45) NOT NULL ,
+ `postal_code` varchar(10) NOT NULL ,
+
+PRIMARY KEY (`postal_code`)
+);
+
+
+
+-- ************************************** `library`
+
+CREATE TABLE `library`
+(
+ `user_id`    int NOT NULL ,
+ `book_id`    int NOT NULL ,
+ `library_id` int NOT NULL ,
+
+PRIMARY KEY (`library_id`),
+KEY `fkIdx_84` (`user_id`),
+CONSTRAINT `FK_82` FOREIGN KEY `fkIdx_84` (`user_id`) REFERENCES `user` (`user_id`),
+KEY `fkIdx_90` (`book_id`),
+CONSTRAINT `FK_88` FOREIGN KEY `fkIdx_90` (`book_id`) REFERENCES `store` (`book_id`)
+);
+
+
+
+
+-- ************************************** `publisher`
+
+CREATE TABLE `publisher`
+(
+ `publisher_id` varchar(45) NOT NULL ,
+ `name`         varchar(45) NOT NULL ,
+
+PRIMARY KEY (`publisher_id`)
+);
+
+
+
+
+
+-- ************************************** `review`
+
+CREATE TABLE `review`
+(
+ `review`    varchar(200) NOT NULL ,
+ `rating`    int NOT NULL ,
+ `book_id`   int NOT NULL ,
+ `user_id`   int NOT NULL ,
+ `review_id` int NOT NULL ,
+
+PRIMARY KEY (`review_id`),
+KEY `fkIdx_60` (`book_id`),
+CONSTRAINT `FK_58` FOREIGN KEY `fkIdx_60` (`book_id`) REFERENCES `store` (`book_id`),
+KEY `fkIdx_63` (`user_id`),
+CONSTRAINT `FK_61` FOREIGN KEY `fkIdx_63` (`user_id`) REFERENCES `user` (`user_id`)
+);
+
+
+
+-- ************************************** `store`
+
+CREATE TABLE `store`
+(
+ `name`         varchar(45) NOT NULL ,
+ `release_date` date NOT NULL ,
+ `author_id`    varchar(45) NOT NULL ,
+ `publisher_id` varchar(45) NOT NULL ,
+ `book_id`      int NOT NULL ,
+
+PRIMARY KEY (`book_id`),
+KEY `fkIdx_108` (`author_id`),
+CONSTRAINT `FK_106` FOREIGN KEY `fkIdx_108` (`author_id`) REFERENCES `author` (`author_id`),
+KEY `fkIdx_115` (`publisher_id`),
+CONSTRAINT `FK_113` FOREIGN KEY `fkIdx_115` (`publisher_id`) REFERENCES `publisher` (`publisher_id`)
+);
+
+-- ************************************** `subscriber`
+
+CREATE TABLE `subscriber`
+(
+ `sub_start` datetime NOT NULL ,
+ `user_id`   int NOT NULL ,
+ `sub_end`   datetime NOT NULL ,
+ `active`    bit NOT NULL ,
+ `sub_id`    int NOT NULL ,
+
+PRIMARY KEY (`sub_id`),
+KEY `fkIdx_38` (`user_id`),
+CONSTRAINT `FK_36` FOREIGN KEY `fkIdx_38` (`user_id`) REFERENCES `user` (`user_id`)
+);
+
+
+-- ************************************** `transactions`
+
+CREATE TABLE `transactions`
+(
+ `date`     datetime NOT NULL ,
+ `user_id`  int NOT NULL ,
+ `book_id`  int NOT NULL ,
+ `trans_id`  NOT NULL ,
+
+PRIMARY KEY (`trans_id`),
+KEY `fkIdx_100` (`book_id`),
+CONSTRAINT `FK_98` FOREIGN KEY `fkIdx_100` (`book_id`) REFERENCES `store` (`book_id`),
+KEY `fkIdx_97` (`user_id`),
+CONSTRAINT `FK_95` FOREIGN KEY `fkIdx_97` (`user_id`) REFERENCES `user` (`user_id`)
+);
+
+
+
+-- ************************************** `user`
+
+CREATE TABLE `user`
+(
+ `user_id`     int NOT NULL ,
+ `name`        varchar(45) NOT NULL ,
+ `postal_code` varchar(10) NOT NULL ,
+ `lastname`    varchar(45) NOT NULL ,
+ `username`    varchar(45) NOT NULL ,
+ `email`       varchar(45) NOT NULL ,
+ `address`     varchar(45) NULL ,
+ `password`    varchar(45) NOT NULL ,
+
+PRIMARY KEY (`user_id`),
+KEY `fkIdx_25` (`postal_code`),
+CONSTRAINT `FK_23` FOREIGN KEY `fkIdx_25` (`postal_code`) REFERENCES `city` (`postal_code`)
+);
+
+
+
+
