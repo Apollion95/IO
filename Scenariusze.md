@@ -14,7 +14,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 |Usuwanie pozycji z koszyka | + | - |
 |Złożenie zamówienia | + | - | 
 |Historia zamówień | + | - |
-|Kontakt z administratorem | + | + |
+|Kontakt z administratorem | + | - |
 |Zbieranie punktów | + | - |
 |Wydawanie punktów | + | - |
 |Dodawanie pozycji do systemu | - | + | 
