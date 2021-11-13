@@ -1,6 +1,32 @@
 ## **Funkcje systemu** (przypadki użycia)
 
-----przypadki.png------
+W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik. Poniższa tabela przedstawia funkcjonalności poszczególnych ról.
+
+|Funkcjonalność | Użytkownik | Administrator|
+|:-------------:|:----------:|:------------:|
+|Rejestracja użytkownika | + | - |
+|Logowanie | + | + |
+|Wylogowanie  | + | + |
+|Edycja danych profilu | + | + |
+|Wyszukiwanie pozycji | + | + |
+|Dodanie recenzji | + | - | 
+|Dodanie pozycji do koszyka | + | - |
+|Usuwanie pozycji z koszyka | + | - |
+|Złożenie zamówienia | + | - | 
+|Historia zamówień | + | - |
+|Kontakt z administratorem | + | + |
+|Zbieranie punktów | + | - |
+|Wydawanie punktów | + | - |
+|Dodawanie pozycji do systemu | - | + | 
+|Modyfikowanie pozycji z systemu | - | + |
+|Usuwanie pozycji z sytemu | - | + |
+|Tryb czytania | + | + |
+|Przeglądanie użytkowników | - | + | 
+|Usuwanie użytkownika | - | + |
+|Przyjmowanie zgłoszeń | - | + |
+|Biblioteczka | + | - |
+|Zakup subskrypcji | + | - |
+|Wypożyczenie pozycji | + | - |
 
 - - - 
 
@@ -38,26 +64,26 @@
 ### Logowanie
 
 * **Cel**: 
-       Celem tej funkcjonalności jest umożliwienie użytkownikowi/użytkownikowi premium/administratorowi  uzyskania dostępu do systemu.
+       Celem tej funkcjonalności jest umożliwienie użytkownikowi/administratorowi  uzyskania dostępu do systemu.
         
 * **Wejście**:
-        Użytkownik/Użytkownik premium/Administrator wprowadza dane logowania.
+        Użytkownik/Administrator wprowadza dane logowania.
         
 * **Wyjście**:
-       Użytkownik/Użytkownik premium/Administrator otrzymuje informację o poprawnym zalogowaniu oraz dostęp do systemu lub komunikat o wprowadzeniu nieodpowiednich danych.
+       Użytkownik/Administrator otrzymuje informację o poprawnym zalogowaniu oraz dostęp do systemu lub komunikat o wprowadzeniu nieodpowiednich danych.
         
 * **Główny scenariusz**:
-       Użytkownik/Użytkownik premium/Administrator chce uzyskać dostęp do swojego konta oraz systemu i jego funkcji, w tym celu musi się zalogować korzystając ze swojego konta.
+       Użytkownik/Administrator chce uzyskać dostęp do swojego konta oraz systemu i jego funkcji, w tym celu musi się zalogować korzystając ze swojego konta.
         
 * **Kroki**:
 
-        - Krok 1: Użytkownikowi/Użytkownikowi premium/Administratorowi wyświetla się ekran z możliwością zarejestrowania lub zalogowania.
+        - Krok 1: Użytkownikowi/Administratorowi wyświetla się ekran z możliwością zarejestrowania lub zalogowania.
 
-        - Krok 2: Użytkownik/Użytkownik premium/Administrator wybiera opcję logowania.
+        - Krok 2: Użytkownik/Administrator wybiera opcję logowania.
 
-        - Krok 3: Użytkownik/Użytkownik premium/Administrator wypełnia wymagane dane w formularzu.
+        - Krok 3: Użytkownik/Administrator wypełnia wymagane dane w formularzu.
 
-        - Krok 4: Użytkownik/Użytkownik premium/Administrator otrzymuje informację o pomyślnym zalogowaniu lub o błędnych danych.
+        - Krok 4: Użytkownik/Administrator otrzymuje informację o pomyślnym zalogowaniu lub o błędnych danych.
 
         
 
@@ -73,17 +99,17 @@
         Celem tej funkcjonalności jest umożliwienie użytkownikowi/administratorowi  wylogowanie się z systemu tym samym zakończenie sesji korzystania z sytemu.
      
 * **Wejście**:
-        Użytkownik/Użytkownik premium/Administrator  klika przycisk „Wyloguj”.
+        Użytkownik/Administrator klika przycisk „Wyloguj”.
         
 * **Wyjście**:
-       Użytkownik/Użytkownik premium/Administrator otrzymuje informację o poprawnym wylogowaniu oraz zostaje przeniesiony na stronę główna.
+       Użytkownik/Administrator otrzymuje informację o poprawnym wylogowaniu oraz zostaje przeniesiony na stronę główna.
         
 * **Główny scenariusz**:
-       Użytkownik/Użytkownik premium/Administrator chce zakończyć korzystanie z systemu tym samym zabezpieczyć swoje konto przed nieautoryzowanym dostępem.
+       Użytkownik/Administrator chce zakończyć korzystanie z systemu tym samym zabezpieczyć swoje konto przed nieautoryzowanym dostępem.
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik premium/Administrator klika przycisk wyloguj.
+        - Krok 1: Użytkownik/Administrator klika przycisk wyloguj.
 
         - Krok 2: Zamykana jest sesja określonego użytkownika/użytkownika premium/administratora.
        
@@ -97,26 +123,26 @@
 ### Edycja danych profilu
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwienie użytkownikowi/użytkownikowi premium/administratorowi edycję danych przypisanych do konta.
+        Celem tej funkcjonalności jest umożliwienie użytkownikowi/administratorowi edycję danych przypisanych do konta.
      
 * **Wejście**:
-        Użytkownik/Użytkownik premium/Administrator edytuje wybrane dane. 
+        Użytkownik/Administrator edytuje wybrane dane. 
         
 * **Wyjście**:
        Komunikat o poprawnym zapisaniu nowych danych lub komunikat o błędzie.
         
 * **Główny scenariusz**:
-       Użytkownik/Użytkownik premium/Administrator chce zaktualizować/edytować dane dotyczące swojego konta, w celu bezpieczeństwa/spójności lub poprawności danych.
+       Użytkownik/Administrator chce zaktualizować/edytować dane dotyczące swojego konta, w celu bezpieczeństwa/spójności lub poprawności danych.
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik premium/Administrator przechodzi do zakładki „Ustawienia konta”.
+        - Krok 1: Użytkownik/Administrator przechodzi do zakładki „Ustawienia konta”.
         
-        - Krok 2: Użytkownik/Użytkownik premium/Administrator klika przycisk „Edytuj dane”.
+        - Krok 2: Użytkownik/Administrator klika przycisk „Edytuj dane”.
         
-        - Krok 3: Użytkownik/Użytkownik premium/Administrator wypełnia poszczególne dane.
+        - Krok 3: Użytkownik/Administrator wypełnia poszczególne dane.
         
-        - Krok 4: Użytkownik/Użytkownik premium/Administrator klika przycisk „Zapisz”.
+        - Krok 4: Użytkownik/Administrator klika przycisk „Zapisz”.
 
        
 
@@ -134,21 +160,21 @@
         Celem tej funkcjonalności jest umożliwienie Użytkownikowi/Administratorowi znalezienie wybranej pozycji w systemie lub określonej grupy na podstawie frazy oraz filtrów.
      
 * **Wejście**:
-        Użytkownik/Użytkownik premium/Administrator wprowadza frazę do wyszukania (autor / tytuł / ISBN).
+        Użytkownik/Administrator wprowadza frazę do wyszukania (autor / tytuł / ISBN).
         
 * **Wyjście**:
        Wyświetlenie danej pozycji, kolekcji lub otrzymanie komunikatu o braku.
         
 * **Główny scenariusz**:
-       Użytkownik/Użytkownik premium/Administrator chce przeszukać księgarnie aby  znaleźć odpowiednią pozycję lub grupę pozycji w celu dalszej interakcji .
+       Użytkownik/Administrator chce przeszukać księgarnie aby  znaleźć odpowiednią pozycję lub grupę pozycji w celu dalszej interakcji .
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik premium/Administrator wypełnia główne pole wpisując odpowiednią frazę.
+        - Krok 1: Użytkownik/Administrator wypełnia główne pole wpisując odpowiednią frazę.
         
-        - Krok 2: **(Opcjonalnie)** Użytkownik/Użytkownik premium/Administrator zawęża wyniki przy pomocy filtrów.
+        - Krok 2: **(Opcjonalnie)** Użytkownik/Administrator zawęża wyniki przy pomocy filtrów.
         
-        - Krok 3: Użytkownik/Użytkownik premium/Administrator klika przycisk „Szukaj”.
+        - Krok 3: Użytkownik/Administrator klika przycisk „Szukaj”.
 
        
 
@@ -158,37 +184,37 @@
 
 - - -
 
-### Dodanie środków do e-portfela 
+### Dodanie recenzji 
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwienie użytkownikowi / użytkownikowi premium dodanie środków do portfela w celu wykorzystania ich na usługi dostępne w systemie.
+        Celem tej funkcjonalności jest umożliwienie użytkownikowi dodanie recenzji do pozycji które przeczytał wraz z opsiem oraz oceną. Ocena będzie stanowić pewne kryterium dla innych użytkowników
      
 * **Wejście**:
-        Użytkownik/Użytkownik premium wybiera opcję doładowania konta.
+        Użytkownik wybiera opcję dodania recenzji.
         
 * **Wyjście**:
-       Wyświetlenie komunikatu o dodaniu środków lub o wystąpieniu błędu.
+       Wyświetlenie komunikatu o dodaniu recenzji.
         
 * **Główny scenariusz**:
-       Użytkownik/Użytkownik premium chce skorzystać z funkcji płatnych jakie oferuje system, tym samym doładowuje środki do swojego portfela za pomocą odpowiedniej kwoty oraz          formy doładowania.
+       Użytkownik po przeczytaniu książki chce ją ocenić wystawiając jej określoną ocene wraz z opisem. 
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik wchodzi w zakładkę e-portfel.
+        - Krok 1: Użytkownik wyszukuje przeczytaną książkę.
         
-        - Krok 2: Użytkownik/Użytkownik wybiera opcję doładowania.
+        - Krok 2: Użytkownik wybiera opcję "Oceń".
         
-        - Krok 3: Użytkownik/Użytkownik wybiera formę doładowania.
+        - Krok 3: Użytkownik wprowadza ocene (1-5).
         
-        - Krok 4: Użytkownik/Użytkownik określa kwotę doładowania.
+        - Krok 4: Użytkownik dodaje opis.
         
-        - Krok 5: Użytkownik/Użytkownik potwierdza transakcję.
+        - Krok 5: Użytkownik zatwierdza dodanie recenzji
 
        
 
 * **Przykład**:
 
-----dodanie_środków.png------
+----recenzja.png------
 
 - - -
 
@@ -196,22 +222,22 @@
 ### Dodanie pozycji do koszyka
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwienie użytkownikowi/użytkownikowi premium dodania wielu pozycji do koszyka w celu wykonania jednego zamówienia wraz z wszystkimi wybranymi pozycjami zamiast wykonywania pojedynczych transakcji.
+        Celem tej funkcjonalności jest umożliwienie użytkownikowi dodania wielu pozycji do koszyka w celu wykonania jednego zamówienia wraz z wszystkimi wybranymi pozycjami zamiast wykonywania pojedynczych transakcji.
      
 * **Wejście**:
-        Użytkownik/Użytkownik premium dodaje pozycje do koszyka.
+        Użytkownik dodaje pozycje do koszyka.
         
 * **Wyjście**:
        Wyświetlenie komunikatu o dodaniu pozycji do koszyka.
         
 * **Główny scenariusz**:
-      Użytkownik/Użytkownik premium chce wykonać większe zamówienie, tym samym przeszukuje księgarnie w celu znalezienia interesujących go pozycji. Po znalezieniu danej pozycji  klika przycisk „Dodaj do koszyka”.
+      Użytkownik chce wykonać większe zamówienie, tym samym przeszukuje księgarnie w celu znalezienia interesujących go pozycji. Po znalezieniu danej pozycji  klika przycisk „Dodaj do koszyka”.
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik premium wyszukuje określoną pozycję.
+        - Krok 1: Użytkownik wyszukuje określoną pozycję.
 
-        - Krok 2: Użytkownik/Użytkownik premium dodaje znalezioną pozycję do koszyka za pomocą przycisku.
+        - Krok 2: Użytkownik dodaje znalezioną pozycję do koszyka za pomocą przycisku.
 
        
 
@@ -227,19 +253,19 @@
         Celem tej funkcjonalności jest umożliwienie usunięcia poszczególnych pozycji z koszyka.
      
 * **Wejście**:
-        Użytkownik/Użytkownik premium klika przycisk „Usuń”.
+        Użytkownik klika przycisk „Usuń”.
         
 * **Wyjście**:
        Wyświetlenie komunikatu o usunięciu pozycji z koszyka.
         
 * **Główny scenariusz**:
-      Użytkownik/Użytkownik premium chce usunąć daną pozycję z koszyka, w tym celu wchodzi w zakładkę koszyk reprezentującą zamówienie. Następnie klika przycisk „Usuń” przy wybranej pozycji.
+      Użytkownik chce usunąć daną pozycję z koszyka, w tym celu wchodzi w zakładkę koszyk reprezentującą zamówienie. Następnie klika przycisk „Usuń” przy wybranej pozycji.
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik otwiera zakładkę „Koszyk”.
+        - Krok 1: Użytkownik otwiera zakładkę „Koszyk”.
         
-        - Krok 2: Użytkownik/Użytkownik przycisk „Usuń” przy wybranej pozycji.
+        - Krok 2: Użytkownik przycisk „Usuń” przy wybranej pozycji.
 
        
 
@@ -253,10 +279,10 @@
 ### Złożenie zamówienia 
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwienie uzytkownikowi/użytkownikowi premium złożenie oraz opłacenie zamówienia.
+        Celem tej funkcjonalności jest umożliwienie uzytkownikowi złożenie oraz opłacenie zamówienia.
      
 * **Wejście**:
-        Użytkownikowi/Użytkownikowi premium potiwerdza zamówienie
+        Użytkownikowi potiwerdza zamówienie
         
 * **Wyjście**:
       - Wyświetlenie komunikatu o przyjęciu zamówienia lub o błędzie.     
@@ -264,19 +290,22 @@
 
         
 * **Główny scenariusz**:
-      Użytkownik/Użytkownik premium chce sfinalizować zamówienie w tym  celu wchodzi w zakładkę „Koszyk” klika przycisk „Złóż zamówienie”. Następnie sprawdza formularz po czym zatwierdza zamówienie poprzez przycisk „Zatwierdź”.
+      Użytkownik chce sfinalizować zamówienie w tym  celu wchodzi w zakładkę „Koszyk” klika przycisk „Złóż zamówienie”. Następnie sprawdza formularz po czym zatwierdza zamówienie poprzez przycisk „Zatwierdź”. Automatycznie przechodzi do zakładki płatność gdzie wybiera opcje płatności oraz finalizuje transakcje.
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik premium otwiera zakładkę "Koszyk"
+        - Krok 1: Użytkownik otwiera zakładkę "Koszyk"
         
-        - Krok 2: Użytkownik/Użytkownik premium klika przycisk „Złóż zamówienie”.
+        - Krok 2: Użytkownik klika przycisk „Złóż zamówienie”.
         
-        - Krok 3: Użytkownik/Użytkownik premium sprawdza poprawność danych pozycji w formularzu.
+        - Krok 3: Użytkownik sprawdza poprawność danych pozycji w formularzu.
         
-        - Krok 4: Użytkownik/Użytkownik premium potwierdza zamówienie.
+        - Krok 4: Użytkownik potwierdza zamówienie.
+        
+        - Krok 5: Użytkownik wybiera metodę płatności.
+        
+        - Krok 6: Użytkownik finalizuje transkacje.
 
-       
 
 * **Przykład**:
 
@@ -287,24 +316,24 @@
 ### Historia zamówień
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwienie użytkownikowi/użytkownikowi premium otrzymanie informacji na temat złożonych zamówień.
+        Celem tej funkcjonalności jest umożliwienie użytkownikowi otrzymanie informacji na temat złożonych zamówień.
      
 * **Wejście**:
-        Użytkownik/Użytkownik premium wybiera zakładkę „Historia”.
+        Użytkownik wybiera zakładkę „Historia”.
         
 * **Wyjście**:
         Wyświetlenie historii zamówień.
         
 * **Główny scenariusz**:
-      Użytkownik/Użytkownik premium chce sprawdzić złożone przez siebie zamówienia, przechodzi w zakładkę odpowiedzialną za historię, otrzymuje zestawienie wykonanych zamówień.
+      Użytkownik chce sprawdzić złożone przez siebie zamówienia, przechodzi w zakładkę odpowiedzialną za historię, otrzymuje zestawienie wykonanych zamówień.
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik premium otwiera zakładkę „Historia”.
+        - Krok 1: Użytkownik otwiera zakładkę „Historia”.
         
-        - Krok 2: Użytkownik/Użytkownik premium opcjonalnie wybiera określone filtry(łączna cena / data złożenia … )
+        - Krok 2: Użytkownik opcjonalnie wybiera określone filtry(łączna cena / data złożenia … )
         
-        - Krok 3: Użytkownik/Użytkownik premium klika „Szukaj”.
+        - Krok 3: Użytkownik klika „Szukaj”.
 
        
 
@@ -317,26 +346,26 @@
 ### Kontakt z administracją
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwienie użytkownikowi/użytkownikowi premium skontaktowanie się z administratorem systemu poprzez wysłanie zgłoszenia.
+        Celem tej funkcjonalności jest umożliwienie użytkownikowi skontaktowanie się z administratorem systemu poprzez wysłanie zgłoszenia.
      
 * **Wejście**:
-        Użytkownik/Użytkownik premium wysyła zgłoszenie
+        Użytkownik wysyła zgłoszenie
         
 * **Wyjście**:
         Potwierdzenie wysłania zgłoszenia.
         
 * **Główny scenariusz**:
-         Użytkownik/Użytkownik premium chce skontaktować się z administracją serwisu np. w celu złożenia zapytania/prośby o usunięcie konta. 
+         Użytkownik chce skontaktować się z administracją serwisu np. w celu złożenia zapytania/prośby o usunięcie konta. 
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik premium otwiera zakładkę „Kontakt”.
+        - Krok 1: Użytkownik otwiera zakładkę „Kontakt”.
         
-        - Krok 2: Użytkownik/Użytkownik premium klika przycisk „Wyślij zgłoszenie”.
+        - Krok 2: Użytkownik klika przycisk „Wyślij zgłoszenie”.
         
-        - Krok 3: Użytkownik/Użytkownik premium wypełnia formularz zgłoszeniowy.
+        - Krok 3: Użytkownik wypełnia formularz zgłoszeniowy.
         
-        - Krok 4: Użytkownik/Użytkownik premium klika przycisk „Wyślij”.
+        - Krok 4: Użytkownik klika przycisk „Wyślij”.
 
        
 
@@ -349,21 +378,21 @@
 ### Zdobywanie punktów
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwienie zbierania punktów użytkownikowi/użytkownikowi premium za wydawanie dostępnych środków oraz za wykonywanie określonych aplikacji w systemie.
+        Celem tej funkcjonalności jest umożliwienie zbierania punktów użytkownikowi za wydawanie dostępnych środków oraz za wykonywanie określonych aplikacji w systemie.
      
 * **Wejście**:
-        Użytkowik/Użytkownik premium wykonuję określoną akcję.
+        Użytkowik wykonuję określoną akcję.
         
 * **Wyjście**:
-      - Użytkowik/Użytkownik premium otrzymuję określoną ilość punktów w zależności od wykonanej akcji.
-      - Użytkowik/Użytkownik premium otrzymuje komunikat o ilości otrzymanych punktów.
+      - Użytkowik otrzymuję określoną ilość punktów w zależności od wykonanej akcji.
+      - Użytkowik premium otrzymuje komunikat o ilości otrzymanych punktów.
         
 * **Główny scenariusz**:
-      Użytkowik/Użytkownik premium wykonuje określone akcje np. złożenie zamówienia / wypożyczenie książki. Za sfinalizowanie akcji otrzymuje określoną ilośc punktów na swoje konto.
+      Użytkowik wykonuje określone akcje np. złożenie zamówienia / wypożyczenie książki. Za sfinalizowanie akcji otrzymuje określoną ilośc punktów na swoje konto.
         
 * **Kroki**:
 
-        - Krok 1: Użytkowik/Użytkownik premium wykonuje określoną akcję
+        - Krok 1: Użytkowik wykonuje określoną akcję
         
         - Krok 2: Po jej zakończeniu punkty automatycznie są dopisywane do konta w odpowiedniej ilości.
 
@@ -378,35 +407,35 @@
 ### Wydawanie punktów
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwienie użytkownikowi/użytkownikowi premium wymiany zebranych punktów na określone nagrody(ksiązki / kody rabatowe).
+        Celem tej funkcjonalności jest umożliwienie użytkownikowi wymiany zebranych punktów na określone nagrody(ksiązki / kody rabatowe).
      
 * **Wejście**:
-        Użytkownik/Użytkownik premium wybiera sposób wykorzystania punktów.
+        Użytkownik wybiera sposób wykorzystania punktów.
         
 * **Wyjście**:
-        - Użytkownik/Użytkownik premium traci pewną ilość punktów.
-        -  Użytkownik/Użytkownik premium otrzymuje określoną nagordę.
+        - Użytkownik traci pewną ilość punktów.
+        - Użytkownik otrzymuje określoną nagordę.
         
 * **Główny scenariusz**:
-      Użytkownik/Użytkownik premium po zebraniu określonej ilości punktów wyraża chęć ich wykorzystania. 
+      Użytkownik po zebraniu określonej ilości punktów wyraża chęć ich wykorzystania. 
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik premium wchodzi w zakładkę "Punkty".
+        - Krok 1: Użytkownik wchodzi w zakładkę "Punkty".
         
-        - Krok 2.1.1: Użytkownik/Użytkownik premium wybiera opcję uzyskania rabatu.
+        - Krok 2.1.1: Użytkownik wybiera opcję uzyskania rabatu.
         
-        - Krok 2.1.2: Użytkownik/Użytkownik premium wybiera określony rabat oraz go zatwierdza.
+        - Krok 2.1.2: Użytkownik wybiera określony rabat oraz go zatwierdza.
         
-        - Krok 2.1.3: Użytkownik/Użytkownik premium otrzymuje kod, który może wykorzystać w zamówieniu
+        - Krok 2.1.3: Użytkownik otrzymuje kod, który może wykorzystać w zamówieniu
 
         /
         
-        - Krok 2.2.1: Użytkownik/Użytkownik premium wybiera opcję otrzymania określonej pozycji.
+        - Krok 2.2.1: Użytkownik wybiera opcję otrzymania określonej pozycji.
         
-        - Krok 2.2.2: Użytkownik/Użytkownik premium wybiera pozycję z określonej puli.
+        - Krok 2.2.2: Użytkownik wybiera pozycję z określonej puli.
         
-        - Krok 2.2.3: Użytkownik/Użytkownik premium zatwierdza swój wybór.
+        - Krok 2.2.3: Użytkownik zatwierdza swój wybór.
        
 
 * **Przykład**:
@@ -513,20 +542,20 @@
 ### Tryb czytania
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwienie użytkownikowi/użytkownikowi premium/administratorowi skorzystanie z zasobu w postaci trybu do czytania.
+        Celem tej funkcjonalności jest umożliwienie użytkownikowi/administratorowi skorzystanie z zasobu w postaci trybu do czytania.
      
 * **Wejście**:
-       Użytkownik/Użytkownik premium/Administrator wybiera dany zasób.
+       Użytkownik/Administrator wybiera dany zasób.
         
 * **Wyjście**:
-        Użytkownik/Użytkownik premium/Administrator otrzymuje dany zasób w trybie "do czytania".
+        Użytkownik/Administrator otrzymuje dany zasób w trybie "do czytania".
         
 * **Główny scenariusz**:
-        Użytkownik/Użytkownik premium/Administrator chce skorzystać z zasobu, w tym celu przechodzi do odpowiedniej zakładki i wybiera interesującą go pozycje.
+        Użytkownik/Administrator chce skorzystać z zasobu, w tym celu przechodzi do odpowiedniej zakładki i wybiera interesującą go pozycje.
         
 * **Kroki**:
 
-        Użytkownik / Użytkownik premium:
+        Użytkownik:
         
         - Krok 1: Wybiera zakładkę biblioteczka.
         
@@ -613,7 +642,7 @@
 ### Przyjmowanie zgłoszeń
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwienie przyjmowanie zgłoszeń przez administratora otrzymanych od użytkowników/użytkowników premium systemu.
+        Celem tej funkcjonalności jest umożliwienie przyjmowanie zgłoszeń przez administratora otrzymanych od użytkowników systemu.
      
 * **Wejście**:
         Administrator potwierdza przyjęcie zgłoszenia.
@@ -645,24 +674,24 @@
 ### Biblioteczka
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwnie użytkownikom/użytkownikom premium przeglądniecię pozycji do których uzyskali dostęp oraz za pomocą tej funkcjonalności przejście to trybu "do czytania".
+        Celem tej funkcjonalności jest umożliwnie użytkownikom przeglądniecię pozycji do których uzyskali dostęp oraz za pomocą tej funkcjonalności przejście to trybu "do czytania".
      
 * **Wejście**:
-        Użytkownik/Użytkownik premium wybiera zakładkę "Biblioteczka".
+        Użytkownik wybiera zakładkę "Biblioteczka".
         
 * **Wyjście**:
-        Użytkownik/Użytkownik premium otrzymuję kolekcję zasobów do których ma przyznany dostęp.
+        Użytkownik otrzymuję kolekcję zasobów do których ma przyznany dostęp.
         
 * **Główny scenariusz**:
-        Użytkownik/Użytkownik premium chce skorzystać z posiadanych zasobów, w tym celu wybiera odpowiednią zakładkę oraz wyszukuje określoną pozycję.
+        Użytkownik chce skorzystać z posiadanych zasobów, w tym celu wybiera odpowiednią zakładkę oraz wyszukuje określoną pozycję.
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik premium wybiera zakładkę "Biblioteczka"
+        - Krok 1: Użytkownik wybiera zakładkę "Biblioteczka"
         
-        - Krok 2: Użytkownik/Użytkownik premium otrzymuje kolekcję pozycji do który posiada dostęp.
+        - Krok 2: Użytkownik otrzymuje kolekcję pozycji do który posiada dostęp.
         
-        - Krok 3: **(opcjonalnie)** Użytkownik/Użytkownik premium wybiera określoną pozycję której szukał w celu uruchomienia trybu "do czytania".
+        - Krok 3: **(opcjonalnie)** Użytkownik wybiera określoną pozycję której szukał w celu uruchomienia trybu "do czytania".
        
 
 * **Przykład**:
@@ -675,8 +704,7 @@
 ### Zakup subskrypcji
 
 * **Cel**: 
-        - Użytkownik premium otrzymuje możliwość przedłużenia już posiadanej subskrypcji.
-        - Użytkownik otrzymuje możliwość zakupienia miesięcznej subskrybcji(indywidualnej/grupowej) w celu otrzymania statusu "premium" oraz otrzymując tym samym następujące bonusy: 
+        - Użytkownik otrzymuje możliwość zakupienia miesięcznej subskrybcji w celu otrzymania statusu "premium" oraz otrzymując tym samym następujące bonusy: 
         
           - Otrzymanie określonej ilości pozycji za darmo(ich pula zmienia się co miesiąc)
           
@@ -687,27 +715,23 @@
           - Dodatkowej ilości przyznawanych punktów za doładowania
           
      
-        
-     * Subskrypcja indywidualna - dla użytkownika kupującego.
-     * Subskrypcja grupowa - po zakupie pozwala na dodanie innych użytkowników do grupy tym samym użytkownicy dodani otrzymują status "Premium" oraz wszystkie benefity z tym związane.
-
+   
         
      
 * **Wejście**:
-        Użytkownik/Użytkownik premium wybiera zakładkę "Premium".
+        Użytkownik wybiera zakładkę "Premium".
         
 * **Wyjście**:
         - Użytkownik otrzymuje status premium lub komunikat o niepowodzeniu.
-        - Użytkownik premium otrzymuje przedłużenie swojej subskrypcji lub komunikat o niepowodzeniu.
         
 * **Główny scenariusz**:
-        Użytkownik/Użytkownik premium chce skorzystać z funkcji premium/przedłużyć subskrypcję, wybiera odpowiednią zakładkę oraz potwierdza transakcję.
+        Użytkownik chce skorzystać z funkcji premium, wybiera odpowiednią zakładkę oraz potwierdza transakcję.
         
        
         
 * **Kroki**:
 
-        - Krok 1:  Użytkownik/Użytkownik premium wybiera zakładkę "premium"
+        - Krok 1:  Użytkownik wybiera zakładkę "premium"
 
         Użytkownik:
         
@@ -717,13 +741,6 @@
        
        - Krok 1.1.3: Zatiwerdza sfinalizowanie transakcji.
 
-        Użytkownik premium:
-        
-        - Krok 1.2.1: Wybiera opcję przedłużenia subskrypcji
-        
-        - Krok 1.2.2: Klika przycisk "Kup".
-       
-       - Krok 1.2.3: Zatiwerdza sfinalizowanie transakcji.
        
 
 * **Przykład**:
@@ -733,63 +750,32 @@
 - - -
 
 
-### Dodanie użytwkonika do grupy subskrypcji
-
-* **Cel**: 
-        Celem tej funkcjonalności jest umożliwnie użytkownikowi premiumu z subskrypcją grupową na dodanie innych użytkowników do swojej grupy. 
-     
-* **Wejście**:
-        Użytkownik podaje e-mail innego użytkownika.
-        
-* **Wyjście**:
-        Użytkownik o podanym adresie e-mail zostaje dodany do grupy / Wystąpienie komunikatu o błędzie
-        
-* **Główny scenariusz**:
-        Użytkownik premium wykupił subskrypcję grupową i chce ją wykorzystać, w tym celu wchodzi w zakładkę premium w celu podania adresu e-mail innego użytkownika.
-        
-* **Kroki**:
-
-        - Krok 1: Użytkownik premium wybiera zakładkę "Premium".
-        
-        - Krok 2: Użytkownik premium wybiera opcję dodaj do grupy.
-        
-        - Krok 3: Użytkownik premium podaje adres e-mail innego uzytkownika.
-        
-        - Krok 4: Użytkownik premium zatwierdza wykonanie operacji.
-       
-
-* **Przykład**:
-
-----dodanie_do_grupy.png------
-
-- - -
-
 
 ### Wypożyczenie pozycji
 
 * **Cel**: 
-        Celem tej funkcjonalności jest umożliwienie użytkownikowi/użytkownikowi premium wypożyczenie danej pozycji za mniejszą kwotę lub za punkty  w zamian za udostępnienie danej pozycji na określony przedział czasu.
+        Celem tej funkcjonalności jest umożliwienie użytkownikowi wypożyczenie danej pozycji za mniejszą kwotę lub za punkty  w zamian za udostępnienie danej pozycji na określony przedział czasu.
      
 * **Wejście**:
-        Użytkowni/Użytkownik premium wybiera opcję wypożyczenia.
+        Użytkowni wybiera opcję wypożyczenia.
         
 * **Wyjście**:
-        Użytkownik/Użytkownik premium otrzymuje dany zasób na określony czas.
+        Użytkownik otrzymuje dany zasób na określony czas.
         
 * **Główny scenariusz**:
-        Użytkownik/Użytkownik premium chce skorzystać z tańszej alternatywy otrzymania danego zasobu. Po wypożyczeniu pozycji otrzymuje do niej pełny dostęp na określony przediał czasu.
+        Użytkownik chce skorzystać z tańszej alternatywy otrzymania danego zasobu. Po wypożyczeniu pozycji otrzymuje do niej pełny dostęp na określony przediał czasu.
         
 * **Kroki**:
 
-        - Krok 1: Użytkownik/Użytkownik premium wyszukuje interesującą go pozcycje.
+        - Krok 1: Użytkownik wyszukuje interesującą go pozcycje.
        
-       - Krok 2: Użytkownik/Użytkownik premium wybiera opcję "Wypożycz".
+       - Krok 2: Użytkownik wybiera opcję "Wypożycz".
        
-       - Krok 3: Użytkownik/Użytkownik premium wybiera opcję wypożyczenia za punkty/z dostępnych środków
+       - Krok 3: Użytkownik wybiera opcję wypożyczenia za punkty/z dostępnych środków
         
-        - Krok 4: Użytkownik/Użytkownik premium zatwierdza swój wybór.
+        - Krok 4: Użytkownik zatwierdza swój wybór.
        
-       - Krok 5: Użytkownik/Użytkownik premium otrzymuje dany zasób na  określony czas.
+       - Krok 5: Użytkownik otrzymuje dany zasób na  określony czas.
        
 
 * **Przykład**:
