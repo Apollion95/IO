@@ -57,7 +57,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----rejestracja.png------
+ ![alt text](https://github.com/Apollion95/IO/blob/Seba/img/rejestracja.png?raw=true)
 
 - - - 
 
@@ -89,7 +89,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----logowanie.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/logowanie.png?raw=true)
 
 - - - 
 
@@ -116,7 +116,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----wylogowanie.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/wylogowanie.png?raw=true)
 
 - - -
 
@@ -148,7 +148,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----edycja_danych.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/edycja_danych.png?raw=true)
 
 - - -
 
@@ -180,7 +180,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----wyszukiwanie_pozycji.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/wyszukiwanie_pozycji.png?raw=true)
 
 - - -
 
@@ -214,7 +214,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----recenzja.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/recenzja.png?raw=true)
 
 - - -
 
@@ -243,7 +243,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----dodanie_pozycji_do_koszyka.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/dodanie_pozycji_do_koszyka.png?raw=true)
 
 - - -
 
@@ -271,7 +271,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----usunięcie_pozycji_z_koszyka.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/usunięcie_pozycji_z_koszyka.png?raw=true)
 
 - - -
 
@@ -309,7 +309,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----złóż_zamówienie.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/złóż_zamówienie.png?raw=true)
 
 - - -
 
@@ -339,7 +339,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----historia.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/historia.png?raw=true)
 
 - - -
 
@@ -371,7 +371,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----kontakt.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/kontakt.png?raw=true)
 
 - - -
 
@@ -400,7 +400,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----zdobywanie_punktów.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/zdobywanie_punktów.png?raw=true)
 
 - - -
 
@@ -440,7 +440,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----wydawanie_punktów.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/wydawanie_punktów.png?raw=true)
 
 - - -
 
@@ -474,7 +474,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----dodanie_pozycji_do_systemu.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/dodanie_pozycji_do_systemu.png?raw=true)
 
 - - -
 
@@ -504,7 +504,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----modyfikowanie_pozycji_z_systemu.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/modyfikowanie_pozycji_z_systemu.png?raw=true)
 
 - - -
 
@@ -534,7 +534,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----usuwanie_pozycji_z_systemu.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/usuwanie_pozycji_z_systemu.png?raw=true)
 
 - - -
 
@@ -571,7 +571,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----tryb_czytania.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/tryb_czytania.png?raw=true)
 
 - - -
 
@@ -602,7 +602,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----przeglądanie_użytkowników.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/przeglądanie_użytkowników.png?raw=true)
 
 - - -
 
@@ -634,7 +634,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----usuwanie_użytkowników.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/usuwanie_użytkowników.png?raw=true)
 
 - - -
 
@@ -666,7 +666,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----zgłoszenia.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/zgłoszenia.png?raw=true)
 
 - - -
 
@@ -696,7 +696,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----biblioteczka.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/biblioteczka.png?raw=true)
 
 - - -
 
@@ -745,7 +745,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----subskrypcja.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/subskrypcja.png?raw=true)
 
 - - -
 
@@ -780,7 +780,7 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 
 * **Przykład**:
 
-----wypożyczenie.png------
+![alt text](https://github.com/Apollion95/IO/blob/Seba/img/wypożyczenie.png?raw=true)
 
 - - -
 
