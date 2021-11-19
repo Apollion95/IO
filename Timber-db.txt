@@ -1,3 +1,5 @@
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
 
 
 -- ************************************** `author`
@@ -13,6 +15,12 @@ PRIMARY KEY (`author_id`)
 
 
 
+
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
 -- ************************************** `city`
 
 CREATE TABLE `city`
@@ -23,6 +31,12 @@ CREATE TABLE `city`
 PRIMARY KEY (`postal_code`)
 );
 
+
+
+
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
 
 
 -- ************************************** `library`
@@ -43,6 +57,29 @@ CONSTRAINT `FK_88` FOREIGN KEY `fkIdx_90` (`book_id`) REFERENCES `store` (`book_
 
 
 
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
+-- ************************************** `prices`
+
+CREATE TABLE `prices`
+(
+ `price_id` int NOT NULL ,
+ `value`    varchar(45) NOT NULL ,
+
+PRIMARY KEY (`price_id`)
+);
+
+
+
+
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
 -- ************************************** `publisher`
 
 CREATE TABLE `publisher`
@@ -55,6 +92,8 @@ PRIMARY KEY (`publisher_id`)
 
 
 
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
 
 
 -- ************************************** `review`
@@ -76,6 +115,12 @@ CONSTRAINT `FK_61` FOREIGN KEY `fkIdx_63` (`user_id`) REFERENCES `user` (`user_i
 
 
 
+
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
 -- ************************************** `store`
 
 CREATE TABLE `store`
@@ -93,20 +138,59 @@ KEY `fkIdx_115` (`publisher_id`),
 CONSTRAINT `FK_113` FOREIGN KEY `fkIdx_115` (`publisher_id`) REFERENCES `publisher` (`publisher_id`)
 );
 
+
+
+
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
 -- ************************************** `subscriber`
 
 CREATE TABLE `subscriber`
 (
- `sub_start` datetime NOT NULL ,
- `user_id`   int NOT NULL ,
- `sub_end`   datetime NOT NULL ,
- `active`    bit NOT NULL ,
- `sub_id`    int NOT NULL ,
+ `sub_start`                 datetime NOT NULL ,
+ `user_id`                   int NOT NULL ,
+ `sub_end`                   datetime NOT NULL ,
+ `active`                    bit NOT NULL ,
+ `subscriber_transaction_id` int NOT NULL ,
+ `sub_id`                    int NOT NULL ,
 
 PRIMARY KEY (`sub_id`),
+KEY `FK_124` (`subscriber_transaction_id`),
+CONSTRAINT `FK_122` FOREIGN KEY `FK_124` (`subscriber_transaction_id`) REFERENCES `SubscriberTransaction` (`subscriber_transaction_id`),
 KEY `fkIdx_38` (`user_id`),
 CONSTRAINT `FK_36` FOREIGN KEY `fkIdx_38` (`user_id`) REFERENCES `user` (`user_id`)
 );
+
+
+
+
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
+-- ************************************** `SubscriberTransaction`
+
+CREATE TABLE `SubscriberTransaction`
+(
+ `subscriber_transaction_id`   int NOT NULL ,
+ `user_id`                     int NOT NULL ,
+ `subscriber_transaction_date` datetime NOT NULL ,
+
+PRIMARY KEY (`subscriber_transaction_id`),
+KEY `FK_127` (`user_id`),
+CONSTRAINT `FK_125` FOREIGN KEY `FK_127` (`user_id`) REFERENCES `user` (`user_id`)
+);
+
+
+
+
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
 
 
 -- ************************************** `transactions`
@@ -127,6 +211,12 @@ CONSTRAINT `FK_95` FOREIGN KEY `fkIdx_97` (`user_id`) REFERENCES `user` (`user_i
 
 
 
+
+
+-- ****************** SqlDBM: MySQL ******************;
+-- ***************************************************;
+
+
 -- ************************************** `user`
 
 CREATE TABLE `user`
@@ -144,6 +234,9 @@ PRIMARY KEY (`user_id`),
 KEY `fkIdx_25` (`postal_code`),
 CONSTRAINT `FK_23` FOREIGN KEY `fkIdx_25` (`postal_code`) REFERENCES `city` (`postal_code`)
 );
+
+
+
 
 
 
