@@ -90,4 +90,5 @@ i przejrzysty.</br>
 -Za mechanike systemu będzie odpowiadać ASP.NET.</br>
 
 -Dane będą przechowywane w bazie opartej na MySQL.</br>
+![image](https://user-images.githubusercontent.com/54260979/142664020-e094f156-357d-4a81-a958-3389dd7c21a1.png)
 
