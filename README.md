@@ -173,7 +173,12 @@ Celem jest utworzenie aplikacji, która umożliwi uzytkownikom korzystanie z ksi
 
 ![image](https://user-images.githubusercontent.com/56208135/139593932-508362fd-074d-4bef-b898-e03149c3f736.png)
 
-# Duża Zmiana
+### Szkic Interfejsu 
 
 
+![Logowanie](https://user-images.githubusercontent.com/56208135/142667777-7ac7c94c-10dc-40fb-93dd-475b5d46d4d4.JPG)
+![Strona Główna](https://user-images.githubusercontent.com/56208135/142667795-589b8b7a-32e9-4f48-81b5-dc8d5fe695f2.JPG)
+![Okno](https://user-images.githubusercontent.com/56208135/142667896-69a467de-4686-42f6-8ee8-2232be37bac2.JPG)
+![Czytanie Jasne](https://user-images.githubusercontent.com/56208135/142667907-658c71fc-393f-45d9-97af-580c9ee59b78.JPG)
+![Czytanie Ciemne](https://user-images.githubusercontent.com/56208135/142667916-6800a0b6-4226-4bcc-a806-6764be7d61f3.JPG)
 
