@@ -1,3 +1,5 @@
+
+=======
 ![Logo](https://user-images.githubusercontent.com/56208135/141685855-71824113-afba-4470-ab14-7bf75ed645d2.png)
 
 
@@ -981,12 +983,3 @@ W systemie istnieją dwa rodzaje użytkowników: Administrator oraz Użytkownik.
 - - -
 ![Czytanie Ciemne](https://user-images.githubusercontent.com/56208135/142667916-6800a0b6-4226-4bcc-a806-6764be7d61f3.JPG)
 - - -
-
-
-
-
-
-
-
-
-
