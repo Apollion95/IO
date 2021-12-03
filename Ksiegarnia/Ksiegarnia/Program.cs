@@ -1,12 +1,18 @@
 using Infrastructure.Data;
+using Pomelo.EntityFrameworkCore.MySql;
+using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
+//services.AddDbContext<MysqlContext>(options => options.UseMySQL(Configuration.GetConnectionString("MysqlConnection")));
+builder.Services.AddCors();
 builder.Services.AddDbContext<Context>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("BookStoreDB"));
+    
+    options.UseMySql("server=localhost;port=49997;database=KSIEGARNIA;user=root;password=Mojekonto14", new MySqlServerVersion(new Version(8, 0, 27)));
+    
 });
 
 

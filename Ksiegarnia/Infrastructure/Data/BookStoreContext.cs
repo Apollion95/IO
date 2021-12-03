@@ -26,7 +26,7 @@ namespace Infrastructure.Data
         public Context CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<Context>();
-            optionsBuilder.UseSqlServer("Data Source=blog.db");
+            optionsBuilder.UseMySql("server=localhost;port=49997;database=KSIEGARNIA;user=root;password=Mojekonto14", new MySqlServerVersion(new Version(8, 0, 27)));
 
             return new Context(optionsBuilder.Options);
         }
