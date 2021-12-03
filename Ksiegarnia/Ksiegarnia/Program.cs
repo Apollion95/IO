@@ -11,7 +11,7 @@ builder.Services.AddCors();
 builder.Services.AddDbContext<Context>(options =>
 {
     
-    options.UseMySql("server=localhost;port=49997;database=KSIEGARNIA;user=root;password=Mojekonto14", new MySqlServerVersion(new Version(8, 0, 27)));
+    options.UseMySql("server=localhost;port=49997;database=KSIEGARNIA;user=root;password=", new MySqlServerVersion(new Version(8, 0, 27)));
     
 });
 
