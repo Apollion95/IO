@@ -1,18 +1,25 @@
+using System;
+
 namespace Domain.Entities
 {
     public class Transactions
     {
-        public int trans_id{ get; set; }
-
-        public datetime date{ get; set;}
- 	
-	public int user_id{ get; set;}
-
- 	public int book_id{ get; set;}
-
-        public Transactions(trans_id, date, user_id, book_id)
+        public Transactions(int trans_id, DateTime date, int user_id, int book_id)
         {
-            (trans_id, date, user_id, book_id) = (transaction, date, user, book);
+            this.trans_id=trans_id;
+            this.date=date;
+            this.user_id=user_id;
+            this.book_id=book_id;
         }
+
+        public int trans_id { get; set; }
+
+        public DateTime date { get; set; }
+
+        public int user_id { get; set; }
+
+        public int book_id { get; set; }
+
+       
     }
 }
