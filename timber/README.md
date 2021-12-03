@@ -1,3 +1,28 @@
+# Moduły pootrzebne do naszego projektu
+
+npm install express
+<br />
+npm install mdbreact
+<br />
+npm install react
+<br />
+npm install react-dom
+<br />
+npm install react-icons
+<br />
+npm install react-router
+<br />
+npm install react-router-dom
+<br />
+npm install react-scripts
+<br />
+npm install react-scroll
+<br />
+npm install reactstrap
+<br />
+npm install styled-components
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -70,16 +95,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-# Moduły pootrzebne do naszego projektu
-
-npm install express
-npm install mdbreact
-npm install react
-npm install react-dom
-npm install react-icons
-npm install react-router
-npm install react-router-dom
-npm install react-scripts
-npm install react-scroll
-npm install reactstrap
-npm install styled-components
