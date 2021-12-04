@@ -47,6 +47,8 @@ namespace Domain.Entities
         [Required]
         public string password { get; set; }
 
+        public virtual ICollection<Transactions> transactions { get; set; }
+
 
 
         public User(int user_id, string name, City postal_code, string lastname, string username, string email, string? address, string password)

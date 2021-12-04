@@ -17,6 +17,8 @@ namespace Domain.Entities
         [Required]
         public virtual Publisher publisher { get; set; }
 
+        public virtual ICollection<Transactions> transactions { get; set; }
+
         public Book(int Id, string Name, DateTime ReleaseDate)
         {
             (book_id, name, releaseDate) = (Id, Name, ReleaseDate);
