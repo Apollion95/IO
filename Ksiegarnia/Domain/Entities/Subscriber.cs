@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    internal class Subscriber
+    public class Subscriber
     {
         [Key]
         [Required]

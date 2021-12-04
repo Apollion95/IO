@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    internal class Review
+    public class Review
     {
         [Key]
         [Required]
