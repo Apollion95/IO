@@ -6,12 +6,12 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 
-//services.AddDbContext<MysqlContext>(options => options.UseMySQL(Configuration.GetConnectionString("MysqlConnection")));
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddCors();
 builder.Services.AddDbContext<Context>(options =>
 {
     
-    options.UseMySql("server=localhost;port=49997;database=KSIEGARNIA;user=root;password=", new MySqlServerVersion(new Version(8, 0, 27)));
+    options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 27)));
     
 });
 
