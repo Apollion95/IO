@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, FormWrap, Icon, FormContent, Form, FormInput, FormH1, FormLabel, FormButton } from './LoginInElements' 
+import { Container, FormWrap, Icon, FormContent, Form, FormInput, FormH1, FormLabel, FormButton } from './RegistrationElements' 
 
 const Register = () => {
   return (
