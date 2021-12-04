@@ -23,7 +23,7 @@ namespace Infrastructure.Data
         public DbSet<Library> Libraries { get; set; }
         public DbSet<Publisher> Publishers { get; set; }    
         public DbSet<Review> Reviews { get; set; }
-        public DbSet<Store> Store { get; set; }
+        public DbSet<Book> Store { get; set; }
         public DbSet<Subscriber> Subscribers  { get; set; }
         public DbSet<Transactions> Transactions { get; set; }
 

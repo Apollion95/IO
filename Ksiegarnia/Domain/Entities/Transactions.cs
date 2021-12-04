@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities
 {
@@ -11,7 +12,7 @@ namespace Domain.Entities
             this.user_id=user_id;
             this.book_id=book_id;
         }
-
+        [Key]
         public int trans_id { get; set; }
 
         public DateTime date { get; set; }

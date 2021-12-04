@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Domain.Entities
 {
     public class Library
@@ -7,9 +9,12 @@ namespace Domain.Entities
             this.user_id=user_id;
             this.book_id=book_id;
         }
-
+        [Key]
+        public int library_id { get; set; }
+        [Required]
+        
         public int user_id{ get; set; }
-
+        [Required]
         public int book_id{ get; set;}
 
       

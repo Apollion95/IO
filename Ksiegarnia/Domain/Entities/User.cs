@@ -25,16 +25,18 @@ namespace Domain.Entities
         public string name { get; set; }
 
 
-        public string postal_code { get; set; }
-        public City City { get; set; }
+        [ForeignKey("postal-code")]
+        public virtual City postal_code { get; set; }
 
         [MaxLength(45)]
         public string lastname { get; set; }
 
         [MaxLength(45)]
+        [Required]
         public string username { get; set; }
 
         [MaxLength(45)]
+        [Required]
         public string email { get; set; }
 
 
@@ -42,16 +44,16 @@ namespace Domain.Entities
         public string? address { get; set; }
 
         [MaxLength(45)]
+        [Required]
         public string password { get; set; }
 
 
 
-        public User(int user_id, string name, string postal_code, City city, string lastname, string username, string email, string? address, string password)
+        public User(int user_id, string name, City postal_code, string lastname, string username, string email, string? address, string password)
         {
             this.user_id=user_id;
             this.name=name;
             this.postal_code=postal_code;
-            City=city;
             this.lastname=lastname;
             this.username=username;
             this.email=email;
