@@ -96,6 +96,10 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("library_id");
 
+                    b.HasIndex("book_id");
+
+                    b.HasIndex("user_id");
+
                     b.ToTable("Libraries");
                 });
 
@@ -173,6 +177,9 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("date")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<double>("price")
+                        .HasColumnType("double");
+
                     b.Property<int>("user_id")
                         .HasColumnType("int");
 
@@ -247,6 +254,25 @@ namespace Infrastructure.Migrations
                     b.Navigation("author");
 
                     b.Navigation("publisher");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Library", b =>
+                {
+                    b.HasOne("Domain.Entities.Book", "book")
+                        .WithMany()
+                        .HasForeignKey("book_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Entities.User", "user")
+                        .WithMany()
+                        .HasForeignKey("user_id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("book");
+
+                    b.Navigation("user");
                 });
 
             modelBuilder.Entity("Domain.Entities.Transactions", b =>

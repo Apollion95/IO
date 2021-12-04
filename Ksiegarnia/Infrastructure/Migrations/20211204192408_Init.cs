@@ -46,21 +46,6 @@ namespace Infrastructure.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Libraries",
-                columns: table => new
-                {
-                    library_id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    user_id = table.Column<int>(type: "int", nullable: false),
-                    book_id = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Libraries", x => x.library_id);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "Publishers",
                 columns: table => new
                 {
@@ -173,12 +158,40 @@ namespace Infrastructure.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Libraries",
+                columns: table => new
+                {
+                    library_id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    user_id = table.Column<int>(type: "int", nullable: false),
+                    book_id = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Libraries", x => x.library_id);
+                    table.ForeignKey(
+                        name: "FK_Libraries_Book_book_id",
+                        column: x => x.book_id,
+                        principalTable: "Book",
+                        principalColumn: "book_id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Libraries_Users_user_id",
+                        column: x => x.user_id,
+                        principalTable: "Users",
+                        principalColumn: "user_id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Transactions",
                 columns: table => new
                 {
                     trans_id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     date = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    price = table.Column<double>(type: "double", nullable: false),
                     user_id = table.Column<int>(type: "int", nullable: false),
                     book_id = table.Column<int>(type: "int", nullable: false)
                 },
@@ -209,6 +222,16 @@ namespace Infrastructure.Migrations
                 name: "IX_Book_publisher_id",
                 table: "Book",
                 column: "publisher_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Libraries_book_id",
+                table: "Libraries",
+                column: "book_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Libraries_user_id",
+                table: "Libraries",
+                column: "user_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Transactions_book_id",
