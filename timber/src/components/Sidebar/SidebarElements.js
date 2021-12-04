@@ -58,12 +58,12 @@ export const SidebarLink = styled(Link)`
   font-weight: bold;
 
   &:hover{
-        color: #666565;
+        color: #c3c6c9;
         transition: all 0.2s ease-in-out;
     }
 
     &.active{
-        color:#666565;
+        color: #c3c6c95;
         transition: all 0.2s ease-in-out;
     }
 `
@@ -84,6 +84,7 @@ export const SidebarRoute = styled(Link)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  font-weight: bold;
   
   &:hover {
     transition: all 0.2s ease-in-out;
