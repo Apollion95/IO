@@ -12,7 +12,7 @@ import {
     NavBtnLink
 } from './NavbarElements'
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ isOpen,toggle }) => {
     return (
         <>
             <Nav>
@@ -23,20 +23,17 @@ const Navbar = ({ toggle }) => {
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about">About</NavLinks>
+                            <NavLinks to="/about">O APLIKACJI</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="discover">Discover</NavLinks>
+                            <NavLinks to="/discover">ODKRYWAJ</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="services">Services</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to="signup">Sign Up</NavLinks>
+                            <NavLinks to="/signup">REJESTRACJA</NavLinks>
                         </NavItem>
                     </NavMenu>
                         <NavBtn>
-                            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+                            <NavBtnLink to="/signin">LOGOWANIE</NavBtnLink>
                         </NavBtn>
                 </NavbarContainer>
             </Nav>
