@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import {Link as LinkS} from 'react-scroll'
-import {Link as LinkR} from 'react-router-dom'
+import {NavLink as Link} from 'react-router-dom'
 import {FaTimes} from 'react-icons/fa'
 
 export const SidebarContainer = styled.aside`
@@ -45,22 +44,28 @@ export const SidebarMenu = styled.ul`
   }
 `
 
-export const SidebarLink = styled(LinkS)`
+export const SidebarLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   text-decoration: none;
   list-style: none;
-  transition: 02s ease-in-out;
+  transition: 0.2s ease-in-out;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  font-weight: bold;
 
-  &:hover {
-    color: #000;
-    transition: 0.2s ease-in-out;
-  }
+  &:hover{
+        color: #666565;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &.active{
+        color:#666565;
+        transition: all 0.2s ease-in-out;
+    }
 `
 
 export const SideBtnWrap = styled.div`
@@ -68,21 +73,21 @@ export const SideBtnWrap = styled.div`
   justify-content: center;
 `
 
-export const SidebarRoute = styled(LinkR)`
-  border-radius: 50px;
+export const SidebarRoute = styled(Link)`
+  border-radius: 12px;
   background: #fff;
   white-space: nowrap;
   padding: 16px 64px;
-  color: #010606;
   font-size: 16px;
   outline:  none;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #000;
+    background: #666565;
     color: #fff;
   }
 `
