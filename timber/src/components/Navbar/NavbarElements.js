@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {NavLink as Link, Link as LinkR} from 'react-router-dom'
+import {NavLink as Link} from 'react-router-dom'
 
 
 
@@ -88,6 +88,7 @@ export const NavItem = styled.li`
 export const NavLinks = styled(Link)`
     color: #fff;
     display: flex;
+    font-weight: bold;
     align-items: center;
     text-decoration: none;
     padding: 0 1rem;
@@ -120,6 +121,7 @@ export const NavBtnLink = styled(Link)`
   border-radius: 4px;
   background: #fff;
   padding: 10px 22px;
+  font-weight: bold;
   outline: none;
   border: none;
   cursor: pointer;
