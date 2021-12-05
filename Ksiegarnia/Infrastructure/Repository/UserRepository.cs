@@ -59,7 +59,7 @@ namespace Infrastructure.Repository
 
         public void InsertUser(User user)
         {
-            throw new NotImplementedException();
+            context.Users.Add(user);
         }
 
         public void UpdateUser(User user)
