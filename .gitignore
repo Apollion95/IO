@@ -9,6 +9,8 @@
 *.user
 *.userosscache
 *.sln.docstates
+appsettings.json
+git rm --cached appsettings.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -61,8 +63,7 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
-# AppSettings
-git rm --cached appsettings.json
+
 
 # StyleCop
 StyleCopReport.xml
