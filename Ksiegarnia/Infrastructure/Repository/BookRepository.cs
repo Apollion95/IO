@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Infrastructure.Data;
 using Microsoft.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -61,12 +62,12 @@ namespace Infrastructure.Repository.Interfaces
 
         public void InsertBook(Book book)
         {
-            throw new NotImplementedException();
+            context.Store.Add(book);
         }
 
         public void UpdateBook(Book book)
         {
-            throw new NotImplementedException();
+            context.Entry(book).State = EntityState.Modified;
         }
 
       
