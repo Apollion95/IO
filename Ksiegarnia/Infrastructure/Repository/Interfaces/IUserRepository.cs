@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Microsoft.CodeAnalysis;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace Infrastructure.Repository
     internal interface IUserRepository : IDisposable
     {
         PagedList<User> GetUsers(int pageNumber);
-        User GetUserById(int userId);
+        Optional<User> GetUserById(int userId);
         void InsertUser(User user);
         void UpdateUser(User user);
         void DeleteUser(int userId);

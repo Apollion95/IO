@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Infrastructure.Data;
+using Microsoft.CodeAnalysis;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -45,9 +46,10 @@ namespace Infrastructure.Repository
             this.disposed = true;
         }
 
-        public User GetUserById(int userId)
+        public Optional<User> GetUserById(int userId)
         {
-            throw new NotImplementedException();
+            Optional<User> user =  context.Users.Find(userId);
+            return user;
         }
 
         public PagedList<User> GetUsers(int pageNumber)

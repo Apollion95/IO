@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Microsoft.CodeAnalysis;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -11,8 +12,8 @@ namespace Infrastructure.Repository.Interfaces
     internal interface IBookRepository : IDisposable
     {
         PagedList<Book> GetBooks(int pageNumber);
-        Book GetBookByName (string name);
-        Book GetBookById (int id);
+        Optional<Book> GetBookByName (string name);
+        Optional<Book> GetBookById (int id);
         void InsertBook (Book book);
         void UpdateBook (Book book);
         void DeleteBook (int id);
