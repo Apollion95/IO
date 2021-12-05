@@ -12,9 +12,15 @@ namespace Infrastructure.Repository
     {
 
         private BookStoreContext context;
+
+        public UserRepository(BookStoreContext context)
+        {
+            this.context = context;
+        }
         public void DeleteUser(int userId)
         {
-            throw new NotImplementedException();
+            User user = context.Users.FirstOrDefault(x => x.user_id == userId);
+            context.Users.Remove(user);
         }
 
         public void Dispose()
