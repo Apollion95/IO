@@ -12,7 +12,7 @@ namespace Infrastructure.Repository
 {
     internal class UserRepository : IUserRepository
     {
-
+        public  const int PAGE_SIZE = 10;
         private BookStoreContext context;
 
         public UserRepository(BookStoreContext context)
@@ -54,7 +54,7 @@ namespace Infrastructure.Repository
 
         public PagedList<User> GetUsers(int pageNumber)
         {
-            throw new NotImplementedException();
+            return (PagedList<User>)context.Users.ToPagedList(pageNumber,PAGE_SIZE);
         }
 
         public void InsertUser(User user)
