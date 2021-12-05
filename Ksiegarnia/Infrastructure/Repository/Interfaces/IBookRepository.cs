@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Infrastructure.Repository.Interfaces
 {
     internal interface IBookRepository : IDisposable
     {
-        IEnumerable<Book> GetBooks();
+        PagedList<Book> GetBooks(int pageNumber);
         Book GetBookByName (string name);
         Book GetBookById (int id);
         void InsertBook (Book book);

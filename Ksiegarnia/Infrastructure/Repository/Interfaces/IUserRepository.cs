@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Infrastructure.Repository
 {
     internal interface IUserRepository : IDisposable
     {
-        IEnumerable<User> GetUsers();
+        PagedList<User> GetUsers(int pageNumber);
         User GetUserById(int userId);
         void InsertUser(User user);
         void UpdateUser(User user);

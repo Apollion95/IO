@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Infrastructure.Data;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +36,7 @@ namespace Infrastructure.Repository
             throw new NotImplementedException();
         }
 
-        public IEnumerable<User> GetUsers()
+        public PagedList<User> GetUsers(int pageNumber)
         {
             throw new NotImplementedException();
         }
