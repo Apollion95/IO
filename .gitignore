@@ -61,8 +61,8 @@ project.lock.json
 project.fragment.lock.json
 artifacts/
 
-# .AppSettings
-git rm --cached appsettings.json
+# AppSettings
+git rm project/appsettings.json
 
 # StyleCop
 StyleCopReport.xml
@@ -350,5 +350,3 @@ healthchecksdb
 MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
-.ionide/Ksiegarnia/Ksiegarnia/appsettings.json
-git rm project/appsettings.json
