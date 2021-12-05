@@ -1,5 +1,7 @@
 # Moduły pootrzebne do naszego projektu
 
+Po sklonowaniu repozytorium powinno wystarczyć samo "npm install" jeżeli z czymś jest problem należy wykonać:
+
 npm install express
 <br />
 npm install mdbreact
