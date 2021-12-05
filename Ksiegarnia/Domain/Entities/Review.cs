@@ -17,8 +17,9 @@ namespace Domain.Entities
         [Required]
         public int rating { get; set; }
         [Required]
-        public int book_id { get; set; }
+        public virtual Book book { get; set; }
         [Required]
-        public int user_id{get;set;}
+        public virtual User user {get;set;}
+
     }
 }
