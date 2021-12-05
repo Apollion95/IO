@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Infrastructure.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(BookStoreContext))]
     [Migration("20211205183543_dodanie_virtual_S_R")]
     partial class dodanie_virtual_S_R
     {

@@ -1,4 +1,5 @@
 ﻿using Domain.Entities;
+using Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace Infrastructure.Repository
 {
     internal class UserRepository : IUserRepository
     {
+
+        private BookStoreContext context;
         public void DeleteUser(int userId)
         {
             throw new NotImplementedException();

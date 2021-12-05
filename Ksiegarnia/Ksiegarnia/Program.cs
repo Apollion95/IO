@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddCors();
-builder.Services.AddDbContext<Context>(options =>
+builder.Services.AddDbContext<BookStoreContext>(options =>
 {
     
     options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 27)));

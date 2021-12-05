@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace Infrastructure.Data
 {
-    public class Context : DbContext
+    public class BookStoreContext : DbContext
     {
-        public Context(DbContextOptions options) : base(options)
+        public BookStoreContext(DbContextOptions options) : base(options)
         {
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
