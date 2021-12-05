@@ -15,9 +15,11 @@ namespace Domain.Entities
         [Required]
         public DateTime sub_start { get; set; }
         [Required]
-        public int user_id { get; set; }
+        public virtual User user { get; set; }
         [Required]
         public DateTime sub_end { get; set; }
         public bool is_active { get; set; }
+
+        
     }
 }
