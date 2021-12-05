@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Infrastructure.Data;
 using Microsoft.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -64,7 +65,7 @@ namespace Infrastructure.Repository
 
         public void UpdateUser(User user)
         {
-            throw new NotImplementedException();
+            context.Entry(user).State = EntityState.Modified;
         }
     }
 }
