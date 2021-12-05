@@ -19,8 +19,10 @@ namespace Infrastructure.Repository
         }
         public void DeleteUser(int userId)
         {
-            User user = context.Users.FirstOrDefault(x => x.user_id == userId);
-            context.Users.Remove(user);
+          
+            User user = context.Users.Find(userId);
+            if(user!=null)
+             context.Users.Remove(user);
         }
 
         public void Dispose()
