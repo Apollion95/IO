@@ -12,7 +12,7 @@ namespace Infrastructure.Repository.Interfaces
         IEnumerable<Transactions> GetTransactions();
         Transactions GetById(int id);
         Transactions GetByUserId(int user_id);
-        Transactions GetByBookName(int book_name);
+        Transactions GetByBookName(string book_name);
         Transactions Add(Transactions transactions);
         void Update(Transactions transactions);
         void Delete(Transactions transactions);
