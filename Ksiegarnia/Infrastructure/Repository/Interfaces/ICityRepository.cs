@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Interfaces
 {
-    internal class ICityRepository
+    internal interface ICityRepository
     {
+
     }
 }
