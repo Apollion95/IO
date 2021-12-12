@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Interfaces
 {
-    internal interface ICityRepository
+    internal interface ICityRepository : IDisposable
     {
         PagedList<City> GetCities(int pageNumber);
         Optional<City> GetCityByPostalCode(string postalCode);
