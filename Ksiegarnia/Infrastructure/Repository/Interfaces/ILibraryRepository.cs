@@ -13,7 +13,8 @@ namespace Infrastructure.Repository.Interfaces
     {
         PagedList<Library> GetLibraryByUserId(int pageNumber, int userId);
         Optional<Library> GetLibrary(int userId, int bookId);
-        void InsertLibrary(int userId, int bookId);
+        void InsertLibrary(Library library);
         void DeleteLibrary(int userId, int bookId);
+        void DeleteLibrary(int id);
     }
 }
