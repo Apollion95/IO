@@ -33,5 +33,22 @@ namespace Bookstore.Tests.RepositoryTests
             Assert.Equal(1, library.Value.user);
             Assert.Equal(1, library.Value.name);
         }
+
+        [Fact]
+        public async Task AuthorRepository_Should_Get_Library_By_Id()
+        {
+            //given
+            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
+            .UseInMemoryDatabase(databaseName: "EmployeeDataBase")
+            .Options;
+
+            LibraryRepository libraryRepository = new LibraryRepository();
+            //when
+            Optional<Library> library = libraryRepository.GetLibraryByUserId();
+            //then
+
+            Assert.NotNull(library.Value);
+            Assert.Equal(1, library.Value.user);
+        }
     }
 }
