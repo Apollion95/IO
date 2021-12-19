@@ -30,7 +30,7 @@ namespace Bookstore.Tests.RepositoryTests
             .Options;
 
             BookStoreContext context = new BookStoreContext(dbOptions);
-            context.Authors.Add(new Author(
+            context.Books.Add(new Author(
                 Id: 1,
                 Name: "Adam",
                 LastName: "Mickiewicz"
