@@ -9,6 +9,19 @@ namespace Domain.Entities
 {
     public class Subscriber
     {
+        public Subscriber(int sub_id, DateTime sub_start, User user,DateTime sub_end, bool is_active)
+        {
+            this.sub_id=sub_id;
+            this.sub_start=sub_start;
+            this.sub_end=sub_end;
+            this.is_active=is_active;
+            this.user=user;
+        }
+        public Subscriber()
+        {
+
+        }
+
         [Key]
         [Required]
         public int sub_id { get; set; }
