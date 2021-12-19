@@ -78,7 +78,7 @@ namespace Infrastructure.Repository
 
         public PagedList<Author> GetAuthorsByLastname(int pageNumber, string lastname)
         {
-            PagedList<Author> authors = (PagedList<Author>)context.Authors.ToPagedList<Author>(pageNumber, PAGE_SIZE).Where(x=>x.lastName.Equals(lastname));
+            PagedList<Author> authors = (PagedList<Author>)context.Authors.Where(x => x.lastName.Equals(lastname)).ToPagedList<Author>(pageNumber, PAGE_SIZE);
             return authors;
         }
 

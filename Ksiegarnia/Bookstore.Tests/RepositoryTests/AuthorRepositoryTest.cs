@@ -255,6 +255,43 @@ namespace Bookstore.Tests.RepositoryTests
 
         }
 
+        [Fact]
+        public async Task AuthorRepository_Should_Get_Authors_By_LastName()
+        {
+            //given
+            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
+            .UseInMemoryDatabase(Guid.NewGuid().ToString())
+            .Options;
+
+            BookStoreContext context = new BookStoreContext(dbOptions);
+            context.Authors.Add(new Author(
+                Id: 1,
+                Name: "Adam",
+                LastName: "Mickiewicz"
+                ));
+            context.Authors.Add(new Author(
+                Id: 2,
+                Name: "Wojtek",
+                LastName: "Turlecki"
+                ));
+            context.Authors.Add(new Author(
+                Id: 3,
+                Name: "Batłomiej",
+                LastName: "Mickiewicz"
+                ));
+            context.SaveChanges();
+
+            AuthorRepository authorRepository = new AuthorRepository(context);
+            //when
+            List<Author> authors = authorRepository.GetAuthorsByLastname(1,"Mickiewicz").ToList();
+
+            //then
+            Assert.Equal(2, authors.Count);
+            Assert.NotNull(authors.FirstOrDefault(x => x.author_Id == 1));
+            Assert.NotNull(authors.FirstOrDefault(x => x.author_Id == 3));
+
+        }
+
 
     }
 }
