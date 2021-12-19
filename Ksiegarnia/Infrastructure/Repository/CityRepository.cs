@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository
 {
-    internal class CityRepository : ICityRepository
+    public class CityRepository : ICityRepository
     {
         private BookStoreContext context;
         public const int PAGE_SIZE = 10;
