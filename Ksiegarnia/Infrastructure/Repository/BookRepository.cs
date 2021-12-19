@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Interfaces
 {
-    internal class BookRepository : IBookRepository
+    public class BookRepository : IBookRepository
     {
         private BookStoreContext context;
         public const int PAGE_SIZE = 10;
