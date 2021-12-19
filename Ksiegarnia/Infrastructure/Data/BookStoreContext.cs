@@ -19,7 +19,7 @@ namespace Infrastructure.Data
         }
         public DbSet<City> Cities { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<Author> Books { get; set; }
+        public DbSet<Author> Authors { get; set; }
         public DbSet<Library> Libraries { get; set; }
         public DbSet<Publisher> Publishers { get; set; }    
         public DbSet<Review> Reviews { get; set; }

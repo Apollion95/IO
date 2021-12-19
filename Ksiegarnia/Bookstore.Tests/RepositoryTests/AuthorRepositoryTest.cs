@@ -30,7 +30,7 @@ namespace Bookstore.Tests.RepositoryTests
             .Options;
 
             BookStoreContext context = new BookStoreContext(dbOptions);
-            context.Books.Add(new Author(
+            context.Authors.Add(new Author(
                 Id: 1,
                 Name: "Adam",
                 LastName: "Mickiewicz"
@@ -45,6 +45,36 @@ namespace Bookstore.Tests.RepositoryTests
             Assert.Equal(1, author.Value.author_Id);
             Assert.Equal("Adam", author.Value.name);
             Assert.Equal("Mickiewicz", author.Value.lastName);
+        }
+
+        [Fact]
+        public async Task AuthorRepository_Should_Get_Author_By_Name_And_LastName()
+        {
+            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
+             .UseInMemoryDatabase(databaseName: "EmployeeDataBase")
+             .Options;
+
+            BookStoreContext context = new BookStoreContext(dbOptions);
+            context.Authors.Add(new Author(
+                Id: 1,
+                Name: "Adam",
+                LastName: "Mickiewicz"
+                ));
+            context.Authors.Add(new Author(
+               Id: 2,
+               Name: "Wojtek",
+               LastName: "Kowalczewski"
+               ));
+            context.SaveChanges();
+            AuthorRepository authorRepository = new AuthorRepository(context);
+            //when           
+            Optional<Author> author = authorRepository.GetAuthorByNameAndLastname("Wojtek", "Kowalczewski");
+            //then
+
+            Assert.NotNull(author.Value);
+            Assert.Equal(2, author.Value.author_Id);
+            Assert.Equal("Wojtek", author.Value.name);
+            Assert.Equal("Kowalczewski", author.Value.lastName);
         }
 
 
@@ -75,5 +105,7 @@ namespace Bookstore.Tests.RepositoryTests
             Assert.Equal("Szczygieł", authorFromDb.lastName);
 
         }
+
+      
     }
 }
