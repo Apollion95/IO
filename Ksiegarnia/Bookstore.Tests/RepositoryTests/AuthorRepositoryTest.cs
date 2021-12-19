@@ -16,7 +16,7 @@ namespace Bookstore.Tests.RepositoryTests
 {
     public class AuthorRepositoryTest
     {
-        
+
 
 
 
@@ -45,6 +45,35 @@ namespace Bookstore.Tests.RepositoryTests
             Assert.Equal(1, author.Value.author_Id);
             Assert.Equal("Adam", author.Value.name);
             Assert.Equal("Mickiewicz", author.Value.lastName);
+        }
+
+
+        [Fact]
+        public async Task AuthorRepository_Should_Add_Author()
+        {
+            //given
+            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
+            .UseInMemoryDatabase(databaseName: "EmployeeDataBase")
+            .Options;
+
+            BookStoreContext context = new BookStoreContext(dbOptions);
+
+            AuthorRepository authorRepository = new AuthorRepository(context);
+
+            Author author = new Author(
+                Id: 2,
+                Name: "Mariusz",
+                LastName: "Szczygieł"
+                );
+            //when
+            authorRepository.InsertAuthor(author);
+            //then
+            Author authorFromDb = authorRepository.GetAuthorById(2).Value;
+            Assert.NotNull(authorFromDb);
+            Assert.Equal(2, authorFromDb.author_Id);
+            Assert.Equal("Mariusz", authorFromDb.name);
+            Assert.Equal("Szczygieł", authorFromDb.lastName);
+
         }
     }
 }
