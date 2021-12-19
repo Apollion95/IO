@@ -12,16 +12,6 @@ namespace Domain.Entities
         {
 
         }
-
-        public Transactions(int trans_id, DateTime date, double price, User user, Book book)
-        {
-            this.trans_id=trans_id;
-            this.date=date;
-            this.price=price;
-            this.user=user;
-            this.book=book;
-        }
-
         [Key]
         public int trans_id { get; set; }
 
