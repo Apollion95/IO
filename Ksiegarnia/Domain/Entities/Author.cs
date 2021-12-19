@@ -1,10 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
 {
     public class Author
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int author_Id { get; set; }
         [Required]
         public string name { get; set; }
@@ -21,6 +23,11 @@ namespace Domain.Entities
         public Author()
         {
 
+        }
+
+        public Author(string Name, string LastName)
+        {
+            (name, lastName) = (Name, LastName);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Infrastructure.Data
 {
     public class BookStoreContext : DbContext
     {
-        public BookStoreContext(DbContextOptions options) : base(options)
+        public BookStoreContext(DbContextOptions<BookStoreContext> options) : base(options)
         {
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

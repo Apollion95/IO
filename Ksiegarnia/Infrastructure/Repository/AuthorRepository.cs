@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository
 {
-    internal class AuthorRepository : IAuthorRepository
+    public class AuthorRepository : IAuthorRepository
     {
         private BookStoreContext context;
         public const int PAGE_SIZE = 10;
@@ -27,6 +27,7 @@ namespace Infrastructure.Repository
             Author authorFromDb = context.Authors.FirstOrDefault(x => x.name.Equals(author.name) && x.lastName.Equals(author.lastName));
             if(authorFromDb!=null)
                 context.Authors.Remove(authorFromDb);
+            context.SaveChanges();
         }
 
         public void DeleteAuthor(int id)
@@ -34,6 +35,7 @@ namespace Infrastructure.Repository
             Author authorFromDb = context.Authors.FirstOrDefault(x => x.author_Id==id);
             if (authorFromDb != null)
                 context.Authors.Remove(authorFromDb);
+            context.SaveChanges();
         }
 
         public void Dispose()
@@ -87,11 +89,13 @@ namespace Infrastructure.Repository
         public void InsertAuthor(Author author)
         {
             context.Authors.Add(author);
+            context.SaveChanges();
         }
 
         public void UpdateAuthor(Author author)
         {
             context.Entry(author).State=EntityState.Modified;
+            context.SaveChanges();
         }
     }
 }
