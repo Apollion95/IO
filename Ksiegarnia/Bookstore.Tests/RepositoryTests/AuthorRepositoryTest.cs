@@ -16,11 +16,6 @@ namespace Bookstore.Tests.RepositoryTests
 {
     public class AuthorRepositoryTest
     {
-        
-
-
-
-
         [Fact]
         public async Task AuthorRepository_Should_Get_Author_By_Id()
         {
@@ -30,7 +25,7 @@ namespace Bookstore.Tests.RepositoryTests
             .Options;
 
             BookStoreContext context = new BookStoreContext(dbOptions);
-            context.Authors.Add(new Author(
+            context.Books.Add(new Author(
                 Id: 1,
                 Name: "Adam",
                 LastName: "Mickiewicz"
