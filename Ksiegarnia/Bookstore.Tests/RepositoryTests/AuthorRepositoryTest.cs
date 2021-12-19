@@ -26,7 +26,7 @@ namespace Bookstore.Tests.RepositoryTests
         {
             //given
             var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
-            .UseInMemoryDatabase(databaseName: "EmployeeDataBase")
+            .UseInMemoryDatabase(databaseName: "Bookstore")
             .Options;
 
             BookStoreContext context = new BookStoreContext(dbOptions);
@@ -35,12 +35,13 @@ namespace Bookstore.Tests.RepositoryTests
                 Name: "Adam",
                 LastName: "Mickiewicz"
                 ));
+            context.SaveChanges();
 
             AuthorRepository authorRepository = new AuthorRepository(context);
             //when
             Optional<Author> author = authorRepository.GetAuthorById(1);
-            //then
 
+            //then
             Assert.NotNull(author.Value);
             Assert.Equal(1, author.Value.author_Id);
             Assert.Equal("Adam", author.Value.name);
@@ -51,7 +52,7 @@ namespace Bookstore.Tests.RepositoryTests
         public async Task AuthorRepository_Should_Get_Author_By_Name_And_LastName()
         {
             var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
-             .UseInMemoryDatabase(databaseName: "EmployeeDataBase")
+             .UseInMemoryDatabase(databaseName: "Bookstore")
              .Options;
 
             BookStoreContext context = new BookStoreContext(dbOptions);
@@ -69,8 +70,8 @@ namespace Bookstore.Tests.RepositoryTests
             AuthorRepository authorRepository = new AuthorRepository(context);
             //when           
             Optional<Author> author = authorRepository.GetAuthorByNameAndLastname("Wojtek", "Kowalczewski");
-            //then
 
+            //then
             Assert.NotNull(author.Value);
             Assert.Equal(2, author.Value.author_Id);
             Assert.Equal("Wojtek", author.Value.name);
@@ -79,11 +80,11 @@ namespace Bookstore.Tests.RepositoryTests
 
 
         [Fact]
-        public async Task AuthorRepository_Should_Add_Author()
+        public async Task AuthorRepository_Should_Insert_Author()
         {
             //given
             var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
-            .UseInMemoryDatabase(databaseName: "EmployeeDataBase")
+            .UseInMemoryDatabase(databaseName: "Bookstore")
             .Options;
 
             BookStoreContext context = new BookStoreContext(dbOptions);
@@ -97,8 +98,9 @@ namespace Bookstore.Tests.RepositoryTests
                 );
             //when
             authorRepository.InsertAuthor(author);
-            //then
             Author authorFromDb = authorRepository.GetAuthorById(2).Value;
+
+            //then
             Assert.NotNull(authorFromDb);
             Assert.Equal(2, authorFromDb.author_Id);
             Assert.Equal("Mariusz", authorFromDb.name);
@@ -106,6 +108,114 @@ namespace Bookstore.Tests.RepositoryTests
 
         }
 
-      
+        [Fact]
+        public async Task AuthorRepository_Should_Delete_Author()
+        {
+            //given
+            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
+            .UseInMemoryDatabase(databaseName: "Bookstore")
+            .Options;
+
+            BookStoreContext context = new BookStoreContext(dbOptions);
+            context.Authors.Add(new Author(
+              Id: 1,
+              Name: "Adam",
+              LastName: "Mickiewicz"
+              ));
+            context.Authors.Add(new Author(
+               Id: 2,
+               Name: "Mariusz",
+               LastName: "Szczygieł"
+               ));
+            context.SaveChanges();
+
+            AuthorRepository authorRepository = new AuthorRepository(context);
+
+            Author author = new Author(
+                Name: "Mariusz",
+                LastName: "Szczygieł"
+                );
+            //when
+            authorRepository.DeleteAuthor(author);
+            Author authorFromDb = authorRepository.GetAuthorById(2).Value;
+
+            //then
+            Assert.Null(authorFromDb);
+
+
+        }
+
+
+        [Fact]
+        public async Task AuthorRepository_Should_Delete_Author_By_Id()
+        {
+            //given
+            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
+            .UseInMemoryDatabase(databaseName: "Bookstore")
+            .Options;
+
+            BookStoreContext context = new BookStoreContext(dbOptions);
+            context.Authors.Add(new Author(
+              Id: 1,
+              Name: "Adam",
+              LastName: "Mickiewicz"
+              ));
+            context.Authors.Add(new Author(
+               Id: 2,
+               Name: "Mariusz",
+               LastName: "Szczygieł"
+               ));
+            context.SaveChanges();
+
+            AuthorRepository authorRepository = new AuthorRepository(context);
+
+            //when
+            authorRepository.DeleteAuthor(1);
+            Author authorFromDb = authorRepository.GetAuthorById(1).Value;
+
+            //then
+            Assert.Null(authorFromDb);
+
+
+        }
+
+        [Fact]
+        public async Task AuthorRepository_Should_Get_Authors_By_PageNumber()
+        {
+            //given
+            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
+            .UseInMemoryDatabase(databaseName: "Bookstore")
+            .Options;
+
+            BookStoreContext context = new BookStoreContext(dbOptions);
+            context.Authors.Add(new Author(
+                Id: 1,
+                Name: "Adam",
+                LastName: "Mickiewicz"
+                ));
+            context.Authors.Add(new Author(
+                Id: 2,
+                Name: "Wojtek",
+                LastName: "Turlecki"
+                ));
+            context.Authors.Add(new Author(
+                Id: 3,
+                Name: "Batłomiej",
+                LastName: "Kawka"
+                ));
+            context.SaveChanges();
+
+            AuthorRepository authorRepository = new AuthorRepository(context);
+            //when
+            Optional<Author> author = authorRepository.GetAuthorById(1);
+
+            //then
+            Assert.NotNull(author.Value);
+            Assert.Equal(1, author.Value.author_Id);
+            Assert.Equal("Adam", author.Value.name);
+            Assert.Equal("Mickiewicz", author.Value.lastName);
+        }
+
+
     }
 }
