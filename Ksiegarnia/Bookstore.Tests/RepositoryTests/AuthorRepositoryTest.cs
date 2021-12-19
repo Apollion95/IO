@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Domain.Entities;
 using Infrastructure.Data;
 using Infrastructure.Repository;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Moq;
@@ -21,9 +22,29 @@ namespace Bookstore.Tests.RepositoryTests
 
 
         [Fact]
-        public async Task AuthorRepository_Should_Get_Author_By_Name()
+        public async Task AuthorRepository_Should_Get_Author_By_Id()
         {
-            
+            //given
+            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
+            .UseInMemoryDatabase(databaseName: "EmployeeDataBase")
+            .Options;
+
+            BookStoreContext context = new BookStoreContext(dbOptions);
+            context.Authors.Add(new Author(
+                Id: 1,
+                Name: "Adam",
+                LastName: "Mickiewicz"
+                ));
+
+            AuthorRepository authorRepository = new AuthorRepository(context);
+            //when
+            Optional<Author> author = authorRepository.GetAuthorById(1);
+            //then
+
+            Assert.NotNull(author.Value);
+            Assert.Equal(1, author.Value.author_Id);
+            Assert.Equal("Adam", author.Value.name);
+            Assert.Equal("Mickiewicz", author.Value.lastName);
         }
     }
 }
