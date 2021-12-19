@@ -14,10 +14,11 @@ using Xunit;
 
 namespace Bookstore.Tests.RepositoryTests
 {
-    public class AuthorRepositoryTest
+    public class ReviewRepositoryTest
     {
         [Fact]
-        public async Task AuthorRepository_Should_Get_Author_By_Id()
+        public async Task ReviewRepository_Should_Get_Review_By_ID()
+
         {
             //given
             var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
@@ -25,21 +26,17 @@ namespace Bookstore.Tests.RepositoryTests
             .Options;
 
             BookStoreContext context = new BookStoreContext(dbOptions);
-            context.Books.Add(new Author(
-                Id: 1,
-                Name: "Adam",
-                LastName: "Mickiewicz"
-                ));
+            context.Reviews.Add(new Review(
+              ));
 
-            AuthorRepository authorRepository = new AuthorRepository(context);
+            ReviewRepository reviewRepository = new ReviewRepository(context);
             //when
-            Optional<Author> author = authorRepository.GetAuthorById(1);
+            Publisher rewiev = ReviewRepository.GetById(1);
             //then
 
-            Assert.NotNull(author.Value);
-            Assert.Equal(1, author.Value.author_Id);
-            Assert.Equal("Adam", author.Value.name);
-            Assert.Equal("Mickiewicz", author.Value.lastName);
+            Assert.NotNull(review);
+        
         }
     }
 }
+
