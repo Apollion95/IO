@@ -15,7 +15,7 @@ namespace Domain.Entities
             this.sub_start=sub_start;
             this.sub_end=sub_end;
             this.is_active=is_active;
-            this.user=user;
+            this.user.user_id=user.user_id;
         }
         public Subscriber()
         {
