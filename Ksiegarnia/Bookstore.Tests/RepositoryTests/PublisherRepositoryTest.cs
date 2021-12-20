@@ -18,29 +18,30 @@ namespace Bookstore.Tests.RepositoryTests
     {
 
         [Fact]
-        public async Task PublisherRepository_Should_Get_Publisher_By_ID()
-           
+        public async Task PublisherRepository_Should_Get_Publisher_By_ID()   
         {
-            //given
-            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
-            .UseInMemoryDatabase(databaseName: "EmployeeDataBase")
-            .Options;
 
-            BookStoreContext context = new BookStoreContext(dbOptions);
-            context.Publishers.Add(new Publisher(
-                Id: 1,
-                Name: "PWN"
-                ));
+            var options = new DbContextOptionsBuilder<BookStoreContext>()
+         .UseInMemoryDatabase(databaseName: "MovieListDatabase")
+         .Options;
 
-            PublisherRepository publisherRepository = new PublisherRepository(context);
-            //when
-            Publisher publisher = publisherRepository.GetById(1);
-            //then
+            // Insert seed data into the database using one instance of the context
+            using (var context = new BookStoreContext(options))
+            {
+                context.Publishers.Add(new Publisher { name  = "Tomek",publisher_id = 1});
+                context.SaveChanges();
+            }
 
-            Assert.NotNull(publisher);
-            Assert.Equal(1, publisher.publisher_id);
-            Assert.Equal("PWN", publisher.name);
-       
+            // Use a clean instance of the context to run the test
+            using (var context = new BookStoreContext(options))
+            {
+                var sut = new PublisherRepository(context);
+                //Act
+                var movies = sut.GetById(1);
+
+                //Assert
+                Assert.Equal(1, movies.publisher_id);
+            }
         }
     }
 }
