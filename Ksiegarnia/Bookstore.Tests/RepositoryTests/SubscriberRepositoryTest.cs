@@ -15,15 +15,15 @@ namespace Bookstore.Tests.RepositoryTests
 {
     public class SubscriberRepositoryTest
     {
-       /* [Fact]
-        public async Task SubscriberRepository_Should_Add_Subscriber_()
+        [Fact]
+        public async Task SubscriberRepository_Should_Add_Subscriber()
         {
 
             var options = new DbContextOptionsBuilder<BookStoreContext>().EnableSensitiveDataLogging()
            .UseInMemoryDatabase(databaseName: "SubscruberMemory")
            .Options;
 
-     
+
             // Use a clean instance of the context to run the test
             using (var context = new BookStoreContext(options))
             {
@@ -38,7 +38,7 @@ namespace Bookstore.Tests.RepositoryTests
                 Assert.Equal(1, sub.sub_id);
             }
         }
-*/
+
         [Fact]
         public async Task SubscriberRepository_Should_Get_Subscriber_By_Id()
         {
