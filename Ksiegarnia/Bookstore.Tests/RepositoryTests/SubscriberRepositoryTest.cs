@@ -141,6 +141,62 @@ namespace Bookstore.Tests.RepositoryTests
             }
         }
 
+
+        [Fact]
+        public async Task SubscriberRepository_Should_Get_Subscribers()
+        {
+
+            var options = new DbContextOptionsBuilder<BookStoreContext>().EnableSensitiveDataLogging()
+            .UseInMemoryDatabase(databaseName: "SubscruberMemory")
+            .Options;
+
+            // Insert seed data into the database using one instance of the context
+            using (var context = new BookStoreContext(options))
+            {
+
+
+                context.Subscribers.Add(new Subscriber { sub_id= 2, sub_start = new DateTime(2015, 11, 10), sub_end = new DateTime(2020, 4, 1), is_active= true, });
+                context.Subscribers.Add(new Subscriber { sub_id= 4, sub_start = new DateTime(2015, 11, 10), sub_end = new DateTime(2020, 4, 1), is_active= true, });
+                context.Subscribers.Add(new Subscriber { sub_id= 5, sub_start = new DateTime(2015, 11, 10), sub_end = new DateTime(2020, 4, 1), is_active= true, });
+                context.Subscribers.Add(new Subscriber { sub_id= 6, sub_start = new DateTime(2015, 11, 10), sub_end = new DateTime(2020, 4, 1), is_active= true, });
+
+
+
+
+
+                context.SaveChanges();
+            }
+
+            // Use a clean instance of the context to run the test
+            using (var context = new BookStoreContext(options))
+            {
+                var sut = new SubscriberRepository(context);
+
+                var cityT = new CityRepository(context);
+                //Act
+                var sub = sut.GetSubscriber();
+                var sub1 = sub.SingleOrDefault(x => x.sub_id == 1);
+                var sub2 = sub.SingleOrDefault(x => x.sub_id == 2);
+                var sub3 = sub.SingleOrDefault(x => x.sub_id == 3);
+                var sub4 = sub.SingleOrDefault(x => x.sub_id == 4);
+                var sub5 = sub.SingleOrDefault(x => x.sub_id == 5);
+
+                //Assert
+                Assert.Equal(1, sub1.sub_id);
+                Assert.Equal(2, sub2.sub_id);
+                Assert.Equal(3, sub3.sub_id);
+                Assert.Equal(4, sub4.sub_id);
+                Assert.Equal(5, sub5.sub_id);
+                Assert.Equal(false, sub1.Equals(null));
+                Assert.Equal(false, sub2.Equals(null));
+                Assert.Equal(false, sub3.Equals(null));
+                Assert.Equal(false, sub4.Equals(null));
+                Assert.Equal(false, sub5.Equals(null));
+
+            }
+        }
+
+
         [Fact]
         public async Task SubscriberRepository_Should_Get_Subscriber_By_User_Id()
         {
