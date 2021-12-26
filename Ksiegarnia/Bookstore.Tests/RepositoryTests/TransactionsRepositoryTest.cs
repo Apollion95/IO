@@ -94,7 +94,7 @@ namespace Bookstore.Tests.RepositoryTests
             }
         }
 
-       /* [Fact]
+        [Fact]
         public async Task TranscabtionRepository_Should_Get_Transactions_By_BookName()
         {
             var options = new DbContextOptionsBuilder<BookStoreContext>().EnableSensitiveDataLogging()
@@ -135,7 +135,7 @@ namespace Bookstore.Tests.RepositoryTests
             }
         }
 
-        [Fact]
+        /*[Fact]
         public async Task TranscabtionRepository_Should_Get_Transactions_Add()
         {
             var options = new DbContextOptionsBuilder<BookStoreContext>().EnableSensitiveDataLogging()
@@ -222,7 +222,7 @@ namespace Bookstore.Tests.RepositoryTests
             {
 
 
-              
+
                 context.Transactions.Add(new Transactions { trans_id=6, price=100, date=new DateTime(2015, 10, 3) });
                 context.Transactions.Add(new Transactions { trans_id=7, price=100, date=new DateTime(2015, 10, 3) });
                 context.Transactions.Add(new Transactions { trans_id=8, price=100, date=new DateTime(2015, 10, 3) });
@@ -238,21 +238,21 @@ namespace Bookstore.Tests.RepositoryTests
             {
                 var tran = new TransactionsRepository(context);
 
-          
+
                 var trans2 = tran.GetById(6);
                 var trans3 = tran.GetById(7);
                 var trans4 = tran.GetById(8);
-             
+
 
                 context.SaveChanges();
 
 
                 //Assert
-            
+
                 Assert.Equal(6, trans2.trans_id);
                 Assert.Equal(7, trans3.trans_id);
                 Assert.Equal(8, trans4.trans_id);
-                
+
 
             }
         }
