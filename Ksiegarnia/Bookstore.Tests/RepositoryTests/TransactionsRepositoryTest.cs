@@ -52,7 +52,7 @@ namespace Bookstore.Tests.RepositoryTests
                 Assert.Equal(1, trans.trans_id);
             }
         }
-        /*[Fact]
+        [Fact]
         public async Task TranscabtionRepository_Should_Get_Transactions_By_User_Id()
         {
             var options = new DbContextOptionsBuilder<BookStoreContext>().EnableSensitiveDataLogging()
@@ -94,7 +94,7 @@ namespace Bookstore.Tests.RepositoryTests
             }
         }
 
-        [Fact]
+       /* [Fact]
         public async Task TranscabtionRepository_Should_Get_Transactions_By_BookName()
         {
             var options = new DbContextOptionsBuilder<BookStoreContext>().EnableSensitiveDataLogging()
