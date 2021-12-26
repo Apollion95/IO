@@ -210,7 +210,7 @@ namespace Bookstore.Tests.RepositoryTests
 
             }
         }
-        /*[Fact]
+        [Fact]
         public async Task TranscabtionRepository_Should_Get_Transactions_Delete()
         {
             var options = new DbContextOptionsBuilder<BookStoreContext>().EnableSensitiveDataLogging()
@@ -256,7 +256,7 @@ namespace Bookstore.Tests.RepositoryTests
 
             }
         }
-        [Fact]
+       /* [Fact]
         public async Task TranscabtionRepository_Should_Get_Transactions_GetTransactions()
         {
             var options = new DbContextOptionsBuilder<BookStoreContext>().EnableSensitiveDataLogging()
