@@ -28,5 +28,8 @@ namespace Domain.Entities
             this.city=city;
         }
 
+        public City()
+        {
+        }
     }
 }
