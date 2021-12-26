@@ -49,7 +49,7 @@ namespace Infrastructure.Repository
 
         public Optional<User> GetUserById(int userId)
         {
-            Optional<User> user =  context.Users.Find(userId);
+            Optional<User> user =  context.Users.SingleOrDefault(x=>x.user_id==userId);
             return user;
         }
 
