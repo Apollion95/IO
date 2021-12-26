@@ -15,7 +15,30 @@ namespace Bookstore.Tests.RepositoryTests
 {
     public class SubscriberRepositoryTest
     {
+       /* [Fact]
+        public async Task SubscriberRepository_Should_Add_Subscriber_()
+        {
 
+            var options = new DbContextOptionsBuilder<BookStoreContext>().EnableSensitiveDataLogging()
+           .UseInMemoryDatabase(databaseName: "SubscruberMemory")
+           .Options;
+
+     
+            // Use a clean instance of the context to run the test
+            using (var context = new BookStoreContext(options))
+            {
+                var sut = new SubscriberRepository(context);
+
+                var cityT = new CityRepository(context);
+                //Act
+                var sub = sut.GetById(1);
+                var city = cityT.GetCityByName("Jelesnia");
+
+                //Assert
+                Assert.Equal(1, sub.sub_id);
+            }
+        }
+*/
         [Fact]
         public async Task SubscriberRepository_Should_Get_Subscriber_By_Id()
         {
@@ -25,11 +48,40 @@ namespace Bookstore.Tests.RepositoryTests
             .Options;
 
             // Insert seed data into the database using one instance of the context
+        
+
+            // Use a clean instance of the context to run the test
             using (var context = new BookStoreContext(options))
             {
-                var user = new User(1, "Pawel",new City("34-340","Jelesnia"),"Kowlaski","Ble","asdas","asdasd","asda2sd");
-                context.Subscribers.Add(new Subscriber { sub_id= 1, sub_start = new DateTime(2015, 11, 10), user = user, sub_end = new DateTime(2020, 4, 1),  is_active= true,  });
-               
+                var sut = new SubscriberRepository(context);
+        
+                var cityT = new CityRepository(context);
+                //Act
+                var sub = sut.GetById(1);
+                var city = cityT.GetCityByName("Jelesnia");
+
+                //Assert
+                Assert.Equal(1, sub.sub_id);
+                Assert.Equal("Jelesnia", city.Value.city);
+                Assert.Equal("34-340", city.Value.postal_code);
+            }
+        }
+
+        [Fact]
+        public async Task SubscriberRepository_Should_Get_Subscriber_By_User_Id()
+        {
+
+            var options = new DbContextOptionsBuilder<BookStoreContext>().EnableSensitiveDataLogging()
+            .UseInMemoryDatabase(databaseName: "SubscruberMemory")
+            .Options;
+
+            // Insert seed data into the database using one instance of the context
+            using (var context = new BookStoreContext(options))
+            {
+                var city = new City { postal_code="34-340", city= "Jelesnia" };
+                var user = new User { user_id=2, username="Kow", name="Pawel", lastname="Kowlaski", address="address", email="email", password="password", postal_code=city };
+                context.Subscribers.Add(new Subscriber { sub_id= 1, sub_start = new DateTime(2015, 11, 10), user = user, sub_end = new DateTime(2020, 4, 1), is_active= true, });
+
 
 
 
@@ -40,14 +92,27 @@ namespace Bookstore.Tests.RepositoryTests
             // Use a clean instance of the context to run the test
             using (var context = new BookStoreContext(options))
             {
-                var sut = new SubscriberRepository(context);
+               
+                var user = new UserRepository(context);
+                var cityT = new CityRepository(context);
                 //Act
-                var movies = sut.GetById(1);
+               
+                var usert = user.GetUserById(2);
+               
 
                 //Assert
-                Assert.Equal(1, movies.sub_id);
+                Assert.Equal(2, usert.Value.user_id);
+                Assert.Equal("Pawel", usert.Value.name);
+                Assert.Equal("Kowlaski", usert.Value.lastname);
+                Assert.Equal("Kow", usert.Value.username);
+                Assert.Equal("email", usert.Value.email);
+                Assert.Equal("address", usert.Value.address);
+                Assert.Equal("password", usert.Value.password);
+
             }
         }
+        
+
 
     }
 }
