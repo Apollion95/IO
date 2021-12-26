@@ -54,7 +54,7 @@ namespace Infrastructure.Repository
 
         public Optional<City> GetCityByName(string name)
         {
-            Optional<City> city = context.Cities.FirstOrDefault(x => x.city.Equals(name));
+            Optional<City> city = context.Cities.SingleOrDefault(x => x.city.Equals(name));
             return city;
         }
 
