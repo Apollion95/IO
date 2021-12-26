@@ -70,7 +70,7 @@ namespace Bookstore.Tests.RepositoryTests
             }
         }
 
-  /*      [Fact]
+        [Fact]
         public async Task SubscriberRepository_Should_Delete_Subscriber()
         {
 
@@ -81,8 +81,8 @@ namespace Bookstore.Tests.RepositoryTests
             // Insert seed data into the database using one instance of the context
             using (var context = new BookStoreContext(options))
             {
-                
-               
+
+
                 context.Subscribers.Add(new Subscriber { sub_id= 3, sub_start = new DateTime(2015, 11, 10), sub_end = new DateTime(2020, 4, 1), is_active= true, });
 
 
@@ -108,7 +108,7 @@ namespace Bookstore.Tests.RepositoryTests
                 //Assert
                 Assert.Equal(null, sub2);
             }
-        }*/
+        }
 
 
 
