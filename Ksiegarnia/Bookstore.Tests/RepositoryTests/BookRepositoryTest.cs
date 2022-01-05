@@ -254,6 +254,47 @@ namespace Bookstore.Tests.RepositoryTests
 
         }
 
+        [Fact]
+        public async Task BookRepository_Should_Update_Book()
+        {
+            //given
+            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
+            .UseInMemoryDatabase(Guid.NewGuid().ToString())
+            .Options;
 
+            BookStoreContext context = new BookStoreContext(dbOptions);
+            context.Authors.Add(new Author(
+              Id: 1,
+              Name: "Adam",
+              LastName: "Mickiewicz"
+              ));
+
+            context.Publishers.Add(new Publisher(
+                Id: 1,
+                Name: "MG"
+            ));
+
+            Book book = new Book();
+            book.book_id = 1;
+            book.name = "Pan Tadeusz";
+            book.releaseDate = new DateTime(2002, 07, 16);
+            book.author = context.Authors.Find(1);
+            book.publisher = context.Publishers.Find(1);
+            context.Store.Add(book);
+            context.SaveChanges();
+
+            BookRepository bookRepository = new BookRepository(context);
+
+            //when
+            Book bookFromDb = bookRepository.GetBookById(1).Value;
+            bookFromDb.name = "Reduta Ordona";
+            bookRepository.UpdateBook(bookFromDb);
+
+            //then
+            Book updatedBook = bookRepository.GetBookById(1).Value;
+
+            Assert.Equal("Reduta Ordona", updatedBook.name);
+
+        }
     }
 }
