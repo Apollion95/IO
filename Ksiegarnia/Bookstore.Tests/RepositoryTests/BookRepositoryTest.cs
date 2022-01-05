@@ -149,6 +149,64 @@ namespace Bookstore.Tests.RepositoryTests
         }
 
 
+        [Fact]
+        public async Task BookRepository_Should_Get_Books_By_PageNumber()
+        {
+            //given
+            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
+            .UseInMemoryDatabase(Guid.NewGuid().ToString())
+            .Options;
+
+            BookStoreContext context = new BookStoreContext(dbOptions);
+            context.Authors.Add(new Author(
+              Id: 1,
+              Name: "Adam",
+              LastName: "Mickiewicz"
+              ));
+
+            context.Publishers.Add(new Publisher(
+                Id: 1,
+                Name: "MG"
+            ));
+            Book book = new Book();
+            book.book_id = 1;
+            book.name = "Pan Tadeusz";
+            book.releaseDate = new DateTime(2002, 07, 16);
+            book.author = context.Authors.Find(1);
+            book.publisher = context.Publishers.Find(1);
+
+            Book book2 = new Book();
+            book2.book_id = 2;
+            book2.name = "Sonety Krymskie";
+            book2.releaseDate = new DateTime(2006, 11, 11);
+            book2.author = context.Authors.Find(1);
+            book2.publisher = context.Publishers.Find(1);
+
+            Book book3 = new Book();
+            book3.book_id = 3;
+            book3.name = "Reduta Ordona";
+            book3.releaseDate = new DateTime(2000, 03, 12);
+            book3.author = context.Authors.Find(1);
+            book3.publisher = context.Publishers.Find(1);
+
+            context.Store.Add(book);
+            context.Store.Add(book2);
+            context.Store.Add(book3);
+            context.SaveChanges();
+
+            BookRepository bookRepository = new BookRepository(context);
+            //when
+            List<Book> books = bookRepository.GetBooks(1).ToList();
+            //then
+
+            Assert.Equal(3, books.Count);
+            Assert.NotNull(books.FirstOrDefault(x => x.book_id == 1));
+            Assert.NotNull(books.FirstOrDefault(x => x.book_id == 2));
+            Assert.NotNull(books.FirstOrDefault(x => x.book_id == 3));
+
+        }
+
+
 
 
     }

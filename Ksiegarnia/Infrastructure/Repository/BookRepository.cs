@@ -58,6 +58,7 @@ namespace Infrastructure.Repository.Interfaces
             return book;
         }
 
+
         public PagedList<Book> GetBooks(int pageNumber)
         {
             return (PagedList<Book>)context.Store.ToPagedList(pageNumber, PAGE_SIZE);
@@ -71,6 +72,8 @@ namespace Infrastructure.Repository.Interfaces
         public void UpdateBook(Book book)
         {
             context.Entry(book).State = EntityState.Modified;
+            context.SaveChanges();
+
         }
 
       
