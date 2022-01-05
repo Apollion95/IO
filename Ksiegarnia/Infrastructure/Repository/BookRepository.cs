@@ -24,6 +24,7 @@ namespace Infrastructure.Repository.Interfaces
             Book book = context.Store.Find(bookId);
             if (book != null)
                 context.Store.Remove(book);
+            context.SaveChanges();
         }
         public void Dispose()
         {
@@ -43,6 +44,8 @@ namespace Infrastructure.Repository.Interfaces
             }
             this.disposed = true;
         }
+
+
         public Optional<Book> GetBookById(int bookId)
         {
             Optional<Book> book = context.Store.Find(bookId);
