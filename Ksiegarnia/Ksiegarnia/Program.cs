@@ -2,6 +2,8 @@ using Infrastructure.Data;
 using Pomelo.EntityFrameworkCore.MySql;
 using System.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Infrastructure.Repository.Interfaces;
+using Infrastructure.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,8 @@ builder.Services.AddDbContext<BookStoreContext>(options =>
     
 });
 
+
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 
 // Add services to the container.
