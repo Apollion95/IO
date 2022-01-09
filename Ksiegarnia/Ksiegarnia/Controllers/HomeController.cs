@@ -40,6 +40,23 @@ namespace Ksiegarnia.Controllers
 
             return Ok(new { message = "succes" });
         }
+        [HttpGet("user")]
+        public IActionResult GetUser()
+        {
+            try
+            {
+                var jwt = Request.Cookies["jwt"];
+                var token = _jwtService.Verify(jwt);
+                int userId = int.Parse(token.Issuer);
+                var user = _repository.GetUserById(userId);
+
+                return Ok(user);
+            }
+            catch (Exception)
+            {
+                return Unauthorized();
+            }
+        }
 
     }
 }
