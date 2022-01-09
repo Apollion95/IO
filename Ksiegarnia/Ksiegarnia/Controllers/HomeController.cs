@@ -1,12 +1,25 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Infrastructure.Repository;
+using Ksiegarnia.Helpers;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace Ksiegarnia.Controllers
 {
+    [Route("home")]
+    [ApiController]
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IUserRepository _repository;
+        private readonly JwtService _jwtService;
+
+        public HomeController(IUserRepository repository, JwtService jwtService)
         {
-            return View();
+            _repository = repository;
+            _jwtService = jwtService;
         }
+
     }
 }
+
+
+
