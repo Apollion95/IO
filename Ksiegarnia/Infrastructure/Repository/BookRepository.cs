@@ -64,6 +64,11 @@ namespace Infrastructure.Repository.Interfaces
             return (PagedList<Book>)context.Store.ToPagedList(pageNumber, PAGE_SIZE);
         }
 
+        public PagedList<Book> GetBooksByPhrase(int pageNumber, string phrase)
+        {
+           return   (PagedList<Book>)context.Store.Where(x => x.name.Contains(phrase)).ToPagedList(pageNumber, PAGE_SIZE);
+        }
+
         public void InsertBook(Book book)
         {
             context.Store.Add(book);
