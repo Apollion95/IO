@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using BCrypt;
 
 
 
@@ -29,12 +30,12 @@ namespace Ksiegarnia.Controllers
 
             if (user == null) return BadRequest(new { message = "Nie poprawne dane" });
 
-            if (!BCrypt.Net.BCrypt.Verify(dto.Password, user.Password))
+            if (!BCrypt.Net.BCrypt.Verify(dto.Password, user.password))
             {
                 return BadRequest(new { message = "Nie poprawne dane" });
             }
 
-            var jwt = _jwtService.Generate(user.Id);
+            var jwt = _jwtService.Generate(user.user_id);
 
             Response.Cookies.Append("jwt", jwt, new CookieOptions { HttpOnly = true });
 
@@ -66,9 +67,5 @@ namespace Ksiegarnia.Controllers
         }
     }
 }
-
-    }
-}
-
 
 

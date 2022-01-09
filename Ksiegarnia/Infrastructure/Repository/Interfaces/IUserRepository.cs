@@ -16,6 +16,7 @@ namespace Infrastructure.Repository
         void InsertUser(User user);
         void UpdateUser(User user);
         void DeleteUser(int userId);
+        User GetUserByEmail(string email);
 
     }
 }

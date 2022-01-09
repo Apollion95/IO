@@ -67,5 +67,10 @@ namespace Infrastructure.Repository
         {
             context.Entry(user).State = EntityState.Modified;
         }
+
+        public User GetUserByEmail(string email)
+        {
+             return context.Users.FirstOrDefault(u=>u.email==email);
+        }
     }
 }
