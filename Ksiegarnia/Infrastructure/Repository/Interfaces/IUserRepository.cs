@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository
 {
-    internal interface IUserRepository : IDisposable
+    public interface IUserRepository : IDisposable
     {
         PagedList<User> GetUsers(int pageNumber);
         Optional<User> GetUserById(int userId);
