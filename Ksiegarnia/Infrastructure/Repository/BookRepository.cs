@@ -74,6 +74,11 @@ namespace Infrastructure.Repository.Interfaces
             return (PagedList<Book>)context.Store.Where(x => x.publisher.name.Contains(publisher)).ToPagedList(pageNumber, PAGE_SIZE);
         }
 
+        public PagedList<Book> GetBooksByAuthor(int pageNumber, string authorName, string authorLastname)
+        {
+            return (PagedList<Book>)context.Store.Where(x => x.author.name.Equals(authorName) && x.author.lastName.Equals(authorLastname)).ToPagedList(pageNumber, PAGE_SIZE);
+        }
+
         public void InsertBook(Book book)
         {
             context.Store.Add(book);
