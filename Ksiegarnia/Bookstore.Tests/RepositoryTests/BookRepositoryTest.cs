@@ -413,5 +413,59 @@ namespace Bookstore.Tests.RepositoryTests
             Assert.NotNull(books[1]);
 
         }
+
+
+
+        [Fact]
+        public async Task BookRepository_Should_Get_Books_By_Author()
+        {
+            //given
+            var dbOptions = new DbContextOptionsBuilder<BookStoreContext>()
+            .UseInMemoryDatabase(Guid.NewGuid().ToString())
+            .Options;
+
+            BookStoreContext context = new BookStoreContext(dbOptions);
+            context.Authors.Add(new Author(
+              Id: 1,
+              Name: "Adam",
+              LastName: "Mickiewicz"
+              ));
+
+
+            context.Publishers.Add(new Publisher(
+                Id: 1,
+                Name: "MG"
+            ));
+
+            Book book = new Book();
+            book.book_id = 1;
+            book.name = "Pan Tadeusz";
+            book.releaseDate = new DateTime(2002, 07, 16);
+            book.author = context.Authors.Find(1);
+            book.publisher = context.Publishers.Find(1);
+            context.Store.Add(book);
+
+            Book book2 = new Book();
+            book2.book_id = 2;
+            book2.name = "Dziady cz. I";
+            book2.releaseDate = new DateTime(1997, 10, 07);
+            book2.author = context.Authors.Find(1);
+            book2.publisher = context.Publishers.Find(1);
+            context.Store.Add(book2);
+
+            context.SaveChanges();
+
+            BookRepository bookRepository = new BookRepository(context);
+
+
+            //when
+            List<Book> books = bookRepository.GetBooksByAuthor(1,"Adam", "Mickiewicz").ToList();
+
+            //then
+            Assert.Equal(2, books.Count);
+            Assert.NotNull(books[0]);
+            Assert.NotNull(books[1]);
+
+        }
     }
 }
