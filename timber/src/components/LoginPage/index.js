@@ -6,7 +6,7 @@ const LoginIn = () => {
     <>
       <Container>
         <FormWrap>
-          <Icon to='/welcome'>Timber</Icon>
+          <Icon to='/'>Timber</Icon>
           <FormContent>
             <Form action='#'>
               <FormH1>Zaloguj się do swojego konta</FormH1>
@@ -14,7 +14,7 @@ const LoginIn = () => {
                 <FormInput htmlFor='email'/>
               <FormLabel htmlFor='for'>Hasło</FormLabel>
                 <FormInput htmlFor='password'/>
-              <FormButton  type='submit'>Zaloguj Się</FormButton>
+              <FormButton  type='submit'>Zaloguj się</FormButton>
               <Text>Zapomniałeś Hasła?</Text>
             </Form>
           </FormContent>

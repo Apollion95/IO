@@ -6,7 +6,7 @@ const Register = () => {
     <>
       <Container>
         <FormWrap>
-          <Icon to='/welcome'>Timber</Icon>
+          <Icon to='/'>Timber</Icon>
           <FormContent>
             <Form action='#'>
               <FormH1>Załóż swoje konto</FormH1>
