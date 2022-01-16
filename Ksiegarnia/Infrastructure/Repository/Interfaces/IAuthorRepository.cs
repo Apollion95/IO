@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Interfaces
 {
-    internal interface IAuthorRepository : IDisposable
+    public interface IAuthorRepository : IDisposable
     {
         PagedList<Author> GetAuthors(int pageNumber);
         PagedList<Author> GetAuthorsByName(int pageNumber, string name);

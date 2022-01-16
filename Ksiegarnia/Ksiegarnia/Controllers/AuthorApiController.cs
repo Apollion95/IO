@@ -1,15 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using Infrastructure.Repository.Interfaces;
 namespace Ksiegarnia.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-
+    [Route("author")]
+    [Produces("application/json")]
     public class AuthorApiController : Controller
     {
-        public IActionResult Index()
+        public IAuthorRepository authorRepository;
+       public AuthorApiController(IAuthorRepository authorRepository)
         {
-            return View();
+            this.authorRepository = authorRepository;
         }
+
+        [HttpGet("{id}")]
+        public JsonResult GetById(int id)
+        {
+            var author = authorRepository.GetAuthorById(id);
+            if (author.HasValue)
+                return new JsonResult(author);
+            return new JsonResult(null);
+        }
+
+        [HttpGet("{}")]
+        
+
     }
 }
