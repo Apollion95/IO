@@ -1,12 +1,17 @@
 import { Container, FormWrap, Icon, FormContent, Form, FormInput, FormH1, FormLabel, FormButton, Text } from './LoginInElements' 
 import React, {useState} from 'react'
+import {Navigate} from "react-router-dom"
 
-const Login = (props) 
-const [email, setEmail] = useState('');
-const [password, setPassword] = useState('');
-const [navigate, setNavigate] = useState('');
 
-const submit = async (e) =>
+
+
+const LoginIn = (props) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [navigate, setNavigate] = useState('');
+
+
+  const submit = async (e) =>
 {
   e.preventDefault(); 
 
@@ -27,8 +32,6 @@ const submit = async (e) =>
       return <Navigate to="/"/>
     }
 
-
-const LoginIn = () => {
   return (
     <>
       <Container>
