@@ -1,6 +1,10 @@
 import React from 'react'
 import { Container, FormWrap, Icon, FormContent, Form, FormInput, FormH1, FormLabel, FormButton, Text } from './LoginInElements' 
 
+const Login = (props) => {
+const [email, setEmail] = useState('');
+
+
 const LoginIn = () => {
   return (
     <>
