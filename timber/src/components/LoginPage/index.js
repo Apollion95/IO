@@ -6,6 +6,27 @@ const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [navigate, setNavigate] = useState('');
 
+const submit = async (e) =>
+{
+  e.preventDefault(); 
+
+  await fetch('http://localhost:8000/home/login', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    credentials: 'include',
+    body: JSON.stringify({
+      email,
+      password
+    })
+  });
+  props.setName('');
+
+  setNavigate(true); 
+}
+    if(navigate) {
+      return <Navigate to="/"/>
+    }
+
 
 const LoginIn = () => {
   return (
