@@ -50,7 +50,6 @@ namespace Ksiegarnia.Controllers
                 var token = _jwtService.Verify(jwt);
                 int userId = int.Parse(token.Issuer);
                 var user = _repository.GetUserById(userId);
-
                 return Ok(user);
             }
             catch (Exception)
