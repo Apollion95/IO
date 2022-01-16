@@ -1,7 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Container, FormWrap, Icon, FormContent, Form, FormInput, FormH1, FormLabel, FormButton } from './RegistrationElements' 
 
+
 const Register = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [navigate, setNavigate] = useState('');
+
   return (
     <>
       <Container>
