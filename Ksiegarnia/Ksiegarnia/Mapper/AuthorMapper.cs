@@ -10,6 +10,9 @@ namespace Ksiegarnia.Mapper
             return  new Author(dto.author_Id, dto.name, dto.lastName);        
         }
 
-
+        private AuthorDto convertToDto(Author entity)
+        {
+            return new AuthorDto(entity.author_Id, entity.name, entity.lastName);
+        }
     }
 }
