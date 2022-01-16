@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Infrastructure.Repository.Interfaces;
 using Ksiegarnia.Mapper;
+using Domain.Entities;
 
 namespace Ksiegarnia.Controllers
 {
@@ -31,8 +32,22 @@ namespace Ksiegarnia.Controllers
             return new JsonResult(null);
         }
 
+        [HttpGet("{id}/books")]
+        public JsonResult GetAuthorBooks(int id)
+        {
 
-        
+            var author = authorRepository.GetAuthorById(id);
+            if (author.HasValue)
+            {
+                List<Book> books = (List<Book>)author.Value.books;
+                return new JsonResult(books);
+
+            }
+            return new JsonResult(null);
+        }
+
+
+
 
     }
 }
