@@ -1,7 +1,7 @@
 import { Container, FormWrap, Icon, FormContent, Form, FormInput, FormH1, FormLabel, FormButton, Text } from './LoginInElements' 
 import React, {useState} from 'react'
 
-const Login = (props) => {
+const Login = (props) 
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [navigate, setNavigate] = useState('');
