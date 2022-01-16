@@ -34,12 +34,14 @@ const Register = () => {
         <FormWrap>
           <Icon to='/'>Timber</Icon>
           <FormContent>
-            <Form action='#'>
+            <Form onSubmit={submit}>
               <FormH1>Załóż swoje konto</FormH1>
               <FormLabel htmlFor='for'>Email</FormLabel>
-                <FormInput htmlFor='email'/>
+              <FormInput type="email" required 
+                onChange={e => setEmail(e.target.value)} />
               <FormLabel htmlFor='for'>Hasło</FormLabel>
-                <FormInput htmlFor='password'/>
+              <FormInput type="password" required 
+                onChange={e => setPassword(e.target.value)} />
               <FormLabel htmlFor='for'>Powtórz Hasło</FormLabel>
                 <FormInput htmlFor='password'/>
               <FormButton  type='submit'>Zarejestruj się</FormButton>
