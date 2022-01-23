@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Domain.Entities;
-using System.Diagnostics;
-using Infrastructure.Repository.Interfaces;
 using Bookstore.Services;
+using Bookstore.Mapper;
+using Bookstore.Dtos;
+
 
 namespace Bookstore.Controllers
 {
@@ -21,38 +22,30 @@ namespace Bookstore.Controllers
         }
 
         [HttpGet]
-        public JsonResult GetAll([FromBody]int page)
+        public JsonResult GetByPage( int page)
         {
             List<AuthorDto> authorDtos = new List<AuthorDto>();
-            return new JsonResult(authorSer)
+            if (page < 1)
+                page = 1;
+            List<Author> authors = authorService.getAuthors(page);
+            foreach(Author author in authors)
+                {
+                authorDtos.Add(authorMapper.convertToDto(author));
+                }
+
+            return new JsonResult(authorDtos);
         }
 
         [HttpGet("{id}")]
         public JsonResult GetById(int id)
-        {
-
-            var author = authorRepository.GetAuthorById(id);
-            if (author.HasValue)
-            {
-                //var authorDto = authorMapper.convertToDto(author.Value);
-                return new JsonResult(author);
-
-            }
-            return new JsonResult(null);
+        {         
+            return new JsonResult(authorService.GetAuthorById(id));
         }
 
         [HttpGet("{id}/books")]
         public JsonResult GetAuthorBooks(int id)
         {
-
-            var author = authorRepository.GetAuthorById(id);
-            if (author.HasValue)
-            {
-                List<Book> books = (List<Book>)author.Value.books;
-                return new JsonResult(books);
-
-            }
-            return new JsonResult(null);
+            return new JsonResult(authorService.getAuthorBooks(id));
         }
 
 

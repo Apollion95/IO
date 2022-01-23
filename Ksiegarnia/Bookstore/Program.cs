@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Infrastructure.Repository.Interfaces;
 using Infrastructure.Repository;
 using Bookstore.Services;
+using Bookstore.Mapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,10 +19,15 @@ builder.Services.AddDbContext<BookStoreContext>(options =>
 
 });
 
-
+//Repositories
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
+
+//Services
 builder.Services.AddScoped<AuthorService, AuthorService>();
+
+//Mappers
+builder.Services.AddScoped<AuthorMapper, AuthorMapper>();
 
 // Add services to the container.
 
