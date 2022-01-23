@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Infrastructure.Repository.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
 
 namespace Bookstore.Services
@@ -31,6 +32,17 @@ namespace Bookstore.Services
         internal object? getAuthorBooks(int id)
         {
             throw new NotImplementedException();
+        }
+
+        internal Author CreateAuthor(Author author)
+        {
+            if (!authorRepository.GetAuthorByNameAndLastname(author.name, author.lastName).HasValue)
+                return null;
+            authorRepository.InsertAuthor(new Author(author.name,author.lastName));
+
+            return author;
+
+
         }
     }
 }

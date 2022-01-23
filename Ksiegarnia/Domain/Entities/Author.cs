@@ -29,5 +29,11 @@ namespace Domain.Entities
         {
             (name, lastName) = (Name, LastName);
         }
+
+        public Author(string Name, string LastName, List<Book> Books)
+        {
+            (name, lastName,books) = (Name, LastName, Books);
+            
+        }
     }
 }

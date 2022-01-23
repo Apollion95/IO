@@ -8,12 +8,16 @@ namespace Bookstore.Mapper
     {
         public Author convertToEntity(AuthorDto dto)
         {
-            return  new Author(dto.author_Id, dto.name, dto.lastName);        
+            if(dto.books==null)
+                return new Author(dto.name, dto.lastName);
+            return  new Author(dto.name, dto.lastName, dto.books);        
         }
 
         public AuthorDto convertToDto(Author entity)
         {
-            return new AuthorDto(entity.author_Id, entity.name, entity.lastName);
+            if(entity.books==null)
+                return  new AuthorDto(entity.name, entity.lastName);
+            return new AuthorDto(entity.name, entity.lastName, entity.books.ToList());
         }
     }
 }

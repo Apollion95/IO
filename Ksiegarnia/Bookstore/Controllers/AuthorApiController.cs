@@ -48,7 +48,18 @@ namespace Bookstore.Controllers
             return new JsonResult(authorService.getAuthorBooks(id));
         }
 
+        [HttpPost]
+        public IActionResult Create([FromBody()] AuthorDto authorDto)
+        {
+            if (authorDto == null)
+                return BadRequest();
 
+            Author author = authorMapper.convertToEntity(authorDto);
+            author = authorService.CreateAuthor(author);
+            if (author==null)
+                return StatusCode(409);
+            return Ok(authorDto);
+        }
 
 
     }
