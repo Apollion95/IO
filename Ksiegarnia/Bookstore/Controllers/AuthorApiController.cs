@@ -39,7 +39,7 @@ namespace Bookstore.Controllers
         [HttpGet("{id}")]
         public JsonResult GetById(int id)
         {         
-            return new JsonResult(authorService.GetAuthorById(id));
+            return new JsonResult(authorService.getAuthorById(id));
         }
 
         [HttpGet("{id}/books")]

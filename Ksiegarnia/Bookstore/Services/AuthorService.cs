@@ -21,7 +21,7 @@ namespace Bookstore.Services
             return authorRepository.GetAuthors(page).ToList();
         }
 
-        internal Author GetAuthorById(int id)
+        internal Author getAuthorById(int id)
         {
             Optional<Author> author = authorRepository.GetAuthorById(id);
             if (!author.HasValue)

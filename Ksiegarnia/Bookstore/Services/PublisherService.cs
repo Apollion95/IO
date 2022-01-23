@@ -1,6 +1,6 @@
 ﻿using Domain.Entities;
 using Infrastructure.Repository;
-
+using Microsoft.CodeAnalysis;
 namespace Bookstore.Services
 {
     public class PublisherService
@@ -14,7 +14,15 @@ namespace Bookstore.Services
 
         internal List<Publisher> getPublishers(int page)
         {
-            return publisherRepository.getPublisher(page);
+            return publisherRepository.getPublishers(page);
+        }
+
+        internal Publisher getPublisherById(int id)
+        {
+            Optional<Publisher> publisher = publisherRepository.getPublisherById(id);
+            if (!publisher.HasValue)
+                return null;
+            return publisher.Value;
         }
     }
 }

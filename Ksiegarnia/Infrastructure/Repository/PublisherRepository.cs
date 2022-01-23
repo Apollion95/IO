@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Infrastructure.Data;
 using Infrastructure.Repository.Interfaces;
+using Microsoft.CodeAnalysis;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,12 @@ namespace Infrastructure.Repository
             _context = context;
         }
 
-        public List<Publisher> getPublisher(int pageNumber)
+        public Optional<Publisher> getPublisherById(int id)
+        {
+            Optional<Publisher> publisher = _context.Publishers.Find(id);
+            return publisher;
+        }
+        public List<Publisher> getPublishers(int pageNumber)
         {
             return ((PagedList<Publisher>)_context.Authors.ToPagedList(pageNumber, 10)).ToList();
         }
