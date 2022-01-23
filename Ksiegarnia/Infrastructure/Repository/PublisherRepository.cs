@@ -12,7 +12,7 @@ namespace Infrastructure.Repository
     public class PublisherRepository : IPublisherRepository
     {
 
-        private readonly BookStoreContext _context;
+        private BookStoreContext _context;
 
         public PublisherRepository(BookStoreContext context)
         {

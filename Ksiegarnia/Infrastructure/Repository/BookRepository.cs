@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository.Interfaces
 {
-    internal class BookRepository : IBookRepository
+    public class BookRepository : IBookRepository
     {
         private BookStoreContext context;
         public const int PAGE_SIZE = 10;
@@ -24,6 +24,7 @@ namespace Infrastructure.Repository.Interfaces
             Book book = context.Store.Find(bookId);
             if (book != null)
                 context.Store.Remove(book);
+            context.SaveChanges();
         }
         public void Dispose()
         {
@@ -43,6 +44,8 @@ namespace Infrastructure.Repository.Interfaces
             }
             this.disposed = true;
         }
+
+
         public Optional<Book> GetBookById(int bookId)
         {
             Optional<Book> book = context.Store.Find(bookId);
@@ -55,9 +58,25 @@ namespace Infrastructure.Repository.Interfaces
             return book;
         }
 
+
         public PagedList<Book> GetBooks(int pageNumber)
         {
             return (PagedList<Book>)context.Store.ToPagedList(pageNumber, PAGE_SIZE);
+        }
+
+        public PagedList<Book> GetBooksByPhrase(int pageNumber, string phrase)
+        {
+            return (PagedList<Book>)context.Store.Where(x => x.name.Contains(phrase)).ToPagedList(pageNumber, PAGE_SIZE);
+        }
+
+        public PagedList<Book> GetBooksByPublisher(int pageNumber, string publisher)
+        {
+            return (PagedList<Book>)context.Store.Where(x => x.publisher.name.Contains(publisher)).ToPagedList(pageNumber, PAGE_SIZE);
+        }
+
+        public PagedList<Book> GetBooksByAuthor(int pageNumber, string authorName, string authorLastname)
+        {
+            return (PagedList<Book>)context.Store.Where(x => x.author.name.Equals(authorName) && x.author.lastName.Equals(authorLastname)).ToPagedList(pageNumber, PAGE_SIZE);
         }
 
         public void InsertBook(Book book)
@@ -68,6 +87,8 @@ namespace Infrastructure.Repository.Interfaces
         public void UpdateBook(Book book)
         {
             context.Entry(book).State = EntityState.Modified;
+            context.SaveChanges();
+
         }
 
       

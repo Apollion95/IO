@@ -35,7 +35,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("author_Id");
 
-                    b.ToTable("Authors");
+                    b.ToTable("Authors", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Book", b =>
@@ -63,7 +63,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("publisher_id");
 
-                    b.ToTable("Book");
+                    b.ToTable("Book", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.City", b =>
@@ -79,7 +79,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("postal_code");
 
-                    b.ToTable("Cities");
+                    b.ToTable("Cities", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Library", b =>
@@ -100,7 +100,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("user_id");
 
-                    b.ToTable("Libraries");
+                    b.ToTable("Libraries", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Publisher", b =>
@@ -115,7 +115,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("publisher_id");
 
-                    b.ToTable("Publishers");
+                    b.ToTable("Publishers", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Review", b =>
@@ -143,7 +143,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("user_id");
 
-                    b.ToTable("Reviews");
+                    b.ToTable("Reviews", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Subscriber", b =>
@@ -168,7 +168,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("user_id");
 
-                    b.ToTable("Subscribers");
+                    b.ToTable("Subscribers", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Transactions", b =>
@@ -195,7 +195,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("user_id");
 
-                    b.ToTable("Transactions");
+                    b.ToTable("Transactions", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.User", b =>
@@ -240,7 +240,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("postal-code");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Book", b =>

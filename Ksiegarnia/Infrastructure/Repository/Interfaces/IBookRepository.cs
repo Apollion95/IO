@@ -12,6 +12,10 @@ namespace Infrastructure.Repository.Interfaces
     internal interface IBookRepository : IDisposable
     {
         PagedList<Book> GetBooks(int pageNumber);
+        PagedList<Book> GetBooksByPhrase(int pageNumber, string phrase);
+        PagedList<Book> GetBooksByPublisher(int pageNumber, string publisher);
+
+        PagedList<Book> GetBooksByAuthor(int pageNumber, string authorName, string authorLastname);
         Optional<Book> GetBookByName (string name);
         Optional<Book> GetBookById (int id);
         void InsertBook (Book book);

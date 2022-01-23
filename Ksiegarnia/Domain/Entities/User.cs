@@ -63,6 +63,8 @@ namespace Domain.Entities
             this.password=password;
         }
 
-
+        public User()
+        {
+        }
     }
 }

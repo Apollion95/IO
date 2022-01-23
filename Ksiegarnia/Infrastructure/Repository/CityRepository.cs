@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repository
 {
-    internal class CityRepository : ICityRepository
+    public class CityRepository : ICityRepository
     {
         private BookStoreContext context;
         public const int PAGE_SIZE = 10;
@@ -54,7 +54,7 @@ namespace Infrastructure.Repository
 
         public Optional<City> GetCityByName(string name)
         {
-            Optional<City> city = context.Cities.FirstOrDefault(x => x.city.Equals(name));
+            Optional<City> city = context.Cities.SingleOrDefault(x => x.city.Equals(name));
             return city;
         }
 
