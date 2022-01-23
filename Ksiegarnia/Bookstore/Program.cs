@@ -25,6 +25,7 @@ builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 
 //Services
 builder.Services.AddScoped<AuthorService, AuthorService>();
+builder.Services.AddScoped<PublisherService, PublisherService>();
 
 //Mappers
 builder.Services.AddScoped<AuthorMapper, AuthorMapper>();
