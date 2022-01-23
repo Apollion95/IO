@@ -10,7 +10,7 @@ const Home = () => {
         height: '90vh'
       }}
     >
-      <h1>O aplikacji</h1>
+      <h1></h1>
     </div>
   )
 }
