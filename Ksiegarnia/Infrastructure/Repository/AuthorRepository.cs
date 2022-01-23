@@ -99,5 +99,10 @@ namespace Infrastructure.Repository
             context.Entry(author).State=EntityState.Modified;
             context.SaveChanges();
         }
+
+        public List<Book> GetAuthorBooks(int id)
+        {
+           return  context.Authors.Find(id).books.ToList();
+        }
     }
 }

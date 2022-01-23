@@ -30,9 +30,9 @@ namespace Bookstore.Services
                 
         }
 
-        internal object? getAuthorBooks(int id)
+        internal List<Book> getAuthorBooks(int id)
         {
-            throw new NotImplementedException();
+            return authorRepository.GetAuthorBooks(id);
         }
 
         internal Author createAuthor(Author author)

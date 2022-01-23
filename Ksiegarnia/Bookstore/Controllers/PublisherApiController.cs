@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Bookstore.Controllers
 {
+    [ApiController]
+    [Route("api/publishers")]
+    [Produces("application/json")]
     public class PublisherApiController : Controller
     {
 

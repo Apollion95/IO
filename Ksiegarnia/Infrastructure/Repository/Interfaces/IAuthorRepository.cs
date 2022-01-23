@@ -20,6 +20,6 @@ namespace Infrastructure.Repository.Interfaces
         void UpdateAuthor(Author author);
         void DeleteAuthor(Author author);
         void DeleteAuthor(int id);
-
+        List<Book> GetAuthorBooks(int id);
     }
 }
