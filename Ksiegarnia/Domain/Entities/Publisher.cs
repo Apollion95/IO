@@ -19,5 +19,10 @@ namespace Domain.Entities
         {
 
         }
+
+        public Publisher(string name)
+        {
+            this.name = name;
+        }
     }
 }

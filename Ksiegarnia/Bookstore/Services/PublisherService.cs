@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Infrastructure.Repository;
 using Microsoft.CodeAnalysis;
+
 namespace Bookstore.Services
 {
     public class PublisherService
@@ -23,6 +24,22 @@ namespace Bookstore.Services
             if (!publisher.HasValue)
                 return null;
             return publisher.Value;
+        }
+
+        internal Publisher createPublisher(string name)
+        {
+            if (publisherRepository.GetByName(name) == null)
+            { 
+                Publisher publisher = new Publisher(name);
+                publisherRepository.Add(publisher);
+                return publisher;
+            }
+            return null;
+        }
+
+        internal void delete(Publisher publisher)
+        {
+            publisherRepository.Delete(publisher);
         }
     }
 }
