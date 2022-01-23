@@ -9,7 +9,7 @@ using BCrypt;
 
 
 
-namespace Ksiegarnia.Controllers
+namespace Bookstore.Controllers
 {
     [Route("home")]
     [ApiController]

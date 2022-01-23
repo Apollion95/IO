@@ -1,4 +1,4 @@
-﻿namespace Ksiegarnia.Dtos
+﻿namespace Bookstore.Dtos
 {
     public class AuthorDto
     {

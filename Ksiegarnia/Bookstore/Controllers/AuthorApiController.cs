@@ -1,28 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Ksiegarnia.Mapper;
 using Domain.Entities;
 using System.Diagnostics;
 using Infrastructure.Repository.Interfaces;
+using Bookstore.Services;
 
-namespace Ksiegarnia.Controllers
+namespace Bookstore.Controllers
 {
     [ApiController]
     [Route("api/authors")]
     [Produces("application/json")]
     public class AuthorApiController : Controller
     {
-        public IAuthorRepository authorRepository;
-        public AuthorMapper authorMapper;
-        public AuthorApiController(IAuthorRepository authorRepository)
+        private AuthorService authorService;
+        private AuthorMapper authorMapper;
+        public AuthorApiController(AuthorService authorService, AuthorMapper authorMapper)
         {
-            this.authorRepository = authorRepository;
+            this.authorService = authorService;
+            this.authorMapper = authorMapper;
             
         }
 
         [HttpGet]
-        public JsonResult GetAll()
+        public JsonResult GetAll([FromBody]int page)
         {
-            return new JsonResult(new Author(1,"Adam", "Mickiewicz"));
+            List<AuthorDto> authorDtos = new List<AuthorDto>();
+            return new JsonResult(authorSer)
         }
 
         [HttpGet("{id}")]

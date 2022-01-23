@@ -1,7 +1,8 @@
-﻿using Domain.Entities;
-using Ksiegarnia.Dtos;
+﻿using Bookstore.Dtos;
+using Domain.Entities;
 
-namespace Ksiegarnia.Mapper
+
+namespace Bookstore.Mapper
 {
     public class AuthorMapper
     {
