@@ -64,6 +64,17 @@ namespace Ksiegarnia.Controllers
 
             return Ok(new { message = "succes" });
         }
+        [HttpPost("register")]
+        public IActionResult Register(RegisterDto dto)
+        {
+            var user = new User
+            {
+                Name=dto.Name
+                Email=dto.Email,
+                Password=dto.Password,
+            };
+            return Ok("Success");
+        }
     }
 }
 
