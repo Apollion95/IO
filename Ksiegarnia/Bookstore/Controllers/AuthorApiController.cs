@@ -55,12 +55,21 @@ namespace Bookstore.Controllers
                 return BadRequest();
 
             Author author = authorMapper.convertToEntity(authorDto);
-            author = authorService.CreateAuthor(author);
+            author = authorService.createAuthor(author);
             if (author==null)
                 return StatusCode(409);
             return Ok(authorDto);
         }
 
+        [HttpDelete]
+        public IActionResult Delete([FromBody()]AuthorDto authorDto)
+        {
+            if (authorDto == null)
+                return BadRequest();
+            authorService.delete(authorMapper.convertToEntity(authorDto));
+
+            return Delete(authorDto);
+        }
 
     }
 }

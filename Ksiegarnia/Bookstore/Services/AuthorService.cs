@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Bookstore.Dtos;
+using Domain.Entities;
 using Infrastructure.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
@@ -34,7 +35,7 @@ namespace Bookstore.Services
             throw new NotImplementedException();
         }
 
-        internal Author CreateAuthor(Author author)
+        internal Author createAuthor(Author author)
         {
             if (!authorRepository.GetAuthorByNameAndLastname(author.name, author.lastName).HasValue)
                 return null;
@@ -43,6 +44,11 @@ namespace Bookstore.Services
             return author;
 
 
+        }
+
+        internal void delete(Author author)
+        {
+            authorRepository.DeleteAuthor(author);
         }
     }
 }
