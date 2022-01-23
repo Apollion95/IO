@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Infrastructure.Data;
 using Infrastructure.Repository.Interfaces;
+using PagedList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,11 @@ namespace Infrastructure.Repository
         public PublisherRepository(BookStoreContext context)
         {
             _context = context;
+        }
+
+        public List<Publisher> getPublisher(int pageNumber)
+        {
+            return ((PagedList<Publisher>)_context.Authors.ToPagedList(pageNumber, 10)).ToList();
         }
 
         public IEnumerable<Publisher> GetPublisher()
